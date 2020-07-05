@@ -1,0 +1,10 @@
+﻿  Classroom.cpp
+c:\users\12638\desktop\c++\vs2017\newgit\curriculum_design\oop(c++)\cms\classroom.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  CMS.cpp
+  Function.cpp
+c:\users\12638\desktop\c++\vs2017\newgit\curriculum_design\oop(c++)\cms\function.cpp(254): warning C4018: “<”: 有符号/无符号不匹配
+  stdafx.cpp
+  正在生成代码...
+c:\users\12638\desktop\c++\vs2017\newgit\curriculum_design\oop(c++)\cms\function.cpp(64): warning C4715: “cmp”: 不是所有的控件路径都返回值
+MSVCRTD.lib(exe_winmain.obj) : error LNK2019: 无法解析的外部符号 _WinMain@16，该符号在函数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 中被引用
+C:\Users\12638\Desktop\C++\vs2017\newgit\curriculum_design\OOP(C++)\CMS\WindowsProject1\Debug\WindowsProject1.exe : fatal error LNK1120: 1 个无法解析的外部命令

@@ -49,16 +49,15 @@ class OrderInfo
 {
 	friend ostream& operator<< (ostream &, const OrderInfo&);
 public:
-	OrderInfo() = default;
+	OrderInfo() = default; // 构造函数进行初始化
 	OrderInfo(const classTime &time, const string &ID,
 		const string &name, const string &phoneNum) : m_time(time),
 		m_ID(ID), m_name(name), m_phoneNum(phoneNum) { }
-
 	string getID() const;
 	classTime getClassTime() const;
 	string getName() const;
-	string getPhoneNum() const;
-
+	string getPhoneNum() const;  //const说明这个函数不改变类中的成员变量。
+	//上面四个是获取函数,获得私有成员
 private:
 	classTime m_time;
 	string m_ID = "";
@@ -68,7 +67,10 @@ private:
 
 //当前教室上课信息类
 class ClassInfo
-{
+{  //一般我们用的"<<"只能输出整型、实型等普通类型。
+	//要想输出类类型，则必须对"<<"进行重载，其中一个参数为类类型对象。
+	//为了方便对对象内部数据的操作，设置为friend友元函数。
+	//为了能达到cout << 对象 << 对象 << endl; 的连续输出对象的效果，设置返回类型为引用。
 	friend ostream& operator<< (ostream &, const ClassInfo &);
 public:
 	ClassInfo() = default;

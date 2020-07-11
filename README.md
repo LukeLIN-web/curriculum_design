@@ -1,3 +1,19 @@
+Cpp笔记
+
+####  map 笔记
+  ``` C++
+ map<const char, int> priority;//用map来储存运算符的优先级
+ //第一个可以称为关键字，每个关键字只能在map中出现一次，第二个可能称为该关键字的值
+  priority['#'] = -1; //反引号可以用来写代码块.
+  priority[')'] = 0;
+  priority['+'] = 1;
+ priority['-'] = 1;
+  priority['*'] = 2;
+ priority['/'] = 2;
+ priority['('] = 3;
+```
+
+
 在此存放我在大学阶段所写的所有课程设计题目和代码
 
 - OOP(C++)-面向对象程序设计：教室管理系统

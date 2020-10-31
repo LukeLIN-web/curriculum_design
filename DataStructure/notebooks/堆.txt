@@ -1,0 +1,48 @@
+找到12 比18小,,
+找到15比18小, 把15上移, 
+T(N) = log(N)
+
+
+最大堆支持删除最大结点.
+最小堆的操作Delete min
+
+首先判断是否为空
+minelement = 第一个,
+lastelemnt= 最后一个
+for( i *2<= H.size){    // i*2>size  就是没有子结点了
+
+如果 child 下一个比child小, 就child++   //  child +1 和child 是两个孩子, 把最小的孩子放在child位置上
+
+如果 最后一个比child大,     //
+   i = child
+else  break;
+}
+第i个 放lastement  
+return minelement
+
+找到其他的,就需要所有的都扫描一遍.
+
+buildheap
+时间复杂度 线性时间,   2^(h+1) -1 -(h+1)  T(N) =O(N)
+不是一个个插入,而是数组不断比较, 最后构建完成.
+
+
+priority queues的应用
+
+1. 找到第k个最大的
+
+2. 堆排序,之后还会讲
+
+d heap
+
+
+
+i =(parent-1)d +1+l 
+if i%d == 0 
+then l = d  
+ i =(parent-1)d +1+d  = parent*d +1
+p =( i -1) /d 
+
+else then l = i%d
+p =( i -1 - i%d+d) /d 
+ i =(parent-1)d +1+i%d 

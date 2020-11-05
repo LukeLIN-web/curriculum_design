@@ -60,6 +60,18 @@ pull = fetch + merge ,多人协作时不够安全
 
 
 
+<u>fatal: HttpRequestException encountered.发送请求时出错</u>
+
+可是在每次push  的时候，都要输入用户名和密码，很是麻烦
+
+原因是使用了https方式 push
+
+ fatal: Could not read from remote repository
+
+用 git clone XX 命令从git上下拉代码时，也出现报这个错误，可是我明明ssh key已经配好了，为什么还会出现这样的事呢
+
+
+
 
 
 Cpp笔记

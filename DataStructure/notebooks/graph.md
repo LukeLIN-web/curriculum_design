@@ -39,7 +39,7 @@ in degree  进来的边
 
 out degree 出去的边
 
-一个图所有degree 加起来/2 就是总边数
+一个图所有degree 加起来/2 就是总边数 ,用来推导一些式子.
 
 ##### 图的表示
 
@@ -131,3 +131,35 @@ void Topsort( Graph G )
 
 
 
+
+
+#### 作业
+
+怎么计算至少几个顶点?
+
+A graph with 90 vertices and 20 edges must have at least __ connected component(s).
+
+解法:
+
+20条边的生成树.对连通图进行遍历，过程中所经过的边和顶点的组合可看做是一棵普通树，通常称为生成树。
+
+连通图中的生成树必须满足以下 2 个条件：
+
+1. 包含连通图中所有的顶点；
+2. 任意两顶点之间有且仅有一条通路；
+
+问题二: 
+
+Given an undirected graph G with 16 edges, where 3 vertices are of degree 4, 4 vertices are of degree 3, and all the other vertices are of degrees less than 3. Then G must have at least __ vertices.
+
+解法 : Sum of vertex degrees 2 number of edges
+
+
+
+##### 拓扑序列
+
+拓扑排序，是对一个有向无环图(Directed Acyclic Graph简称DAG)G进行拓扑排序，是将G中所有顶点排成一个线性序列，使得图中任意一对顶点u和v，若边(u,v)∈E(G)，则u在线性序列中出现在v之前。通常，这样的线性序列称为满足拓扑次序(Topological Order)的序列，简称拓扑序列
+
+**Hamiltonian Cycle**
+
+require contains every vertex 顶点, 由指定的起点前往指定的终点，途中经过所有其他节点且只经过一次*/

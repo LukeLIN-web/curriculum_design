@@ -61,6 +61,10 @@ TestHelloObject::TestHelloObject(TestHelloObjectParams *params) :
 
 
 
+   1 如果你需要高效的随即存取，而不在乎插入和删除的效率，使用vector 
+   2 如果你需要大量的插入和删除，而不关心随即存取，则应使用list 
+   3 如果你需要随即存取，而且关心两端数据的插入和删除，则应使用deque
+
 #### map
 
 unordered系列的容器。unordered_map记录元素的hash值，根据hash值判断元素是否相同。map相当于java中的TreeMap，unordered_map相当于HashMap。无论从查找、插入上来说，unordered_map的效率都优于hash_map，更优于map；而空间复杂度方面，hash_map最低，unordered_map次之，map最大。
@@ -112,6 +116,22 @@ pair<string,double> myshopping ("baking powder",0.3);
 ```
 
 通常，如果 *N* 是常数且很小，我们可以简单地使用一个数组将键存储在同一个桶中。如果 *N* 是可变的或很大，我们可能需要使用`高度平衡的二叉树`来代替。
+
+
+
+#### set
+
+**为何map和set的插入删除效率比用其他序列容器高？**
+
+大部分人说，很简单，因为对于关联容器来说，不需要做内存拷贝和内存移动。
+
+- set以RBTree作为底层容器
+- 所得元素的只有key没有value，value就是key
+- 不允许出现键值重复
+- 所有的元素都会被自动排序
+- 不能通过迭代器来改变set的值，因为set的值就是键
+
+Set和Vector的区别在于Set不包含重复的数据。Set和Map的区别在于Set只含有Key，而Map有一个Key和Key所对应的Value两个元素。
 
 
 

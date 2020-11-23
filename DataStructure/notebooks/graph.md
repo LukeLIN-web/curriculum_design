@@ -23,11 +23,15 @@ vi is adjacent to vj, vj is adjacent(与…毗连的；邻近的) from vi;
 
 <vi , vj> is incident(事件) on vi and vj;
 
+联通分量: 
+
+无向图的极大连通子图称为G的**连通分量**( Connected Component)。任何[连通图](https://baike.baidu.com/item/连通图)的连通分量只有一个，即是其自身，非连通的[无向图](https://baike.baidu.com/item/无向图)有多个连通分量。 
+
 
 
 连通图: 每一个顶点都是connected.  
 
-强连通图:   有向图每一个顶点都是互相connected.  
+强连通图:   有向图每一个顶点都是互相可以有路径到达
 
 
 
@@ -47,7 +51,7 @@ adj_mat[i][j] = 1 ;
 
 ```
 
-链表法
+链表法  adjacent list
 
 ```c
 // 有向图可以看出outdegree,需要 求indegree

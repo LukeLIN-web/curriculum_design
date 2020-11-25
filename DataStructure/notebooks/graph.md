@@ -121,19 +121,11 @@ void Topsort( Graph G )
 //最后所有都在topological sort
 ```
 
-### 最短路径算法
-
-#### single source 最短路径
-
-从0开始找,宽度优先
-
-把距离为0的点都找了.记录下来,然后
-
-
-
 
 
 #### 作业
+
+[数据结构与算法（周测5-最短路径） - nonlinearthink - 博客园 (cnblogs.com)](https://www.cnblogs.com/nonlinearthink/p/11854784.html)
 
 怎么计算至少几个顶点?
 
@@ -141,7 +133,7 @@ A graph with 90 vertices and 20 edges must have at least __ connected component(
 
 解法:
 
-20条边的生成树.对连通图进行遍历，过程中所经过的边和顶点的组合可看做是一棵普通树，通常称为生成树。
+最小的是一个20条边的生成树.对连通图进行遍历，过程中所经过的边和顶点的组合可看做是一棵普通树，通常称为生成树。
 
 连通图中的生成树必须满足以下 2 个条件：
 
@@ -152,9 +144,24 @@ A graph with 90 vertices and 20 edges must have at least __ connected component(
 
 Given an undirected graph G with 16 edges, where 3 vertices are of degree 4, 4 vertices are of degree 3, and all the other vertices are of degrees less than 3. Then G must have at least __ vertices.
 
-解法 : Sum of vertex degrees 2 number of edges
+解法 : Sum of vertex degrees 2 number of edges  16*2 -12 -12 = 8 
 
+问题三:
 
+Let P be the shortest path from S to T. If the weight of every edge in the graph is incremented by 2, P will still be the shortest path from S to T.
+
+解法: 假如说最短路径上一共有10条边，而另一条路径虽然比最短路径长，但它只有一条边，如果全加1，就会导致边少的路径成为新的最短路径。
+
+问题四: 
+
+若要求在找到从S到其他顶点最短路的同时，还给出不同的最短路的条数，我们可以将Dijkstra算法略作修改，增加一个count[]数组：count[V]记录S到顶点V的最短路径有多少条。则count[V]应该被初始化为：
+
+  A.对所有顶点都有count[V]=1
+  B.对所有顶点都有count[V]=0
+  C.count[S]=1;对于其他顶点V则令count[V]=0
+  D.count[S]=0;对于其他顶点V则令count[V]=1
+
+C , 由于S到S一定有一条长度为0的边，所以count初始化为1，其他则是0 .
 
 ##### 拓扑序列
 
@@ -163,3 +170,34 @@ Given an undirected graph G with 16 edges, where 3 vertices are of degree 4, 4 v
 **Hamiltonian Cycle**
 
 require contains every vertex 顶点, 由指定的起点前往指定的终点，途中经过所有其他节点且只经过一次*/
+
+### 最短路径算法
+
+#### single source 最短路径
+
+从0开始找,宽度优先
+
+把距离为0的点都找了.记录下来.
+
+Dijkstra 的算法是一种算法，用于查找图形中两个节点之间的最短距离
+
+因为Dijkstra算法总是在V-S中选择“最轻”或“最近”的顶点插入到集合S中，所以我们说它使用了贪心策略。
+
+#### PAT 1163 Dijkstra Sequence（30）
+
+给出的序列是Dijkstra序列的关键在于，序列的第i个数x的dist[x]是等于当时求到的最短路径。
+
+
+
+##### 复杂度
+
+[Dijkstra算法能得出最短路径的最优解，但由于它遍历计算的节点很多，所以效率低。]
+
+所以搜索 Q 中最小元素的运算（Extract-Min(Q)）只需要线性搜索 Q 中的所有元素。
+这样的话算法的运行时间是 O(E^2)。
+
+对于边数少于 E^2 的稀疏图来说，我们可以用邻接表来更有效的实现迪科斯彻算法。
+同时需要将一个二叉堆或者斐波纳契堆用作优先队列来寻找最小的顶点（Extract-Min）。
+
+当用到二叉堆时候，算法所需的时间为O(( V+E )logE)，
+斐波纳契堆能稍微提高一些性能，让算法运行时间达到O(V+ElogE)。

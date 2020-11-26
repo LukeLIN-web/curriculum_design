@@ -72,7 +72,9 @@ pull = fetch + merge ,多人协作时不够安全
 
 
 
+怎么解决编码问题
 
+![image](img/theWayToSolveCode could not explain.jpeg)
 
 Cpp笔记
 

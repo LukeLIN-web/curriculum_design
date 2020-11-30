@@ -28,19 +28,19 @@ int main()
     int m, u, v, distance, k;
     //scanf("%d%d", &Vertexnum, &m);
     Vertexnum = 5, m = 7;
-G[1][2] = G[2][1] = 2;
-G[1][5] = G[5][1] = 1;
-G[2][3] = G[3][2] = 1;
-G[2][4] = G[4][2] = 1;
-G[2][5] = G[5][2] = 2;
-G[3][5] = G[5][3] = 1;
-G[3][4] = G[4][3] = 1;
-//    for (int i = 0; i < m; i++){
-//        scanf("%d%d%d", &u, &v, &distance);
-//        G[u][v] = G[v][u] = distance;
-//    }
-    //scanf("%d",&k);
-    k = 1;
+//G[1][2] = G[2][1] = 2;
+//G[1][5] = G[5][1] = 1;
+//G[2][3] = G[3][2] = 1;
+//G[2][4] = G[4][2] = 1;
+//G[2][5] = G[5][2] = 2;
+//G[3][5] = G[5][3] = 1;
+//G[3][4] = G[4][3] = 1;
+    for (int i = 0; i < m; i++){
+        scanf("%d%d%d", &u, &v, &distance);
+        G[u][v] = G[v][u] = distance;
+    }
+    scanf("%d",&k);
+//    k = 1;
 	for (int i = 0; i < k; i++){
         for (int j = 0; j < Vertexnum; j++) scanf("%d", &query[j]);//每次循环检查 query 的一位
         bool isD = Dijkstra(query[0]);//查 当前距离原点最近 的 未访问点 与原点的距离

@@ -72,6 +72,8 @@ pull = fetch + merge ,多人协作时不够安全
 
 
 
+看看 本地commit 两次, push 一次, GitHub算几次
+
 怎么解决编码问题
 
 ![image](img/theWayToSolveCode could not explain.jpeg)

@@ -46,7 +46,7 @@ pull = fetch + merge ,多人协作时不够安全
 
 总之，就是让这个文件回到最近一次`git commit`或`git add`时的状态。
 
-
+事实上git restore 比较常用, checkout 用来切换分支比较多, checkout功能比较多
 
 <u>如果clone下来,直接push失败</u>
 

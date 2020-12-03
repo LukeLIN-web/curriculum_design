@@ -46,7 +46,7 @@ pull = fetch + merge ,多人协作时不够安全
 
 总之，就是让这个文件回到最近一次`git commit`或`git add`时的状态。
 
-事实上git restore 比较常用, checkout 用来切换分支比较多, checkout功能比较多
+事实上git restore 撤销修改回到添加到暂存区后的状态比较常用, checkout 用来切换分支比较多, checkout功能比较多,图书馆里借出书也叫checkout.
 
 <u>如果clone下来,直接push失败</u>
 
@@ -72,11 +72,13 @@ pull = fetch + merge ,多人协作时不够安全
 
 
 
-看看 本地commit 两次, push 一次, GitHub算几次
+看看 本地commit 两次, push 一次, GitHub算几次?
 
-怎么解决编码问题
+算两次, 所以本地多commit 就行,不用每天push. 写完一个逻辑就可以commit .
 
-![image](img/theWayToSolveCode could not explain.jpeg)
+
+
+----------
 
 Cpp笔记
 
@@ -92,10 +94,6 @@ Cpp笔记
  priority['/'] = 2;
  priority['('] = 3;
   ```
-
-- 
-
-----------
 
 
 #### OOP(C++)-面向对象课程设计
@@ -117,7 +115,7 @@ Cpp笔记
 ----------
 
 
-#### 程序设计实践课程设计（转专业补修）
+#### C语言程序设计实践课程设计（转专业补修）
 
 ##### 题目
 

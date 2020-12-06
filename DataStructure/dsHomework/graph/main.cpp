@@ -50,15 +50,16 @@ int MaxFlow(int s, int t) {//最大流算法,s为源点,
         ap[s]  = INT_MAX;  // 源点到自己的残量 = max
         while(!q.empty()){
             int v1 = q.front(); //vector 1 = source //遍历以队列第一个元素为起点的边
-            cout<< "v1 = "<<v1<<endl;
+       //     cout<< "v1 = "<<v1<<endl;
             q.pop();
             // graph[s] 是一个vector,  vector里面的数字表示v1连着的一些vertex; 我们把每个vertex取出来判断一下.
-            for(int i:graph[v1]) {//遍历x节点的每一条边.如果当前边的终点的残量为0且容量大于流量,
-                if (ap[edges[i].to] == 0 && edges[i].cap > edges[i].flow) {  //如果当前边的终点的残量为0且边的容量大于流量, 说明这个新的边可以增大他的残量.
-                    gp[edges[i].to] = i ;   // i is the number in graph 记录到达该终点的边的编号
-                    ap[edges[i].to] = min(ap[i],edges[i].cap - edges[i].flow) ;  //更新源点到该终点的残量
-                    q.emplace(edges[i].to);        //把终点压入队列,继续判断从这个点出发的所有边,   //     直到终点的残量不为零或者没有终点在队列中.
-                    cout<<i<<"= i  edge[i] = "<<edges[i].to<<"ap[i]="<<ap[i]<<endl;
+            for(int i:graph[v1]){//遍历以x为起点的边 for (int j:i) { //这里i 是数组，j不是下标了，j是来接受每一个数组i遍历出来的值的。
+                Edge &e = edges[i];
+                if (ap[e.to] == 0 && e.cap > e.flow) {  //如果当前边的终点的残量为0且边的容量大于流量, 说明这个新的边可以增大他的残量.
+                    gp[e.to] = i ;   // i is the number in graph 记录到达该终点的边的编号
+                    ap[e.to] = min(ap[v1], e.cap - e.flow) ;  //更新源点到该终点的残量, 是原点到v1距离这一段路径流量和容量-流量残余流量的较小值
+                    q.emplace(e.to);        //把终点压入队列,继续判断从这个点出发的所有边,   //     直到终点的残量不为零或者没有终点在队列中.
+          //          cout << i << "= i  edge[i] = " << e.to << "ap[i]=" << ap[i] << endl;
                 }
             }
             if(ap[t])//终点的残量不为零，跳出循环
@@ -99,7 +100,7 @@ void insertEdge(string &from, string &to, int cap) {//插入边，起点为from�
     graph[f].emplace_back(edges.size());
     edges.emplace_back(Edge(f,t,cap,0));
     graph[t].emplace_back(edges.size());
-    edges.emplace_back(Edge(t,f,0,0));//error C2065: “edges”: undeclared. I don't know wh
+    edges.emplace_back(Edge(t, f, 0, 0));//error C2065: “edges”: undeclared. I don't know wh
 }
 
 int main(){

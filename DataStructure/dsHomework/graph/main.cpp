@@ -1,9 +1,15 @@
+
 #include<iostream>
 #include<unordered_map>
 #include<vector>
 #include<string>
 #include<queue>
 using namespace std;
+
+struct Edge{
+    int from,to,cap,flow;
+    Edge(int f,int t, int c, int fl):from(f),to(t),cap(c),flow(fl){}//creator
+};
 /*
 本题是PAT上顶级1003，考察的知识点其实只有一个，最大流问题。
 用基于广度优先搜索的Edmonds-Karp算法求解。题目意思就是说求解最多能从地球站发送出去的最大人数，
@@ -11,17 +17,9 @@ using namespace std;
 那么可以将EAR视为源点s，MAR视为汇点，是一个单源点单汇点的最大流问题
 */
 unordered_map<string,int>trans;//将字符串转换为数字，由0开始编号
-vector<Edge>edges;//储存边
+vector<Edge>edges;
 vector<int>graph[1005];//整个图，其中graph[i][j]表示结点i的第j条边在edges数组中的序号
 
-
-
-
-/*插入边，起点为from，终点是to，容量为cap ,
-首先找找这个边在不在无序map, 如果不在 ,那就insert一个 , 通过tran的size,就可以获得他的大小
-利用构造函数, 在edges中创建边.  同时在 图中插入边,以及初始化一个反向边.
-*/
-void insertEdge(string&from,string&to,int cap);
 /*
 1. 首先把所有残余网络初始化为0,广度优先遍历查找从源点到达汇点的增广路
 然后定义一个数组 a,a[i]代表从源点到i的最大流通量，即每次源点开始搜索，
@@ -32,21 +30,82 @@ void insertEdge(string&from,string&to,int cap);
 那么更新最短路上到达结点p[i]的边在edges数组中的序号, p中记录终点在graph中的序号
  更新源点到该终点的残量, 再把终点压入队列继续判断从这个点出发的所有边,
  直到终点的残量不为零或者没有终点在队列中.
- 3.
-
-在每一次搜索完成之后，如果a[n]==0，说明已经没有剩余可以流通的量了，直接return
+ 3.一次搜索结束后, 源点到终点的残量a[t]为零，表示不存在增广路了，跳出外层死循环
+ 否则从汇点向前遍历增广路经，更新每条增广路的流量, p[u]偶数变奇数?奇数变偶数?
+ flow记录最大流量
+ 4. 继续循环搜索, 再把将源点到达每个结点的残量初始化为0,再把source push进去.
+在每一次搜索完成之后，如果a[n]==0，说明已经没有剩余可以流通的量了，then break and 直接return.
  */
-int MaxFlow(int s,int t);
 
 int MaxFlow(int s, int t) {//最大流算法,s为源点,
-    int a[1005],p[1005];//a数组表示源点到结点a[i]的残量,p数组表示最短路树上到达结点p[i]的边在edges数组中的序号
-    int flow=0;//最大流量
+    int ap[1005],gp[1005];//a数组表示源点到结点a[i]的残量,p数组表示最短路树上到达结点p[i]的边在edges数组中的序号
+    int flow = 0;//最大流量
+    queue<int>q;
+    while(1){
+            //init the augmenting path
+            for(int i = 0;i < 1005;i++){
+                ap[i] = 0;
+            }
+            //广度优先遍历查找从源点到达汇点的增广路
+            q.emplace(s);      //from source we begin search
+            ap[s]  = INT_MAX;  // 表示源点到自己的残量 = max
+            //遍历x节点的每一条边.如果当前边的终点的残量为0且容量大于流量,
+            //       那么  记录最短路上到达结点gp[i]的边在edges数组中的序号, p中记录终点在graph中的序号
+            // 更新源点到该终点的残量, 再把终点压入队列继续判断从这个点出发的所有边,
+            //     直到终点的残量不为零或者没有终点在队列中.
+            while(!q.empty()){
+                //遍历以队列第一个元素为起点的边
+                int e1 = q.front();
+                q.pop();
+                //如果当前边的终点的残量为0且边的容量大于流量, 说明这个新的边可以增大他的残量.
+                //记录到达该终点的边的编号
+                //更新源点到该终点的残量
+                //把终点压入队列
+                // graph[x] 是一个向量,  里面的数字表示x连着的一些点; 我们把每个点取出来判断一下.
+                for(int i:graph[x]) {
 
-    return 0 ;
+                    if (ap[edges[e1].to] == 0 && edges[e1].cap > edges[e1].flow) {
+                        gp[edges[e1]] = i ;   // i is the number in graph
+                        ap[edges[e1]] += min(ap[i],edges[e1].cap - edges[e1].flow) ;
+
+                    }
+                }
+
+
+                if(a[t]!=0)//终点的残量不为零，跳出循环
+                    break;
+            }
+
+        //清空了队列之后,再判断
+        //a数组表示源点到结点a[i]的残量 在每一次搜索完成之后，如果a[t]==0，说明已经没有剩余可以流通的量了，直接跳出外层死循环 then return
+        if(a[t]==0)//源点到终点的残量为零，表示不存在增广路了，跳出外层死循环
+            break;
+        //否则, 往前找edge.from,更新每一个边的流量和反流量
+        //其实就是如果是偶数变奇数?奇数变偶数?
+
+        //4. 继续循环搜索, 再把将源点到达每个结点的残量初始化为0,再把source push进去,
+    }
+    return flow;
 }
-
+/*插入边，起点为from，终点是to，容量为cap ,
+首先找找这个边在不在无序map, 如果不在 ,那就insert一个 , 通过tran的size,就可以获得他的大小
+then , we could use creator 构造函数, 在edges中创建边.  同时在 graph图中插入边,以及初始化一个反向边.
+*/
 void insertEdge(string &from, string &to, int cap) {//插入边，起点为from，终点是to，容量为cap
-
+    if(trans.find(from) == trans.end()){
+        trans.insert({from,trans.size()});// give "from" an id = trans.size
+    }
+    if(trans.find(to) == trans.end()){
+        trans.insert({to,trans.size()}); //same as from
+    }
+// create edge in the vector edges and graph
+    int f,t;
+    f = trans[from];
+    t = trans[to];
+    graph[f].emplace_back(edges.size());
+    edges.emplace_back(Edge(f,t,cap,0));
+    graph[t].emplace_back(edges.size());
+    edges.emplace_back(Edge(t,f,0,0));//error C2065: “edges”: undeclared. I don't know wh
 }
 
 int main(){

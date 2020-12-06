@@ -3,7 +3,7 @@
 #define ERROR 1e8
 typedef int ElementType;
 typedef enum { push, pop, end } Operation;
-
+// for DS homework stack
 typedef struct StackRecord *Stack;
 struct StackRecord  {
     int Capacity;       /* maximum size of the stack array */
@@ -91,7 +91,7 @@ ElementType Top_Pop( Stack S, int Stacknum ){
 	if(IsEmpty(S , Stacknum) == 1) return ERROR;
 	if(Stacknum == 1) return  S->Array[S->Top1--] ;
 	else if(Stacknum == 2){
-	return S->Array[S->Top2++] ;
+    	return S->Array[S->Top2++] ;
 	}
 	else	return ERROR;
 }

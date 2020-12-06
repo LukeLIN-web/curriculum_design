@@ -113,7 +113,7 @@ int Inject( ElementType X, Deque D ){
     if(D->Front == D->Rear){ //if no data in deque
     	D->Front->Next = p;
 		p->Last  = D->Front;
-		D->Rear  = p;//as push , for convient and for init same way
+		D->Rear  = p;//as push , for convenient and for init same way
 	}
     else{
     D->Rear->Next = p;

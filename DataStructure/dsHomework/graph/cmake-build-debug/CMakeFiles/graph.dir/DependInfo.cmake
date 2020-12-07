@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/graph/7-1 Universal Travel Sites.cpp" "D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/graph/cmake-build-debug/CMakeFiles/graph.dir/7-1_Universal_Travel_Sites.cpp.obj"
+  "D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/graph/7-2 Uniqueness of MST .cpp" "D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/graph/cmake-build-debug/CMakeFiles/graph.dir/7-2_Uniqueness_of_MST_.cpp.obj"
   "D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/graph/main.cpp" "D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/graph/cmake-build-debug/CMakeFiles/graph.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")

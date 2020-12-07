@@ -127,6 +127,60 @@ graph\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\graph.dir\build
 .PHONY : graph\fast
 
+7-1_Universal_Travel_Sites.obj: 7-1_Universal_Travel_Sites.cpp.obj
+
+.PHONY : 7-1_Universal_Travel_Sites.obj
+
+# target to build an object file
+7-1_Universal_Travel_Sites.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\graph.dir\7-1_Universal_Travel_Sites.cpp.obj
+.PHONY : 7-1_Universal_Travel_Sites.cpp.obj
+
+7-1_Universal_Travel_Sites.i: 7-1_Universal_Travel_Sites.cpp.i
+
+.PHONY : 7-1_Universal_Travel_Sites.i
+
+# target to preprocess a source file
+7-1_Universal_Travel_Sites.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\graph.dir\7-1_Universal_Travel_Sites.cpp.i
+.PHONY : 7-1_Universal_Travel_Sites.cpp.i
+
+7-1_Universal_Travel_Sites.s: 7-1_Universal_Travel_Sites.cpp.s
+
+.PHONY : 7-1_Universal_Travel_Sites.s
+
+# target to generate assembly for a file
+7-1_Universal_Travel_Sites.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\graph.dir\7-1_Universal_Travel_Sites.cpp.s
+.PHONY : 7-1_Universal_Travel_Sites.cpp.s
+
+7-2_Uniqueness_of_MST_.obj: 7-2_Uniqueness_of_MST_.cpp.obj
+
+.PHONY : 7-2_Uniqueness_of_MST_.obj
+
+# target to build an object file
+7-2_Uniqueness_of_MST_.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\graph.dir\7-2_Uniqueness_of_MST_.cpp.obj
+.PHONY : 7-2_Uniqueness_of_MST_.cpp.obj
+
+7-2_Uniqueness_of_MST_.i: 7-2_Uniqueness_of_MST_.cpp.i
+
+.PHONY : 7-2_Uniqueness_of_MST_.i
+
+# target to preprocess a source file
+7-2_Uniqueness_of_MST_.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\graph.dir\7-2_Uniqueness_of_MST_.cpp.i
+.PHONY : 7-2_Uniqueness_of_MST_.cpp.i
+
+7-2_Uniqueness_of_MST_.s: 7-2_Uniqueness_of_MST_.cpp.s
+
+.PHONY : 7-2_Uniqueness_of_MST_.s
+
+# target to generate assembly for a file
+7-2_Uniqueness_of_MST_.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\graph.dir\7-2_Uniqueness_of_MST_.cpp.s
+.PHONY : 7-2_Uniqueness_of_MST_.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -163,6 +217,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... graph
+	@echo ... 7-1_Universal_Travel_Sites.obj
+	@echo ... 7-1_Universal_Travel_Sites.i
+	@echo ... 7-1_Universal_Travel_Sites.s
+	@echo ... 7-2_Uniqueness_of_MST_.obj
+	@echo ... 7-2_Uniqueness_of_MST_.i
+	@echo ... 7-2_Uniqueness_of_MST_.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

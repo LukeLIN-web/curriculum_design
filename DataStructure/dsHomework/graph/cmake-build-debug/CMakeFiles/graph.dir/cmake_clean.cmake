@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/graph.dir/7-1_Universal_Travel_Sites.cpp.obj"
+  "CMakeFiles/graph.dir/7-2_Uniqueness_of_MST_.cpp.obj"
   "CMakeFiles/graph.dir/main.cpp.obj"
   "graph.exe"
   "graph.exe.manifest"

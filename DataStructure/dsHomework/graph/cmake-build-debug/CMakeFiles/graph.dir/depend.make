@@ -3,5 +3,7 @@
 
 CMakeFiles\graph.dir\7-1_Universal_Travel_Sites.cpp.obj: "..\7-1 Universal Travel Sites.cpp"
 
+CMakeFiles\graph.dir\7-2_Uniqueness_of_MST_.cpp.obj: "..\7-2 Uniqueness of MST .cpp"
+
 CMakeFiles\graph.dir\main.cpp.obj: ..\main.cpp
 

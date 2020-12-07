@@ -1,14 +1,8 @@
 #include<iostream>
-#include<string>
-
+#include <vector>
+#include <algorithm>
+#include <numeric>
 using namespace std;
+int main() {
 
-
-int main(){
-    string from,to;
-    int n,cap;
-    cin>>from>>to;
-    cin>>n;
-    printf("%d",123);
-    return 0;
 }

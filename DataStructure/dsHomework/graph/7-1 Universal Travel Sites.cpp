@@ -1,7 +1,7 @@
 //
 // Created by 12638 on 2020/12/7.
 //
-
+/*
 #include<iostream>
 #include<unordered_map>
 #include<vector>
@@ -19,9 +19,9 @@ struct Edge{
 在到达目的星球（MAR）上途径每一个行星（不包括MAR）上都没有收留多余游客的能力，到达的游客必须运送出去。
 那么可以将EAR视为源点s，MAR视为汇点，是一个单源点单汇点的最大流问题
 */
-unordered_map<string,int>trans;//将字符串转换为数字，由0开始编号
-vector<Edge>edges;
-vector<int>graph[1005];//整个图，其中graph[i][j]表示结点i的第j条边在edges数组中的序号
+//unordered_map<string,int>trans;//将字符串转换为数字，由0开始编号
+//vector<Edge>edges;
+//vector<int>graph[1005];//整个图，其中graph[i][j]表示结点i的第j条边在edges数组中的序号
 
 /*
 1. 首先把所有残余网络初始化为0,广度优先遍历查找从源点到达汇点的增广路
@@ -39,7 +39,7 @@ vector<int>graph[1005];//整个图，其中graph[i][j]表示结点i的第j条边
  4. 继续循环搜索, 再把将源点到达每个结点的残量初始化为0,再把source push进去.
 在每一次搜索完成之后，如果a[n]==0，说明已经没有剩余可以流通的量了，then break and 直接return.
  */
-
+/*
 int MaxFlow(int s, int t) {//最大流算法,s为源点,
     int ap[1005],gp[1005];//a数组表示源点到结点a[i]的残量,p数组表示最短路树上到达结点p[i]的边在edges数组中的序号
     //edges < 500 , we need 1005 gp because it is a directed graph
@@ -85,11 +85,13 @@ int MaxFlow(int s, int t) {//最大流算法,s为源点,
     }
     return flow;
 }
+*/
 /*插入边，起点为from，终点是to，容量为cap ,
 首先找找这个边在不在无序map, 如果不在 ,那就insert一个 , 通过tran的size,就可以获得他的大小
 then , we could use creator 构造函数, 在edges中创建边.  同时在 graph图中插入边,以及初始化一个反向边.
 insertEdge
  */
+/*
 void insertEdge(string &from, string &to, int cap) {//插入边，起点为from，终点是to，容量为cap
     if(trans.find(from) == trans.end()){
         trans.insert({from,trans.size()});// give "from" an id = trans.size
@@ -106,3 +108,4 @@ void insertEdge(string &from, string &to, int cap) {//插入边，起点为from�
     graph[t].emplace_back(edges.size());
     edges.emplace_back(Edge(t, f, 0, 0));//error C2065: “edges”: undeclared. I don't know wh
 }
+*/

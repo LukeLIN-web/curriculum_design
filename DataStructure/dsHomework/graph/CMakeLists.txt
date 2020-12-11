@@ -3,4 +3,4 @@ project(graph)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(graph main.cpp "7-1 Universal Travel Sites.cpp" "7-2 Uniqueness of MST .cpp")
+add_executable(graph main.cpp "7-1 Universal Travel Sites.cpp" "7-2 Uniqueness of MST .cpp" "Strongly Connected Components.cpp")

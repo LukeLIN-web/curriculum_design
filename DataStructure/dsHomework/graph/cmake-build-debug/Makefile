@@ -181,6 +181,33 @@ graph\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\graph.dir\7-2_Uniqueness_of_MST_.cpp.s
 .PHONY : 7-2_Uniqueness_of_MST_.cpp.s
 
+Strongly_Connected_Components.obj: Strongly_Connected_Components.cpp.obj
+
+.PHONY : Strongly_Connected_Components.obj
+
+# target to build an object file
+Strongly_Connected_Components.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\graph.dir\Strongly_Connected_Components.cpp.obj
+.PHONY : Strongly_Connected_Components.cpp.obj
+
+Strongly_Connected_Components.i: Strongly_Connected_Components.cpp.i
+
+.PHONY : Strongly_Connected_Components.i
+
+# target to preprocess a source file
+Strongly_Connected_Components.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\graph.dir\Strongly_Connected_Components.cpp.i
+.PHONY : Strongly_Connected_Components.cpp.i
+
+Strongly_Connected_Components.s: Strongly_Connected_Components.cpp.s
+
+.PHONY : Strongly_Connected_Components.s
+
+# target to generate assembly for a file
+Strongly_Connected_Components.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\graph.dir\Strongly_Connected_Components.cpp.s
+.PHONY : Strongly_Connected_Components.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -223,6 +250,9 @@ help:
 	@echo ... 7-2_Uniqueness_of_MST_.obj
 	@echo ... 7-2_Uniqueness_of_MST_.i
 	@echo ... 7-2_Uniqueness_of_MST_.s
+	@echo ... Strongly_Connected_Components.obj
+	@echo ... Strongly_Connected_Components.i
+	@echo ... Strongly_Connected_Components.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

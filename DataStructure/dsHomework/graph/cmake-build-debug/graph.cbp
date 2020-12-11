@@ -88,6 +88,9 @@
 		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/graph/7-2 Uniqueness of MST .cpp">
 			<Option target="graph"/>
 		</Unit>
+		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/graph/Strongly Connected Components.cpp">
+			<Option target="graph"/>
+		</Unit>
 		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/graph/main.cpp">
 			<Option target="graph"/>
 		</Unit>

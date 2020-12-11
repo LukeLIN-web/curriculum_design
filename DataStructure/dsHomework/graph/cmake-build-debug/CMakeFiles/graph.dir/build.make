@@ -118,23 +118,23 @@ CMakeFiles\graph.dir\7-2_Uniqueness_of_MST_.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\graph.dir\7-2_Uniqueness_of_MST_.cpp.s /c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\graph\7-2 Uniqueness of MST .cpp"
 <<
 
-CMakeFiles\graph.dir\Strongly_Connected_Components.cpp.obj: CMakeFiles\graph.dir\flags.make
-CMakeFiles\graph.dir\Strongly_Connected_Components.cpp.obj: "..\Strongly Connected Components.cpp"
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\graph\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/graph.dir/Strongly_Connected_Components.cpp.obj"
+CMakeFiles\graph.dir\strongLyconnectedcompoent.c.obj: CMakeFiles\graph.dir\flags.make
+CMakeFiles\graph.dir\strongLyconnectedcompoent.c.obj: ..\strongLyconnectedcompoent.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\graph\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/graph.dir/strongLyconnectedcompoent.c.obj"
 	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\graph.dir\Strongly_Connected_Components.cpp.obj /FdCMakeFiles\graph.dir\ /FS -c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\graph\Strongly Connected Components.cpp"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\graph.dir\strongLyconnectedcompoent.c.obj /FdCMakeFiles\graph.dir\ /FS -c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\graph\strongLyconnectedcompoent.c"
 <<
 
-CMakeFiles\graph.dir\Strongly_Connected_Components.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graph.dir/Strongly_Connected_Components.cpp.i"
-	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\graph.dir\Strongly_Connected_Components.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\graph\Strongly Connected Components.cpp"
+CMakeFiles\graph.dir\strongLyconnectedcompoent.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/graph.dir/strongLyconnectedcompoent.c.i"
+	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\graph.dir\strongLyconnectedcompoent.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\graph\strongLyconnectedcompoent.c"
 <<
 
-CMakeFiles\graph.dir\Strongly_Connected_Components.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graph.dir/Strongly_Connected_Components.cpp.s"
+CMakeFiles\graph.dir\strongLyconnectedcompoent.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/graph.dir/strongLyconnectedcompoent.c.s"
 	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\graph.dir\Strongly_Connected_Components.cpp.s /c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\graph\Strongly Connected Components.cpp"
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\graph.dir\strongLyconnectedcompoent.c.s /c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\graph\strongLyconnectedcompoent.c"
 <<
 
 # Object files for target graph
@@ -142,7 +142,7 @@ graph_OBJECTS = \
 "CMakeFiles\graph.dir\main.cpp.obj" \
 "CMakeFiles\graph.dir\7-1_Universal_Travel_Sites.cpp.obj" \
 "CMakeFiles\graph.dir\7-2_Uniqueness_of_MST_.cpp.obj" \
-"CMakeFiles\graph.dir\Strongly_Connected_Components.cpp.obj"
+"CMakeFiles\graph.dir\strongLyconnectedcompoent.c.obj"
 
 # External object files for target graph
 graph_EXTERNAL_OBJECTS =
@@ -150,7 +150,7 @@ graph_EXTERNAL_OBJECTS =
 graph.exe: CMakeFiles\graph.dir\main.cpp.obj
 graph.exe: CMakeFiles\graph.dir\7-1_Universal_Travel_Sites.cpp.obj
 graph.exe: CMakeFiles\graph.dir\7-2_Uniqueness_of_MST_.cpp.obj
-graph.exe: CMakeFiles\graph.dir\Strongly_Connected_Components.cpp.obj
+graph.exe: CMakeFiles\graph.dir\strongLyconnectedcompoent.c.obj
 graph.exe: CMakeFiles\graph.dir\build.make
 graph.exe: CMakeFiles\graph.dir\objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\graph\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable graph.exe"

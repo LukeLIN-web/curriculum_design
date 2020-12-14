@@ -6,8 +6,14 @@
 
 #IncludeRegexTransform: 
 
+D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/graph/7-2 Uniqueness of MST .cpp
+
 D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/graph/main.cpp
 iostream
+-
+stdio.h
+-
+stdlib.h
 -
 vector
 -

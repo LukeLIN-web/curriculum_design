@@ -1,13 +1,9 @@
 //
 // Created by 12638 on 2020/12/15.
 //
-
 #include <iostream>
 #include <cstdio>
 #include <algorithm>
-#include <string.h>
-
-
 using namespace std;
 const int maxn=105;
 int heap[maxn];
@@ -37,22 +33,22 @@ void swaps(int &a,int &b){
  */
 void PercolateDown( int p, PriorityQueue H ){
     int tmp = H->Elements[p],child = 2*p;
-    while(child < H->Size  ){    //还没有到底
+    while(child <= H->Size  ){    //还没有到底 , we need <= , notice child+1 may into the sorted region , so judge it .
         // swap child and H[p]
         //		printf(" child = %d\n",child);
-        if(  H->Elements[p]  < H->Elements[child]){
-            if(  H->Elements[child]  < H->Elements[child+1]){//child is median
+        if(  tmp < H->Elements[child]){
+            if( child+1 <= H->Size && tmp < H->Elements[child+1] ){//child is median
                 H->Elements[p] = H->Elements[child+1];
                 p = child+1;
                 child = 2*p;
             }
             else{       //child is biggest
-                H->Elements[p] = H->Elements[child];
+                H->Elements[p] = H->Elements[child]; // I have a error  , don't change ,I need save tmp instead of H->Elements[p] < H->Elements[child+1]
                 p = child;
                 child = 2*p;
             }
         }
-        else if( H->Elements[p]  < H->Elements[child+1]){  //right node bigger than parent
+        else if(child+1 <= H->Size && tmp < H->Elements[child+1]){  //right node bigger than parent
             H->Elements[p] = H->Elements[child+1];
             p = child+1;
             child = 2*p;
@@ -62,10 +58,10 @@ void PercolateDown( int p, PriorityQueue H ){
     H->Elements[p] = tmp;
 }
 
-
 int main()
 {
-    int n,i;
+    int n;
+    int i;
     int num[maxn],num2[maxn];
     PriorityQueue H = ( PriorityQueue)malloc(sizeof(HeapStruct)); ;  //we  need allocate a room for H
     H->Size = 0;
@@ -76,7 +72,8 @@ int main()
     for(i = 1 ;i <= n;i++){
         scanf("%d",&num2[i]);
     }
-    int idx = 1;
+    int idx;
+    idx = 1;
     for(;idx < n-1 && num2[idx] <= num2[idx+1];idx++);
     int p  = idx + 1;
     for(;p < n && num[p] ==   num2[p];p++);
@@ -91,8 +88,10 @@ int main()
         //heap_pop  swap(0, idx)
         //for(idx = n-1 ;idx > 0  && num2[idx] >= num2[idx-1];idx--); //we cannot find sorted region in this way
         //从n开始往前找，找第一个小于等于b[1]的数字b[p]
+        printf("Heap Sort\n");
         for(idx = n-1 ;idx > 0  && num2[idx] >= num2[1];idx--); //idx is in the heap , after idx are sorted
         swaps(num2[1],num2[idx]); //pop max
+        idx-- ;
         H->Size = idx;
         H->Elements = num2;
         PercolateDown(1,H);
@@ -105,3 +104,12 @@ int main()
     }
     return 0;
 }
+/*
+ *   partial accepted  , try the following input
+ *
+ *   10
+3 1 2 8 7 5 9 4 6 0
+6 4 5 0 1 2 3 7 8 9
+ output 5 4 6 0 1 2 3 7 8 9 error notice child+1 may into the sorted region
+ 5 4 2 1 0 3 6 7 8 9   2 don't swap with 3 , because..
+ */

@@ -15,6 +15,8 @@ owner->
 
 this->
 
+shared_ptr也是对auto_ptr的一种改进，它的思路是，使用引用计数来管理指针。如果一个指针被多次使用了，那么引用计数就加一，如果减少一次使用，引用计数就减一。当引用计数变为0，那就可以真正地删除指针了。引用计数法的优点就是算法简单（在C++中只要几行代码就实现了），但是效率不高，且有循环引用这个巨大的坑。
+
 
 
 lambda function 作为third argument to the std::sort() function .

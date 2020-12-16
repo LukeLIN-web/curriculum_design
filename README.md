@@ -84,6 +84,34 @@ pull = fetch + merge ,多人协作时不够安全
 
 等 dev 分支开发完成了之后，要合并到上游分支 master 上的时候，切换到 master 分支，使用 `git merge dev`
 
+
+
+##### git 本地push 和远程不一致
+
+我想换一个目录来连接远程的仓库, 不要用现在这个目录
+
+远程master的代码是**无用的**并且可以使用**强推**
+
+```bash
+//添加仓库
+git remote add origin <仓库地址>
+//强制push本地master分支到远端的master分支
+git push origin master:master -f
+```
+
+不能使用代码强推
+
+```bash
+//添加仓库
+git remote add origin <仓库地址>
+//关联远端master分支
+git branch --set-upstream-to=origin/master master
+//rebase 远端代码到本地(这会对本地代码进行变基，把远端的提交插入本地代码提交的最底下。好比房子的地基改变了，这个地基会和远端仓库的提交一致，本地的提交都变动到这些提交上面)
+git rebase
+//push代码
+git push
+```
+
 ----------
 
 Cpp笔记

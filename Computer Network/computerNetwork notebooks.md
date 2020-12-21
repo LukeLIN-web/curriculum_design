@@ -5,18 +5,18 @@
 |  Application 应用层  |
 | Presentation(五层合并到应用层)表示层 |
 | Session 会话层(五层合并到应用层) |
-| Transport  传输层 |
-| NetWork |
+| Transport  传输层 传输层的主要协议有[UDP](https://baike.baidu.com/item/UDP/571511)、TCP，是使用者使用平台和计算机信息网内部数据结合的通道，可以实现数据传输与数据共享； |
+| NetWork 网络层  网络层的主要协议有ICMP、IP、IGMP， |
 | Data/Link   有以太网 CSMA -CD  或token ring 令牌(用在数据量非常大的地方) |
 | Physical(四层合并到数据链路层) |
 
-
+传输层以上主要协议有[Telnet](https://baike.baidu.com/item/Telnet/810597)、[FTP](https://baike.baidu.com/item/FTP/13839)、[SMTP](https://baike.baidu.com/item/SMTP/175887)等，是用来接收来自传输层的数据.
 
 
 
 #### 数据链路层
 
-以太网, 
+以太网, 数据链路层，主要协议有ARP、[RARP](https://baike.baidu.com/item/RARP/610685)，主要功能是提供链路管理错误检测、对不同通信媒介有关信息细节问题进行有效处理等
 
 #### **TCP协议的三次握手和四次挥手：**
 

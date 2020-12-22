@@ -136,4 +136,51 @@ a safe maneuver : pivot is a random  . but generation is time expensive
 
 median elminate wrong way 5% time. 
 
-小数组 N<20 , insertion sort比quick sort 更快.  
+小数组 N<20 , insertion sort比quick sort 更快.  if(i+cutoff)< right  qsort  else qsort
+
+
+
+### Sorting 大结构
+
+不交换所有变量而是交换指向结构的指针.
+
+table sort.
+
+
+
+### a general lower bound for sorting
+
+Ω(N logN)
+
+N个元素, N!个不同结果, 
+
+thus, 决策树 必须有N! leaves 
+
+高度是K, 
+$$
+N! <= 2^{k-1}
+$$
+=>  k>= log(N!)+1
+$$
+N! >= (N/2)^{(N/2)}   =>  log(N!) >= (N/2)log{(N/2)}
+$$
+
+
+### bucket sort and radix sort
+
+
+
+bucket sort 建1000个桶 , 
+
+radix sort 建10个桶, 按最低位排序.  然后按十位排序. 按百位 T= O(P+B) P是pass  = 3 pass,
+
+B 是bucket 的数量, B =  10 . 在线性时间内排序.
+
+
+
+MSD  most significant digit sort  4个桶,每个桶可以独立排
+
+LSD 必须在前一次排序基础上排序.
+
+LSD总是比MSD快吗? 不一定
+

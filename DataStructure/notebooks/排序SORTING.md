@@ -138,7 +138,33 @@ median elminate wrong way 5% time.
 
 小数组 N<20 , insertion sort比quick sort 更快.  if(i+cutoff)< right  qsort  else qsort
 
+快速排序， 首先第一个为pivot， 后面分为<pivot 和> pivot 的部分， 如果<pivot , 那就分到小于的一堆，如果> pivot ，那就分到大于的一堆。
 
+ 首先从后半部分开始，**如果扫描到的值大于基准数据就让high减1**,***如果发现有元素比该基准数据的值小(如上图中18<=tmp)，就将high位置的值赋值给low位置\*** ,结果如下:
+
+然后开始从前往后扫描,**如果扫描到的值小于基准数据就让low加1**,***如果发现有元素大于基准数据的值(如上图46=>tmp)，就再将low位置的值赋值给high位置的值\***,指针移动并且数据交换后的结果如下:
+
+If there are less than 20 inversions in an integer array, the Quick Sort will be the best method among Quick Sort, Heap Sort and Insertion Sort.
+
+这样快排应该最快
+
+快速排序在随机数据表现比现较堆排好。
+
+虽说堆排和快排都是nlog（n）级的，数据比较，堆排的常数是快排的2.5倍。
+
+在非随机数据下，快排的就没有什么优势了，特别是全一样的数时，达到了n^2的上限
+
+对于快速排序，有点就在于通过分治法从顶到底的渐进有序，选择的基准数使得分成的左右两个子序列长度越接近（即分区越平衡），快排的效率越高。反之，选择的数使分区不平衡，快排的效率就会降低。 
+ 回到问题，当序列渐进有序时，意味着大量元素已经处于有序状态，左边的数普遍比右边的小。对于**普通快排**，默认选择左边第一个元素作为基准数，这就导致小与基准的数会相当少，而大于基准的数相当多，造成分区不平衡的问题，普通排序就会退化，严重的将退化成O(n^2)。所以对其改进：不再默认选择第一个数，而是随机选一个数作为基准，这样的快排称为**随机普通快排**。 
+ 实现上，随机普通快排随机选一个数与第一个数交换，然后在将第一个数作为基准（这样代码好写），进行普通快排即可。所以随机普通快排只是对普通快排进行了一下预处理而已。
+
+问题1：对于渐进有序的数组，效率很差 
+ 改进：随机选择基准。得到**随机化快速排序**。
+
+问题2：对于含有大量重复元素的序列，即使是随机化快排效率也很差 
+ 于是再次改进，得到 
+ **1.****双路快排**： 从两端向中间挺近，设立两个区：*小于等于区，大于等于区* 
+ **2.****三路快排**： 从两端向中间挺近，设立三个区：*小与区，等于区，大于区*
 
 ### Sorting 大结构
 
@@ -168,15 +194,11 @@ $$
 
 ### bucket sort and radix sort
 
-
-
 bucket sort 建1000个桶 , 
 
 radix sort 建10个桶, 按最低位排序.  然后按十位排序. 按百位 T= O(P+B) P是pass  = 3 pass,
 
 B 是bucket 的数量, B =  10 . 在线性时间内排序.
-
-
 
 MSD  most significant digit sort  4个桶,每个桶可以独立排
 
@@ -184,3 +206,42 @@ LSD 必须在前一次排序基础上排序.
 
 LSD总是比MSD快吗? 不一定
 
+
+
+#### 基数排序(radix sort）
+
+是属于“分配式排序”（distribution sort），又称“桶子法”（bucket sort）或bin sort，顾名思义，它是透过键值的部份资讯，将要排序的元素分配至某些“桶”中，藉以达到排序的作用，基数排序法是属于稳定性的排序，其时间复杂度为[*O ( d(n+radix ) )*](http://blog.csdn.net/wu_lai_314/article/details/8475237)，其中r为所采取的基数，而m为堆数，在某些时候，基数排序法的效率高于其它的比较性排序法（比较性排序法的时间复杂度下限是O（n log n））。
+
+基数排序的方式可以采用LSD（Least sgnificant digital）或MSD（Most sgnificant digital），LSD的排序方式由键值的最右边开始，而MSD则相反，由键值的最左边开始。 LSD的基数排序适用于位数小的数列，如果位数多的话，使用MSD的效率会比较好，MSD的方式恰与LSD相反，是由高位数为基底开始进行分配，其他的演算方式则都相同。 
+
+基数排序
+ 它是一种稳定的排序算法，但有一定的局限性：
+ 　1、关键字可分解。
+ 　2、记录的关键字位数较少，如果密集更好
+ 　3、如果是数字时，最好是无符号的，否则将增加相应的映射复杂度，可先将其正负分开排序。
+
+ 
+
+ 
+
+### 作业:
+
+
+
+During the sorting, processing every element which is not yet at its final position is called a "run". Which of the following cannot be the result after the second run of quicksort?
+
+只需要掌握一点就可以解出这个问题：每趟排序就有一个元素排在了最终的位置上。那么就是说，第n趟结束，至少有n个元素已经排在了最终的位置上。
+
+所以我们把最终排序结果写出来：2,3,4,5,6,7,9去与每一项做比较即可快速判断。
+
+ 
+
+When running internal sorting, if merge sort is chosen instead of insertion sort, the possible reason should be:
+
+1. The     code of merge sort is shorter X insertion sort 更短。 
+2. Merge     sort takes less space X 不需要空间
+3. Merge     sort runs faster 对
+
+Among the following sorting methods, which ones will be slowed down if we store the elements in a linked structure instead of a sequential structure?
+
+ 

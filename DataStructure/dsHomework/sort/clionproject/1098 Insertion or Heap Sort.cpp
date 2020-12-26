@@ -57,7 +57,7 @@ void PercolateDown( int p, PriorityQueue H ){
     }
     H->Elements[p] = tmp;
 }
-
+/*
 int main()
 {
     int n;
@@ -104,6 +104,7 @@ int main()
     }
     return 0;
 }
+*/
 /*
  *   partial accepted  , try the following input
  *

@@ -154,6 +154,33 @@ clionproject\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\1098_Insertion_or_Heap_Sort.cpp.s
 .PHONY : 1098_Insertion_or_Heap_Sort.cpp.s
 
+Arrangement_of_Computation_Tasks.obj: Arrangement_of_Computation_Tasks.cpp.obj
+
+.PHONY : Arrangement_of_Computation_Tasks.obj
+
+# target to build an object file
+Arrangement_of_Computation_Tasks.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\Arrangement_of_Computation_Tasks.cpp.obj
+.PHONY : Arrangement_of_Computation_Tasks.cpp.obj
+
+Arrangement_of_Computation_Tasks.i: Arrangement_of_Computation_Tasks.cpp.i
+
+.PHONY : Arrangement_of_Computation_Tasks.i
+
+# target to preprocess a source file
+Arrangement_of_Computation_Tasks.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\Arrangement_of_Computation_Tasks.cpp.i
+.PHONY : Arrangement_of_Computation_Tasks.cpp.i
+
+Arrangement_of_Computation_Tasks.s: Arrangement_of_Computation_Tasks.cpp.s
+
+.PHONY : Arrangement_of_Computation_Tasks.s
+
+# target to generate assembly for a file
+Arrangement_of_Computation_Tasks.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\Arrangement_of_Computation_Tasks.cpp.s
+.PHONY : Arrangement_of_Computation_Tasks.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -193,6 +220,9 @@ help:
 	@echo ... 1098_Insertion_or_Heap_Sort.obj
 	@echo ... 1098_Insertion_or_Heap_Sort.i
 	@echo ... 1098_Insertion_or_Heap_Sort.s
+	@echo ... Arrangement_of_Computation_Tasks.obj
+	@echo ... Arrangement_of_Computation_Tasks.i
+	@echo ... Arrangement_of_Computation_Tasks.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

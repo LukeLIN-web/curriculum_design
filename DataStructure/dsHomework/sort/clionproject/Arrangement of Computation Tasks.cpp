@@ -95,18 +95,16 @@ int main(){
         vt = & mapIt->second;
         sort(vt->begin(),vt->end(),comp);//define a customer compare rule
     }
-    // sort finished
- // we can use iterator,notice we need change value so don't use const iterator
+ // sort finished, we can use iterator,notice we need change value so don't use const iterator
  // sort default from small to big , sort finished in 12.28 23:26, we can
-//        sort(vt->begin(),vt->end(),comp);//define a customer compare rule
-//        // sort method actually does not take the number corresponding to the last address.
-//        // vector，set，map,The values taken out by the end() of these containers are not actually the last values
-    for(auto it : m1){
-        vector<time>vt = it.second;
-        for (auto & it2 : vt){
-            cout << "hours: " << it2.hours << " min: " << it2.minutes << endl;
-        } //sort(it.second.begin(),it.second.end());
-    }
+        // sort method actually does not take the number corresponding to the last address.
+        // vector，set，map,The values taken out by the end() of these containers are not actually the last values
+//    for(auto it : m1){
+//        vector<time>vt = it.second;
+//        for (auto & it2 : vt){
+//            cout << "hours: " << it2.hours << " min: " << it2.minutes << endl;
+//        } //for debug
+//    }
     // output the longest.
     //first we write down the beginning time of each server .
     // how to deal with switch from different servers?

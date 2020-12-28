@@ -95,6 +95,8 @@ emplace_back() 和 push_back() 效果一样.
 
 最多的方法是先用eraser函数擦除，可以通过key 擦除, 然后我们再进行赋值
 
+不要局部变量,其实全局变量设iterator也可以修改,用一个指针.
+
 #### unordered_map 容器
 
 | 成员方法 | 功能                                               |

@@ -18,6 +18,7 @@ Recycling b. The algorithm should be nlogn's
 #include<vector>
 #include <map>
 #include <algorithm>
+#include <set>
 
 #define SEC_PER_MIN 60
 using namespace std;
@@ -29,18 +30,9 @@ public:
     int seconds;
 };
 time::time(int h, int m, int s):hours(h),minutes(m),seconds(s) {} // constructor
-class server{
-public:
-    server(time start,time end,string name);
-    time start;
-    time end;
-    string name;
-};
-server::server(time start, time end, string name):start(start),end(end),name(std::move(name)) {} //init list
 //define smaller a earlier, return 1. b earlier, return 0;
 bool comp(const time &a, const time &b){
-    if (a.hours >= b.hours)// bigger is later.
-    {
+    if (a.hours >= b.hours){            // bigger is later.
         if (a.hours > b.hours) {
             return false;
         }//else if(a.hours == b.hours)
@@ -52,6 +44,18 @@ bool comp(const time &a, const time &b){
         else return a.seconds < b.seconds;
     } else return true;
 }
+
+class server{  //every pair
+public:
+    server(time start,time end,string name);
+    time start;
+    time end;
+    string name;
+    bool operator< (const server &b) const {  // sort by the starting time point ascending
+        return comp(this->start, b.start); // true is earlier,  false;
+    }
+};
+server::server(time start, time end, string name):start(start),end(end),name(std::move(name)) {} //init list
 
 int main(){
     int sec,min,hours,left;
@@ -98,10 +102,16 @@ int main(){
     // output the longest.
     //first we write down the beginning time of each server .
     // how to deal with switch from different servers?
-
-    for(auto it : m1){
-// move all into set. they will be sorted automatically.
+    set<server> ser1;// store all the time block, each server has <start,end>
+    for(auto it : m1){// move all into set. they will be sorted automatically.
+        int count = it.second.size();
+        for (int i = 0; i < count;i += 2){
+            cout << "hour: " << it.second[i].hours << " min: " << it.second[i].minutes << endl;// for debug
+            ser1.insert(server(it.second[i], it.second[i + 1], it.first) );// insert into set
+        }
     }
+    //In fact, there is no need to distinguish between servers in the set, we can save first
+
     for(i = 0;i < K;i++ ){  // input the queries
         cin >> hours;
         cin >> dev; // enter ':'

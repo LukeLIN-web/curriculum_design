@@ -6,10 +6,16 @@
 
 #IncludeRegexTransform: 
 
-D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/1098 Insertion or Heap Sort.cpp
+D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/Arrangement of Computation Tasks.cpp
+string
+-
 iostream
 -
-cstdio
+utility
+-
+vector
+-
+map
 -
 algorithm
 -

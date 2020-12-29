@@ -30,19 +30,26 @@ public:
     int seconds;
 };
 time::time(int h, int m, int s):hours(h),minutes(m),seconds(s) {} // constructor
-//define smaller a earlier, return 1. b earlier, return 0;
-bool comp(const time &a, const time &b){
-    if (a.hours >= b.hours){            // bigger is later.
-        if (a.hours > b.hours) {
-            return false;
-        }//else if(a.hours == b.hours)
-        else if (a.minutes < b.minutes) {
+//define smaller a earlier, return 1. b  earlier, return 0;
+bool comp(const time &a, const time &b){  // equal time will return true, We judge it earlier so we can link them.
+    if (a.hours > b.hours)
+        return false;               // bigger is later.
+    else  if (a.hours < b.hours) {
             return true;
-        } else if (a.minutes > b.minutes) {
+        }
+    else{            //else if(a.hours == b.hours)
+        if(a.minutes < b.minutes) {
+            return true;
+        } else if(a.minutes >b.minutes ){
             return false;
-        }// else if(a.minutes == b.minutes)
-        else return a.seconds < b.seconds;
-    } else return true;
+        }
+        else{
+            if (a.seconds >= b.seconds) {
+                return false;// same time return false. such as sample 13:00:00
+            }
+            else  return true;//
+        }
+    }
 }
 int timeSub(const time &a, const time &b){   // a should later than  b
     return (a.hours-b.hours)*3600+(a.minutes-b.minutes)*60+(a.seconds-b.seconds);
@@ -122,12 +129,17 @@ int main(){
     int tempT = 0;// tempT store current length of time.
     int maxT = 0;
     while (comp(itNext->start, it->end) && itNext != ser1.end() ) {  // if there is a block "itNext" start before the "it" end,
+        if(comp(itNext->end,it->end)) // itNext end before it end,  ignore it NExt
+            itNext++;
+        else{   // itNext can link after the it
             tempT += timeSub(itNext->start, it->start);//tempT =
-            it++;
+            it = itNext;
             itNext = std::next(it);
+        }
         cout << "hour: " << it->start.hours << " min: " << it->start.minutes << endl;
+        cout << "next hour: " << itNext->start.hours << " min: " << itNext->start.minutes << endl;
     }// if don't have any block can continue
-    tempT += timeSub(it->start, it->end);
+    tempT += timeSub(it->end, it->start);
     maxT = tempT;
     printf("%d\n",maxT);// the longest computation task you could run
     for(i = 0;i < K;i++ ){  // input the queries

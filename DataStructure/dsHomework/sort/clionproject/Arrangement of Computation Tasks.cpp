@@ -52,7 +52,7 @@ int timeSub(const time &a, const time &b){   // a should later than  b
 }
 class server{  //every pair
 public:
-    server(time start,time end,string name);
+    server(time start,time end);
     time start;
     time end;
     string name;
@@ -60,13 +60,13 @@ public:
         return comp(this->start, b.start); // true is earlier,  false;
     }
 };
-server::server(time start, time end, string name):start(start),end(end),name(std::move(name)) {} //init list
+server::server(time start, time end):start(start),end(end) {} //init list
 
 int main() {
     int sec, min, hours, N, K, i;
     cin >> N >> K;
     string tempS;
-    map<string, std::vector<time>> m1;
+    map<string, std::vector<time>> m1;//Save input in the map
     char dev;
     for (i = 0; i < N; i++) { // input all the time point
         cin >> tempS;cin >> hours;cin >> dev; //end when meet space
@@ -77,8 +77,7 @@ int main() {
         tmpV.push_back(t1);//record the hour, minute and seconds
         if (m1.empty()) { // if don't have any server, add directly,
             m1.insert(make_pair(tempS, tmpV)); //mapPerson.insert(pair < int,string > (1,"Jim"));
-        }
-            //else compare.
+        }//else compare.
         else { // find the map server then put the time into
             if (m1.find(tempS) ==
                 m1.end()) {// returns an iterator to it if found,otherwise it returns an iterator to map::end.
@@ -90,7 +89,7 @@ int main() {
     }// it is difficult to change the vector in the map
     map<string, std::vector<time>>::iterator mapIt;// define iterator as a global variable for change data
     std::vector<time> *vt;//pointer for change data
-    for (mapIt = m1.begin(); mapIt != m1.end(); mapIt++) {
+    for (mapIt = m1.begin(); mapIt != m1.end(); mapIt++) { //Sort the time in the map
         vt = &mapIt->second;
         sort(vt->begin(), vt->end(), comp);//define a customer compare rule
     }// sort finished, we can use iterator,notice we need change value so don't use const iterator
@@ -102,17 +101,17 @@ int main() {
 //        } //for debug
 //    }// before there, is all  correct  10:58 12/30
 
-    //first we write down the beginning time of each server .
+    //first we Save server pair in the set
     set<server> ser1;// store all the time block, each server has <start,end>
     for (auto it : m1) {// move all into set. they will be sorted automatically.
         int count = it.second.size();// the number of one server's all time point
         for (int i = 0; i + 1 < count; i += 2) {
-            cout << "hour: " << it.second[i].hours << " min: " << it.second[i].minutes << endl;// for debug
-            ser1.insert(server(it.second[i], it.second[i + 1], it.first));// insert into set
-        }
+//            cout << "hour: " << it.second[i].hours << " min: " << it.second[i].minutes << endl;// for debug
+            ser1.insert(server(it.second[i], it.second[i + 1]));// insert into set
+        }//Save server pair in the set
     }// before there, is all  correct  10:59 12/30
     //In fact, there is no need to distinguish between servers in the set, we now save , may delete it in the future
-    // output each query results
+
     auto it = ser1.begin(); // traverse the set.
     auto itNext = std::next(it);// find next the beginning time .
     vector<int> block;
@@ -134,8 +133,8 @@ int main() {
                 it = itNext;
                 itNext = std::next(it);
             }
-            cout << "hour: " << it->start.hours << " min: " << it->start.minutes << endl;
-            cout << "itNext->start next hour: " << itNext->start.hours << " min: " << itNext->start.minutes << endl;
+//            cout << "hour: " << it->start.hours << " min: " << it->start.minutes << endl;
+//            cout << "itNext->start next hour: " << itNext->start.hours << " min: " << itNext->start.minutes << endl;
         }// if don't have any block can continue
         qTmp += timeSub(it->end, it->start);// finished the link
         block.push_back(qTmp);// push the link block
@@ -153,7 +152,7 @@ int main() {
             if(QueryL < i)
                 total += i- QueryL+1;
         }
-        printf("%d\n",total);
+        printf("%d\n",total);// output each query results
     }
     return 0;
 }

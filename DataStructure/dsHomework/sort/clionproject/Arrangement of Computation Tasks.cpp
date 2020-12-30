@@ -79,11 +79,10 @@ int main() {
             m1.insert(make_pair(tempS, tmpV)); //mapPerson.insert(pair < int,string > (1,"Jim"));
         }//else compare.
         else { // find the map server then put the time into
-            if (m1.find(tempS) ==
-                m1.end()) {// returns an iterator to it if found,otherwise it returns an iterator to map::end.
-                m1.insert(make_pair(tempS, tmpV));
+            if (m1.count(tempS)  ) { // exist return 1 , else return 0
+                m1.find(tempS)->second.push_back(t1);  // find returns an iterator to it if found,otherwise it returns an iterator to map::end.
             } else {
-                m1.find(tempS)->second.push_back(t1);// finally we will sort vector
+                m1.insert(make_pair(tempS, tmpV));// finally we will sort the vector in map
             }
         }
     }// it is difficult to change the vector in the map
@@ -102,55 +101,60 @@ int main() {
 //    }// before there, is all  correct  10:58 12/30
 
     //first we Save server pair in the set
-    set<server> ser1;// store all the time block, each server has <start,end>
+    set<server> ser1;// store all the time blocks, each server has <start,end>
     for (auto it : m1) {// move all into set. they will be sorted automatically.
         int count = it.second.size();// the number of one server's all time point
         for (int i = 0; i + 1 < count; i += 2) {
-//            cout << "hour: " << it.second[i].hours << " min: " << it.second[i].minutes << endl;// for debug
             ser1.insert(server(it.second[i], it.second[i + 1]));// insert into set
         }//Save server pair in the set
     }// before there, is all  correct  10:59 12/30
     //In fact, there is no need to distinguish between servers in the set, we now save , may delete it in the future
 
     auto it = ser1.begin(); // traverse the set.
-    auto itNext = std::next(it);// find next the beginning time .
-    vector<int> block;
-    it = ser1.begin(); // traverse the set.
-    itNext = std::next(it);// find next the beginning time .
-    while (itNext != ser1.end()) { // traverse all block
+    set<server>::iterator itNext;
+    if(!ser1.empty()) {
+        itNext = std::next(it);// find next the beginning time .
+    }
+    else{
+        cout <<"don't have any server record!!";
+        return 0;
+    }
+    vector<int> blocks;//save each blocks
+    if(itNext == ser1.end()){
+        blocks.push_back(timeSub(it->end, it->start));
+    }// only have one element;
+    while (itNext != ser1.end()) { // traverse all blocks
         int qTmp = 0;// query tmp store current length of time.
         while (itNext != ser1.end() &&
-               comp(itNext->start, it->end)) {  // if there is a block "itNext" start before the "it" end,
+               comp(itNext->start, it->end)) {  // if there is a blocks "itNext" start before the "it" end,
             while (itNext != ser1.end() && comp(itNext->end, it->end)) { // itNext end before it end,  cannot ignore
-                  // can process the query
-                    block.push_back( timeSub(itNext->end, itNext->start) );// the total number of valid time points for starting the task.
-                // add then jump out the itNext
+                blocks.push_back(timeSub(itNext->end, itNext->start) );// the total number of valid time points for starting the task.
                 itNext++; //traverse all "it contains "
-            }
-            // have processed all "it contains ".
+            }// have processed all "it contains ".
             if (itNext != ser1.end() && comp(itNext->start, it->end)) {   // itNext can link after the it 这一段连起来的算完.
-                qTmp += timeSub(itNext->start, it->start);//tempT
+                qTmp += timeSub(itNext->start, it->start);// add then jump out the itNext
                 it = itNext;
                 itNext = std::next(it);
             }
 //            cout << "hour: " << it->start.hours << " min: " << it->start.minutes << endl;
 //            cout << "itNext->start next hour: " << itNext->start.hours << " min: " << itNext->start.minutes << endl;
-        }// if don't have any block can continue
+        }// if don't have any blocks can continue
         qTmp += timeSub(it->end, it->start);// finished the link
-        block.push_back(qTmp);// push the link block
-        it = itNext; itNext++;// continue traverse
+        blocks.push_back(qTmp);// push the link blocks
+        if(itNext!= ser1.end()){
+        it = itNext; itNext++;}// continue traverse
     }//
-    sort(block.begin(),block.end());
-    printf("%d\n", block.back());//output the the longest computation task you could run
+    sort(blocks.begin(), blocks.end());
+    printf("%d\n", blocks.back());//output the the longest computation task you could run
     // the index of vector , then we compare them with query  the length of one link
     for(i = 0;i < K;i++ ){  // input the queries
         cin >> hours;cin >> dev; // enter ':'
         cin >> min;cin >> dev;cin >> sec;// enter ':'
         int QueryL = timeSub(time(hours,min,sec),time(0,0,0));
         int total = 0;
-        for(int i : block){
+        for(int i : blocks){
             if(QueryL < i)
-                total += i- QueryL+1;
+                total += i- QueryL+1;//can process the query
         }
         printf("%d\n",total);// output each query results
     }

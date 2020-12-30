@@ -125,7 +125,7 @@ pair<string,double> myshopping ("baking powder",0.3);
 
 **为何map和set的插入删除效率比用其他序列容器高？**
 
-大部分人说，很简单，因为对于关联容器来说，不需要做内存拷贝和内存移动。
+大部分人说，很简单，因为对于关联容器来说，不需要做内存拷贝和内存移动。插入删除为logn;
 
 - set以RBTree作为底层容器
 - 所得元素的只有key没有value，value就是key

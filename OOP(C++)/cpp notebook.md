@@ -153,6 +153,10 @@ Set和Vector的区别在于Set不包含重复的数据。Set和Map的区别在�
 
 #### vector
 
+
+
+最后一个元素 return vec.back();
+
 vector排序, 用自定义的结构体进行sort算法
 
 这时候需要自己定义个比较函数，因为sort算法是基于容器中的元素是可以两两比较的，然后从小到大排序，所以要自定义怎么样才是小于（'<'）
@@ -197,10 +201,11 @@ advance() 函数本身不会检测 it 迭代器移动 n 个位置的可行性，
 #include <vector>
  int main() {    
  std::vector<int> v{1,2,3};    *// 返回 第二个元素（begin的第一个后继)*    
-auto nx = std::next(v.begin());    *// 2*    
-std::cout << *nx << std::endl;  
+auto it = std::next(v.begin());    *// 2*    
+std::cout << *it << std::endl;  
 auto nx = std::next(it, 2);// it  -- 迭代指针
 //   n  -- 向前进的元素个数，缺省默认为1 ,
+       std::cout << *it << ' ' << *nx << '\n';//会输出1 3
   return 0; }
 ```
 

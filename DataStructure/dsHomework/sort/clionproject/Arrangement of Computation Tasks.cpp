@@ -95,8 +95,6 @@ int main() {
         sort(vt->begin(), vt->end(), comp);//define a customer compare rule
     }// sort finished, we can use iterator,notice we need change value so don't use const iterator
     // sort default from small to big , sort finished in 12.28 23:26, we can
-    // sort method actually does not take the number corresponding to the last address.
-    // vector，set，map,The values taken out by the end() of these containers are not actually the last values
 //    for(auto it : m1){
 //        vector<time>vt = it.second;
 //        for (auto & it2 : vt){
@@ -107,19 +105,17 @@ int main() {
     //first we write down the beginning time of each server .
     set<server> ser1;// store all the time block, each server has <start,end>
     for (auto it : m1) {// move all into set. they will be sorted automatically.
-        int count = it.second.size();
+        int count = it.second.size();// the number of one server's all time point
         for (int i = 0; i + 1 < count; i += 2) {
             cout << "hour: " << it.second[i].hours << " min: " << it.second[i].minutes << endl;// for debug
             ser1.insert(server(it.second[i], it.second[i + 1], it.first));// insert into set
         }
     }// before there, is all  correct  10:59 12/30
     //In fact, there is no need to distinguish between servers in the set, we now save , may delete it in the future
+    // output each query results
     auto it = ser1.begin(); // traverse the set.
     auto itNext = std::next(it);// find next the beginning time .
-
-    // output each query results
     vector<int> block;
-    int qMax = 0;
     it = ser1.begin(); // traverse the set.
     itNext = std::next(it);// find next the beginning time .
     while (itNext != ser1.end()) { // traverse all block
@@ -147,7 +143,7 @@ int main() {
     }//
     sort(block.begin(),block.end());
     printf("%d\n", block.back());//output the the longest computation task you could run
-    // the index of vector , then we compare them with query .; // the length of one link
+    // the index of vector , then we compare them with query  the length of one link
     for(i = 0;i < K;i++ ){  // input the queries
         cin >> hours;cin >> dev; // enter ':'
         cin >> min;cin >> dev;cin >> sec;// enter ':'
@@ -155,7 +151,7 @@ int main() {
         int total = 0;
         for(int i : block){
             if(QueryL < i)
-                total += i- QueryL;
+                total += i- QueryL+1;
         }
         printf("%d\n",total);
     }

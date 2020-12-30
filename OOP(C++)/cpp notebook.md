@@ -155,7 +155,11 @@ Set和Vector的区别在于Set不包含重复的数据。Set和Map的区别在�
 
 
 
-最后一个元素 return vec.back();
+最后一个元素 `return vec.back();`
+
+ vector，set，map,The values taken out by the end() of these containers are not actually the last values, sort method actually does not take the number corresponding to the last address.
+
+`sort(vt.begin(),vt.end());`
 
 vector排序, 用自定义的结构体进行sort算法
 

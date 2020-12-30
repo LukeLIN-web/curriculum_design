@@ -1,0 +1,1 @@
+open the   by clion , compile it by  c++11 or higher version.

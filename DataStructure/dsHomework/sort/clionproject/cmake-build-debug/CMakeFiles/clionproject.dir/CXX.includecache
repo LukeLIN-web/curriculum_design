@@ -6,19 +6,11 @@
 
 #IncludeRegexTransform: 
 
-D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/Arrangement of Computation Tasks.cpp
-string
--
+D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/ptaNewyear1.cpp
 iostream
 -
-utility
--
-vector
--
-map
+queue
 -
 algorithm
--
-set
 -
 

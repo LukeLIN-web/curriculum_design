@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/clionproject.dir/1098_Insertion_or_Heap_Sort.cpp.obj"
   "CMakeFiles/clionproject.dir/Arrangement_of_Computation_Tasks.cpp.obj"
   "CMakeFiles/clionproject.dir/main.cpp.obj"
+  "CMakeFiles/clionproject.dir/ptaNewyear1.cpp.obj"
   "clionproject.exe"
   "clionproject.exe.manifest"
   "clionproject.lib"

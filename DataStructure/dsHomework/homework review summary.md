@@ -32,8 +32,22 @@ n0+n1+n2 =2016=1+0*n0+1*n1+2*n2
 
 
 
-HW5
+#### HW5
 
 In a binary search tree which contains several integer keys including 4, 5, and 6, if 4 and 6 are on the same level, then 5 must be their parent. X
 
 不是能有两个5, 而是可以很高.
+
+
+
+#### HW13
+
+题一If there are less than 20 inversions in an integer array, the Quick Sort will be the best method among Quick Sort, Heap Sort and Insertion Sort. 错的.
+
+题二Among the following sorting methods, which ones will be slowed down if we store the elements in a linked structure instead of a sequential structure?
+
+1 Insertion sort; 2. Selection Sort; 3. Bubble sort; 4. Shell sort; 5. Heap sort
+
+链表查询较慢, 
+
+题三 During the sorting, processing every element which is not yet at its final position is called a "run". Which of the following cannot be the result after the second run of quicksort?

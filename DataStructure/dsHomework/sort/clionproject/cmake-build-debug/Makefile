@@ -208,6 +208,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\main.cpp.s
 .PHONY : main.cpp.s
 
+ptaNewyear1.obj: ptaNewyear1.cpp.obj
+
+.PHONY : ptaNewyear1.obj
+
+# target to build an object file
+ptaNewyear1.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\ptaNewyear1.cpp.obj
+.PHONY : ptaNewyear1.cpp.obj
+
+ptaNewyear1.i: ptaNewyear1.cpp.i
+
+.PHONY : ptaNewyear1.i
+
+# target to preprocess a source file
+ptaNewyear1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\ptaNewyear1.cpp.i
+.PHONY : ptaNewyear1.cpp.i
+
+ptaNewyear1.s: ptaNewyear1.cpp.s
+
+.PHONY : ptaNewyear1.s
+
+# target to generate assembly for a file
+ptaNewyear1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\ptaNewyear1.cpp.s
+.PHONY : ptaNewyear1.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -226,6 +253,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... ptaNewyear1.obj
+	@echo ... ptaNewyear1.i
+	@echo ... ptaNewyear1.s
 .PHONY : help
 
 

@@ -11,6 +11,7 @@ And then cycle the next one as well.
 If not, then maxtime = aend-astat;
 Recycling b. The algorithm should be nlogn's
  */
+/*
 #include<string>
 #include<iostream>
 #include <utility>
@@ -128,7 +129,8 @@ int main() {
         while (itNext != ser1.end() &&
                comp(itNext->start, it->end)) {  // if there is a blocks "itNext" start before the "it" end,
             while (itNext != ser1.end() && comp(itNext->end, it->end)) { // itNext end before it end,  cannot ignore
-                blocks.push_back(timeSub(itNext->end, itNext->start) );// the total number of valid time points for starting the task.
+                blocks.push_back(timeSub(itNext->end,
+                                         itNext->start));// the total number of valid time points for starting the task.
                 itNext++; //traverse all "it contains "
             }// have processed all "it contains ".
             if (itNext != ser1.end() && comp(itNext->start, it->end)) {   // itNext can link after the it 这一段连起来的算完.
@@ -141,8 +143,11 @@ int main() {
         }// if don't have any blocks can continue
         qTmp += timeSub(it->end, it->start);// finished the link
         blocks.push_back(qTmp);// push the link blocks
-        if(itNext!= ser1.end()){
-        it = itNext; itNext++;}// continue traverse
+        if (itNext != ser1.end()) {
+            it = itNext;itNext++;
+        }// continue traverse
+        if (itNext == ser1.end())
+            blocks.push_back(timeSub(it->end, it->start));// push the final block
     }//
     sort(blocks.begin(), blocks.end());
     printf("%d\n", blocks.back());//output the the longest computation task you could run
@@ -161,3 +166,4 @@ int main() {
     return 0;
 }
 
+*/

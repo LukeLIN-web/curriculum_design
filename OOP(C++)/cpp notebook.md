@@ -173,6 +173,17 @@ vector排序, 用自定义的结构体进行sort算法
   auto p1 = std::make_pair(names[1], std::ref(score[1]));
 ```
 
+#### queue
+
+```cpp
+q.top();// return highest-priority element 也就是先入的.
+q.pop()// erase highest-priority element
+```
+
+优先队列
+
+priority_queue 模板有 3 个参数，其中两个有默认的参数；第一个参数是存储对象的类型，第二个参数是存储元素的底层容器，第三个参数是函数对象，它定义了一个用来决定元素顺序的断言
+
 ### 迭代器
 
 #### std::advance
@@ -277,3 +288,9 @@ true 和 false 并不是某某库做的 define，他们是 C/C++ 的关键字，
 
 
 错误:调用不带对象参数的非静态成员函数。出现这个错误的原因是，类没有实例化 。
+
+
+
+int i不会回带参数，而int &i可以回带参数,int &i 相当于别名，而int i 只是拷贝
+
+ int i 可赋予常量，而int & i 不能

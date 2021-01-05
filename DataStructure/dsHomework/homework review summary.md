@@ -42,7 +42,7 @@ In a binary search tree which contains several integer keys including 4, 5, and 
 
 #### HW13
 
-题一If there are less than 20 inversions in an integer array, the Quick Sort will be the best method among Quick Sort, Heap Sort and Insertion Sort. 错的.
+题一If there are less than 20 inversions in an integer array, the Quick Sort will be the best method among Quick Sort, Heap Sort and Insertion Sort. 错的.  数组长度越大, 快排效果越好.
 
 题二Among the following sorting methods, which ones will be slowed down if we store the elements in a linked structure instead of a sequential structure?
 
@@ -51,3 +51,5 @@ In a binary search tree which contains several integer keys including 4, 5, and 
 链表查询较慢, 
 
 题三 During the sorting, processing every element which is not yet at its final position is called a "run". Which of the following cannot be the result after the second run of quicksort?
+
+快速排序每一轮的过程, 观察有几个元素在正确的位置, 每轮当分割点的元素一定会在正确的位置. 

@@ -79,6 +79,8 @@ linear probing( 探查性的)冲突了之后, 就放下一个, 下一个有了,�
 
 平方探查 f(i) = c1 i^2+c2 i;
 
+只要至少一半是空的,就一定能找到. 否则可能找不到空.
+
 - 随机探测法
 - 双散列（Double hashing）
 
@@ -88,7 +90,17 @@ linear probing( 探查性的)冲突了之后, 就放下一个, 下一个有了,�
 
 比较接近理想的一致散列.
 
-- 再哈希法
+- 再哈希法rehashing
+
+a insertion 失败, 或者half full 或者table reaches a certain load factor. 
+ 用rehashing. 
+
+build another table 两倍大, scan down original hash table, use a new function to hash into new table.
+
+
+
+
+
 - 建立一个公共溢出区
 
 

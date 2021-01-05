@@ -232,9 +232,15 @@ During the sorting, processing every element which is not yet at its final posit
 
 只需要掌握一点就可以解出这个问题：每趟排序就有一个元素排在了最终的位置上。那么就是说，第n趟结束，至少有n个元素已经排在了最终的位置上。
 
+每轮当分割点的元素,一定会在正确的位置.
+
 所以我们把最终排序结果写出来：2,3,4,5,6,7,9去与每一项做比较即可快速判断。
 
- 
+ 快排最理想的情况, 就是每轮都选到中间点,  这样两轮过后会有三个分割点, 
+
+如果选择了最值, 会有两个分割点.
+
+D没有选到最值, 又没有三个分割点, 是不可能的. 
 
 When running internal sorting, if merge sort is chosen instead of insertion sort, the possible reason should be:
 
@@ -245,3 +251,18 @@ When running internal sorting, if merge sort is chosen instead of insertion sort
 Among the following sorting methods, which ones will be slowed down if we store the elements in a linked structure instead of a sequential structure?
 
  
+
+#### external sorting
+
+考试不考,作为补充资料.
+
+
+
+#### polyphase merge
+
+k way merging using k+1 tapes.
+
+#### replacement selection
+
+
+

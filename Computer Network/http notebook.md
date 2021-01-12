@@ -1,3 +1,73 @@
+**HTTP就是一个用文本格式描述报文头并用双换行分隔报文头和内容，在TCP基础上实现的请求-响应模式的双向通信协议。**
+
+
+
+### 请求协议
+
+```http
+GET或POST 请求的url路径（一般是去掉域名的路径） HTTP协议版本号
+字段1名: 字段1值\r\n
+字段2名: 字段2值\r\n
+      ...
+字段n名 : 字段n值\r\n
+\r\n
+http协议包体内容
+```
+
+eg:浏览器组装的http数据包格式如下： 
+
+```http
+GET /index_2013.php HTTP/1.1\r\n
+Host: www.hootina.org\r\n
+Connection: keep-alive\r\n
+Upgrade-Insecure-Requests: 1\r\n
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 Safari/537.36\r\n
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\n
+Accept-Encoding: gzip, deflate\r\n
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8\r\n
+\r\n
+```
+
+这里只有head,get 一般没有package body  
+
+
+
+### 应答协议
+
+给客户端的应答协议与http请求协议有一点点差别，就是将请求的url路径换成所谓的http响应码，如200表示应答正常返回、404页面不存在。应答协议格式如下：
+
+```http
+GET或POST 响应码 HTTP协议版本号
+字段1名: 字段1值\r\n
+字段2名: 字段2值\r\n
+      ...
+字段n名 : 字段n值\r\n
+\r\n
+http协议包体内容
+```
+
+注册结果放在retData中，为了发给客户端，我们将结果中的特殊字符如双引号转码，如返回结果是：
+
+```text
+{"code":0, "msg":"ok"}
+```
+
+会被转码成：
+
+```http
+{%22code%22:0,%20%22msg%22:%22ok%22}
+```
+
+不满足一个http包头时的处理，如果某个客户端（不是使用浏览器）通过程序模拟了一个连接请求，但是迟迟不发含有\r\n\r\n的数据，这路连接将会一直占用。我们可以判断收到的数据长度，防止别有用心的客户端给我们的服务器乱发数据。我们假定，我们能处理的最大url长度是2048，如果用户发送的数据累积不含\r\n\r\n，且超过2048个，我们认为连接非法，将连接断开。
+
+如果一个客户端连上来不给我们发任何数据，这段逻辑就无能为力了。如果不断有客户端这么做，会浪费我们大量的连接资源，所以我们还需要一个定时器去定时检测哪些http连接超过一定时间内没给我们发数据，找到后将连接断开。这又涉及到服务器定时器如何设计了，关于这部分请参考我写的其他文章。链接：https://zhuanlan.zhihu.com/p/37198392
+
+### http怎么分割
+
+这里有三个变量，分别是username、password和appid，他们之间使用&符号分割，但是请注意的是，这不意味着传递多个POST变量时必须使用&符号分割，只不过这里是浏览器html表单（输入用户名和密码的文本框是html表单的一种）分割多个变量采用的默认方式而已。你可以根据你的需求，来自由定制，只要让服务器知道你的解析方式即可。
+
+如上图所示，由于http协议是基于tcp协议的，tcp协议是流式协议，包头部分可以通过多出的\r\n来分界，包体部分如何分界呢？这是协议本身要解决的问题。目前一般有两种方式，第一种方式就是在包头中有个content-Length字段，这个字段的值的大小标识了POST数据的长度，上图中55就是数据username=balloonwj%40qq.com&password=iloveyou&appid=otn的长度，服务器收到一个数据包后，先从包头解析出这个字段的值，再根据这个值去读取相应长度的作为http协议的包体数据。还有一个格式叫做http chunked技术（分块），大致意思是将大包分成小包
+
 
 
 ### cookie与session

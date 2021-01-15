@@ -6,8 +6,6 @@
 
 G::= graph, V = V(G) ::=  finite nonempty set of vertices(顶点), E = E(G) = finite set of edges.
 
-
-
 ##### 限制:
 
 1. 不用考虑多重边.
@@ -17,11 +15,9 @@ G::= graph, V = V(G) ::=  finite nonempty set of vertices(顶点), E = E(G) = fi
 
 完全图 complete graph 
 
-有最多的边. 边的数量有向图是 n(n-1)  无向图是 n(n-1)  /2
+**有最多的边. 边的数量有向图是 n(n-1)  ,无向图是 n(n-1)  /2** 常考
 
-vi -> vj
-
-vi is adjacent to vj, vj is adjacent(与…毗连的；邻近的) from vi; 
+vi -> vj ,  vi is adjacent to vj, vj is adjacent(与…毗连的；邻近的) from vi; 
 
 <vi , vj> is incident(事件) on vi and vj;
 
@@ -29,19 +25,15 @@ vi is adjacent to vj, vj is adjacent(与…毗连的；邻近的) from vi;
 
 无向图的极大连通子图称为G的**连通分量**( Connected Component)。任何[连通图](https://baike.baidu.com/item/连通图)的连通分量只有一个，即是其自身，非连通的[无向图](https://baike.baidu.com/item/无向图)有多个连通分量。 
 
-
-
 连通图: 每一个顶点都是connected.  
 
 强连通图:   有向图每一个顶点都是互相可以有路径到达
 
+in degree  入度,就是进来的边
 
+out degree 出度, 出去的边
 
-in degree  进来的边
-
-out degree 出去的边
-
-一个图所有degree 加起来/2 就是总边数 ,用来推导一些式子.
+**一个图所有degree 加起来/2 就是总边数e** ,用来推导一些式子.
 
 ##### 图的表示
 
@@ -50,23 +42,18 @@ out degree 出去的边
 ```c
 adj_mat[i][j] = 1 ;
     //无向图,adj_mat是对称的,可以存在数组中.
-
 ```
 
 链表法  adjacent list
 
-```c
-// 有向图可以看出outdegree,需要 求indegree
+// 有向图可以看出outdegree,需要求indegree
 //建立一个 反向的lists
-```
 
 adjacent multilists
 
 一条边 数据结构为  {mark, v1,v2}
 
 mark可以用来看这条边有没有统计过
-
-
 
 ##### 定义
 
@@ -123,8 +110,6 @@ void Topsort( Graph G )
 //最后所有都在topological sort
 ```
 
-
-
 #### 作业
 
 [数据结构与算法（周测5-最短路径） - nonlinearthink - 博客园 (cnblogs.com)](https://www.cnblogs.com/nonlinearthink/p/11854784.html)
@@ -133,37 +118,29 @@ void Topsort( Graph G )
 
 A graph with 90 vertices and 20 edges must have at least __ connected component(s).
 
-解法:
+解法:最小的是一个20条边的生成树.对连通图进行遍历，过程中所经过的边和顶点的组合可看做是一棵普通树，通常称为生成树。
 
-最小的是一个20条边的生成树.对连通图进行遍历，过程中所经过的边和顶点的组合可看做是一棵普通树，通常称为生成树。
-
-连通图中的生成树必须满足以下 2 个条件：
+连通图的生成树必须满足以下 2 个条件：
 
 1. 包含连通图中所有的顶点；
 2. 任意两顶点之间有且仅有一条通路；
 
-问题二: 
-
-Given an undirected graph G with 16 edges, where 3 vertices are of degree 4, 4 vertices are of degree 3, and all the other vertices are of degrees less than 3. Then G must have at least __ vertices.
+问题二: Given an undirected graph G with 16 edges, where 3 vertices are of degree 4, 4 vertices are of degree 3, and all the other vertices are of degrees less than 3. Then G must have at least __ vertices.
 
 解法 : Sum of vertex degrees 2 number of edges  16*2 -12 -12 = 8 
 
-问题三:
-
-Let P be the shortest path from S to T. If the weight of every edge in the graph is incremented by 2, P will still be the shortest path from S to T.
+问题三:Let P be the shortest path from S to T. If the weight of every edge in the graph is incremented by 2, P will still be the shortest path from S to T.
 
 解法: 假如说最短路径上一共有10条边，而另一条路径虽然比最短路径长，但它只有一条边，如果全加1，就会导致边少的路径成为新的最短路径。
 
-问题四: 
-
-若要求在找到从S到其他顶点最短路的同时，还给出不同的最短路的条数，我们可以将Dijkstra算法略作修改，增加一个count[]数组：count[V]记录S到顶点V的最短路径有多少条。则count[V]应该被初始化为：
+问题四: 若要求在找到从S到其他顶点最短路的同时，还给出不同的最短路的条数，我们可以将Dijkstra算法略作修改，增加一个count[]数组：count[V]记录S到顶点V的最短路径有多少条。则count[V]应该被初始化为：
 
   A.对所有顶点都有count[V]=1
   B.对所有顶点都有count[V]=0
   C.count[S]=1;对于其他顶点V则令count[V]=0
   D.count[S]=0;对于其他顶点V则令count[V]=1
 
-C , 由于S到S一定有一条长度为0的边，所以count初始化为1，其他则是0 .
+答案为 C , 由于S到S一定有一条长度为0的边，所以count初始化为1，其他则是0 .
 
 ##### 拓扑序列
 
@@ -189,8 +166,6 @@ Dijkstra 的算法是一种算法，用于查找图形中两个节点之间的�
 
 给出的序列是Dijkstra序列的关键在于，序列的第i个数x的dist[x]是等于当时求到的最短路径。
 
-
-
 ##### 复杂度
 
 [Dijkstra算法能得出最短路径的最优解，但由于它遍历计算的节点很多，所以效率低。]
@@ -203,8 +178,6 @@ Dijkstra 的算法是一种算法，用于查找图形中两个节点之间的�
 
 当用到二叉堆时候，算法所需的时间为O(( V+E )logE)，
 斐波纳契堆能稍微提高一些性能，让算法运行时间达到O(V+ElogE)。
-
-
 
 ### Network Flow Problem
 
@@ -274,8 +247,6 @@ G=(V, E)是一个有向图，图中每条边(u, v) ∈E有一个非负的容量�
 
 3. 复杂度为O(V^2*E)的Dinic算法
 
-
-
 ### 最小生成树MST
 
 spanning tree , 
@@ -286,8 +257,6 @@ spanning tree ,
 
 1.  图是连通的 
 2. spanning tree包含所有的顶点, 至少有n-1条边
-
-
 
 #### 生成方法
 
@@ -301,8 +270,6 @@ Prim's 算法, O(**E** log **V**) greedy MST algorithm that grows a Minimum Span
 2. A Boolean array of size **V** (to decide if a vertex has been taken or not, i.e. in the same connected component as source vertex **s** or not).
 
 With these, we can run Prim's Algorithm in O(**E** log **V**) because we process each edge once and each time, we call **Insert((w, v))** and **(w, v) = ExtractMax()** from a PQ in O(log **E**) = O(log **V2**) = O(2 log **V**) = O(log **V**). As there are **E** edges, Prim's Algorithm runs in O(**E** log **V**).
-
-
 
 ##### Kruskal 算法, maintain a forest
 

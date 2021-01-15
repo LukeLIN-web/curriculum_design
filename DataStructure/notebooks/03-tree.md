@@ -36,8 +36,13 @@ It is always possible to represent a tree by a one-dimensional integer array.  �
 3）整理，左右摆齐。
 利用 FirstChild - NextSibling 表示方法，可以将兄弟节点均变为右侧儿子节点，从而将任何树转为二叉树。
 
-    二叉树转换一般树（相反）：
-          1）若一个结点是其父结点的左结点，则将此结点的右结点，右结点的右结点。。。都与其父结点相连线。
+就是每个点的左儿子是它的第一个儿子，右儿子是它从左往右数的第一个兄弟
+
+![](https://img-blog.csdn.net/20180713160942112?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZvcmV2ZXJfZHJlYW1z/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+
+二叉树转换一般树（相反）：
+      1）若一个结点是其父结点的左结点，则将此结点的右结点，右结点的右结点。。。都与其父结点相连线。
+
  2）删除原二叉树所有父结点与右结点的连线。
 
 **遍历方式**：
@@ -81,7 +86,7 @@ https://blog.csdn.net/demi_hu/article/details/70183267
 
 ### 完全二叉树（Complete Binary Tree）
 
-除最后一层外其他层均充满。
+除最后一层外其他层均充满。n1 = 0 
 
 ### 二叉查找树（Binary Search Tree，BST）
 
@@ -123,8 +128,6 @@ https://blog.csdn.net/qq_41754065/article/details/106590844?utm_medium=distribut
 查找一个元素所需要的时间最坏是2lgN，插入一个元素最坏情况所需要的时间是2lgN，查找命中所需要的平均时间是lgN，插入一个元素所需要的平均时间也是lgN.
 
 
-
-二叉搜索树.:*左儿子有**6**个结点，则根的值为数组中第**7**大的值*
 
 **若完全二叉树的节点个数为2N-1，则叶节点个数为（）**
   A）N-1    B）2×N    C）2N-1    D）2N

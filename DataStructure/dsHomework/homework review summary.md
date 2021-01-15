@@ -1,40 +1,46 @@
 # 考试复习
 
-### homework1
+### homework 1
 
-1.The major task of algorithm analysis is to analyze the time complexity and the space complexity. √ 
+1. The major task of algorithm analysis is to analyze the time complexity and the space complexity. √ 
 
-2.The Fibonacci number sequence {*F**N*} is defined as: *F*0=0, *F*1=1, *F**N*=*F**N*−1+*F**N*−2, *N*=2, 3, .... The time complexity of the function which calculates *F**N* recursively is Θ(*N*!).    X
+2. The Fibonacci number sequence {F*N*} is defined as: *F*0=0, *F*1=1, F*N*=F*N−1*+F*N−2*, *N*=2, 3, .... The time complexity of the function which calculates *F**N* recursively is Θ(*N*!).    X
 
-3.递归方程：T(n) = 3T(n/3) + 1, n>1, T(1) = 1
+3. 递归方程：T(n) = 3*T(n/3) + 1, n>1, T(1) = 1
 
-应该是3的logN 次, 时间复杂度为 N. 
+应该是3的log N 次方, 时间复杂度为 N. 
 
+### homework 2
 
+1. For a sequentially stored linear list of length *N*, the time complexities for deleting the first element and inserting the last element are *O*(1) and *O*(*N*), respectively.    X 
 
-### homework2
+ a sequentially stored linear list of length ,顺序存储的线性表支持随机存取，所以查询的时间是常数时间，但插入需要把后面每一个元素的位置都进行调整，所以是线性时间。 插入最后一个时间为O(1).
 
-1.For a sequentially stored linear list of length *N*, the time complexities for deleting the first element and inserting the last element are *O*(1) and *O*(*N*), respectively.    X 
+2. If a linear list is represented by a linked list, the addresses of the elements in the memory must be consecutive(连续的). X 
 
- a sequentially stored linear list of length ,顺序存储的线性表支持随机存取，所以查询的时间是常数时间，但插入需要把后面每一个元素的位置都进行调整，所以是线性时间。 插入最后一个 时间为O(1).
+3.  循环队列, 不能 rear == front. 队列满时rear == front -1. enqueue时rear增加, dequeue front 增加.
 
-2.If a linear list is represented by a linked list, the addresses of the elements in the memory must be consecutive(连续的). X 
+#### HW 3
 
-3, 循环队列, 不能 rear == front. 队列满时rear == front -1. enqueue时rear增加, dequeue front 增加.
+Push 5 characters `ooops` onto a stack. In how many different ways that we can pop these characters and still obtain `ooops`?
 
-#### HW3
+答案: 123  , 132, 231, 213, 321. 五种,  312 是不行的. 
 
 
 
 #### HW4
 
-There exists a binary tree with 2016 nodes in total, and with 16 nodes having only one child.X
+There exists a binary tree with 2016 nodes in total, and with 16 nodes having only one child.  X 
 
-n0+n1+n2 =2016=1+0*n0+1*n1+2*n2 
+n0+n1+n2 =2016=1+0n0+1n1+2n2  根结点不是任何结点的孩子, 
 
 发现除不尽. 
 
 选择题的话,可以 画一个出来,然后看看.
+
+It is always possible to represent a tree by a one-dimensional integer array 对的
+
+
 
 
 
@@ -63,6 +69,16 @@ If a binary search tree of *N* nodes is complete, which one of the following sta
 不连通, 35个边. 
 
 答案: 至少10个顶点
+
+In a connected graph, the number of edges must be greater than the number of vertices minus 1. X 可以等于
+
+A graph with 90 vertices and 20 edges must have at least __ connected component(s).   答案70,  20个 两边连, 50个没边
+
+If graph G is NOT connected and has 35 edges, then it must have at least ____ vertices  答案:  5个边 ,3+3+4 = 10 , 6个边, 15,7个, 21, 8个 28, 9个 , 35 . 加一个点, 就是10个点. 
+
+Given the adjacency list of a directed graph as shown by the figure. There is(are) __ strongly connected component  . 两边都有是强连通分量. 有向图的极大强连通子图，称为强连通分量 . 有更大的要选大的.
+
+
 
 #### HW11
 

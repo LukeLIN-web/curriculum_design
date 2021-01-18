@@ -1,0 +1,170 @@
+请仔细阅读以下要求，并设法在假期中完成任务。
+    任务1.确保访问ZJU课程站点，并浏览那里的所有资源。
+    任务2.阅读Ubuntu_Installing_Guide_2020.pdf后，尝试在计算机上安装Ubuntu。
+    任务3.尝试将Triumph of Nerds视频文件下载到本地Linux系统。
+    任务4.更新Linux系统，以便您可以在其中观看视频。
+    任务5.需要视频字幕吗？ 尝试从课程站点下载字幕文件，并为此视频分配一个相应的.srt文件。
+    任务6.字幕是否与视频不同步？ 尝试从课程站点下载demo_code.zip，找到demo_subtitle.pl并将其解压缩到视频文件所在的位置。
+    任务7.确定如何运行demo_subtitle.pl（作为Perl脚本）来修复字幕计时标记。
+    这些任务的目的是熟悉Linux操作。
+
+      然后，在观看了三首《凯旋的书呆子》后，请尝试用自己的话回答以下问题。
+    1）戈登·摩尔坐在哪里?他在视频中怎么说？  （书呆子的胜利）
+Intel公司的创始人之一的戈登·摩尔（Gordon Moore）。
+坐在小隔间里,没有办公室,也没有门,14分钟的时候出现
+他说:"我们创建的公司,希望每个人能共享知识,有平等的发言权"
+
+2）什么是Xerox PARC？ 史蒂夫·乔布斯（Steve Jobs）从中提到了3项创新，除了GUI之外还有其他两项？(第三章12分11秒)  （书呆子的胜利）
+即施乐帕克研究中心，是施乐公司所成立的最重要的研究机构，成立于1970年,在旧金山以南,在帕洛阿尔托,
+施乐复印机公司, 成立了帕洛阿尔托研究中心,或PARC,(第三章第5分钟)人们开始读电脑屏幕代替纸张,施乐公司遇到了麻烦.主宰无纸化办公.
+
+还有OOP object oriented programming
+第三个是network computer system.几百个奥托电脑都用电子邮件,等联网.
+乔布斯被第一个GUI完全吸引了.
+
+
+
+3）史蒂夫·乔布斯对比尔·盖茨有何看法？  （书呆子的胜利）
+
+jobs想要艺术,诗人,音乐家,艺术家,历史学家,
+
+他劝说bill 做图形界面,觉得这样可以最后成功,
+他没有意识到bill是主要竞争对手, 认为IBM是主要对手,
+他认为好的艺术家模仿, 伟大的艺术家偷窃,jobs偷窃伟大的想法.
+他认为 在大的方向上,微软没有融入很多文化到产品中, 没有创新思想,他们没有品味tasty,他们绝对没有tasty.jobs觉得微软没有做好行间距,比例,字体等细节,他希望用户能用好产品.
+他觉得很难过,不是因为微软成功了, 他觉得微软做三流的产品.
+
+
+
+这些问题的目的是要了解工程文化中非凡的东西。
+      然后在假期中，研究下一章“入门”的幻灯片，并在Linux终端上尝试幻灯片中提到的命令。
+
+
+#Please CAREFULLY read the requirements below and manage to finish the tasks.
+Task 1. Be sure to visit the course ftp site, and browse the resources there.
+Task 2. Try to install Ubuntu on a computer after reading Ubuntu_Installing_Guide_2018.pdf file.
+Task 3. Try to download all files in ~/video directory on ftp site to your Linux system.
+Task 4. Update your Linux system so you could watch video in it.
+Task 5. Need subtitles for the video? Try to assign a .srt file to the video.
+Task 6. Is the subtitle out of sync with the video? Try to download demo_subtitle.pl from ~/demo directory.
+Task 7. Figure out how to run demo_subtitle.pl to fix the subtitle timing marks.
+
+Then after watching all 3 episodes of Triumph of Nerds, try to answer questions below.
+Intel公司的创始人之一的戈登·摩尔（Gordon Moore）。
+坐在小隔间里,没有办公室,也没有门,14分钟的时候出现
+他说:"我们创建的公司,希望每个人能共享知识,有平等的发言权"
+1) Where does Gordon Moore sit and what does he say in the video? (Triumph of Nerds)
+Gordon Moore is one of the founder of Intel, but he didn't have a office, just sit in a cubicle without a door. 
+He said:"We found a company which can share knowledge to everyone. I hope everyone have an equal voice in this company."
+At the video one 14min. 
+即施乐帕克研究中心，是施乐公司所成立的最重要的研究机构，成立于1970年,在旧金山以南,在帕洛阿尔托,
+施乐复印机公司, 成立了帕洛阿尔托研究中心,或PARC,(第三章第5分钟)
+人们开始读电脑屏幕代替纸张,施乐公司遇到了麻烦.主宰无纸化办公.
+
+还有OOP object oriented programming
+第三个是network computer system.几百个奥托电脑都用电子邮件,等联网.
+乔布斯被第一个GUI完全吸引了.
+2) What is Xerox PARC? Steve Jobs has mentioned 3 innovations from it, what are the other two besides GUI? (Triumph of Nerds)
+The Xerox Parker Research Center is the most important research institution which was established by Xerox.
+It was established in 1970, south of San Francisco, in Palo Alto, Xerox Copiers,(video three, 5th mins)
+People began to read computer screens instead of paper, so the Xerox was in trouble. It wanted to dominating paperless office as well.
+As for Steve Jobs, besides GUI, he also mentioned the OOP, object oriented programming, 
+and network computer system. hunreds of Otto computers were connecting with network, and using network tools such as Emails.
+By the way, Jobs was occupied by the GUI.
+
+jobs想要艺术,诗人,音乐家,艺术家,历史学家,
+
+他劝说bill 做图形界面,觉得这样可以最后成功,
+他没有意识到bill是主要竞争对手, 认为IBM是主要对手,
+他认为好的艺术家模仿, 伟大的艺术家偷窃,jobs偷窃伟大的想法.
+他认为 在大的方向上,微软没有融入很多文化到产品中, 没有创新思想,他们没有品味tasty,他们绝对没有tasty.
+jobs觉得微软没有做好行间距,比例,字体等细节,他希望用户能用好产品.
+他觉得很难过,不是因为微软成功了, 他觉得微软做三流的产品.
+
+3) What is the opinion of Steve Jobs towards Bill Gates? (Triumph of Nerds)
+Steve Jobs want art, poets, musicians, artists, historians. He persuaded Bill to adopt GUI, and believed that GUI would make a great success.
+At first, he didn't realize that Bill is his major competiter, he thought that IBM was his major competitor.
+He said:" Microsoft had not add culture in their products in big way, they don't have innovation ideas, they don't have tasty, they absolutely don't have tasty.
+they don't pay attention to the line spacing, proportions, fonts and other details. I felt sad not because MS was successful, they are just making third-rate products "
+Jobs hope customers can use better products. Jobs improve Apple's products in many ways.
+
+
+Then let's try working on our installed system.
+然后，让我们尝试在已安装的系统上工作。
+    问题1    尝试在您的shell中运行* cat / etc / passwd *，并读取结果，其中每一行由一些用'：'分隔的单词组成。
+   然后，请阅读UNIX实用程序“ cut”和“ paste”的手册（例如，man cut；信息粘贴），并了解如何使用它们。
+   我们的目标是从文件/ etc / passwd的每一行中剪切第一个单词（即字段1-用户名）和第六个单词（即字段6-HOME目录），并将它们存储在2个单独的新文件中。
+     然后，我们将2个文件粘贴到一个只有2个单词列的新文件中，这2列在每一行中由一个制表符分隔。
+   预期的结果看起来像
+
+Problem 1.
+Try to run *cat /etc/passwd* in your shell, and read the result, each line of which is composed of some words separated by ':'.
+Then please read the manuals of UNIX utilities "cut" and "paste" (e.g., man cut; info paste), and understand how to use them. 
+Our target is to cut the 1st word (i.e., field 1 - the user names) and the 6th word (i.e., field 6 - HOME directories) in each line from file /etc/passwd, and store them in 2 separated new files.
+ 
+Then we paste the 2 files together into a new file with only 2 word columns, and these 2 columns are separated by one tab character in each line.
+The expected result looks like,
+root	/root
+daemon	/usr/sbin
+bin	/bin
+sys	/dev
+sync	/bin
+games	/usr/games
+man	/var/cache/man
+lp	/var/spool/lpd
+mail	/var/mail
+news	/var/spool/news
+landscape	/var/lib/landscape
+postgres	/var/lib/postgresql
+uucp	/var/spool/uucp
+问题2    请阅读UNIX实用程序“ expand”的手册，并将问题2的结果中的制表符更改为许多空格字符，同时保持单词对齐，并且第二个单词始终在第24列开始。
+   预期的结果看起来像
+Problem 2.
+Please read the manual of UNIX utility "expand", and change the tab character in the result of Problem 2 into many space characters, while the word alignment keeps and the 2nd word always begins on the 24th column.
+The expected result looks like,
+root                   /root
+daemon                 /usr/sbin
+bin                    /bin
+sys                    /dev
+sync                   /bin
+games                  /usr/games
+man                    /var/cache/man
+lp                     /var/spool/lpd
+mail                   /var/mail
+news                   /var/spool/news
+landscape              /var/lib/landscape
+postgres               /var/lib/postgresql
+uucp                   /var/spool/uucp
+
+Problem 3.
+Everything similar as in Problem 1, but try to show the results in a manner like below.
+root:
+/root
+daemon:
+/usr/sbin
+bin:
+/bin
+sys:
+/dev
+sync:
+/bin
+games:
+/usr/games
+man:
+/var/cache/man
+lp:
+/var/spool/lpd
+mail:
+/var/mail
+news:
+/var/spool/news
+landscape:
+/var/lib/landscape
+postgres:
+/var/lib/postgresql
+uucp:
+/var/spool/uucp
+
+The purpose of these problems 1/2/3 is to let the students do manual reading, understand meaning of options and practice a little on text processing.
+这些问题1/2/3的目的是让学生进行手工阅读，理解选项的含义以及在文本处理方面进行一些练习。
+ 

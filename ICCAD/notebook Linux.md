@@ -520,25 +520,27 @@ cut  文件内容查看
 
  backticks (`) 
 
- Alternation  (|)
+ vertical bar/pipe symbol ("|");  或者 Alternation  (|);
 
-.   (period,dot )
+ampersand ("&");
 
-wildcard character  (*) ;
+tilde ("~")
 
- opening and closing square brackets ("[" and "]"); 
+ period/full stop/dot (".");
+
+wildcard character或者 asterisk  (*) ;
 
 backslash \ ;
+
+slash / ;
 
  caret ("^"); 
 
 dollar sign ("$");
 
- period/full stop/dot (".");
+question mark ("?");   plus sign ("+"); 
 
- vertical bar/pipe symbol ("|");  或者 Alternation  (|);
-
-question mark ("?");  asterisk (*); plus sign ("+"); 
+ opening and closing square brackets ("[" and "]"); 
 
 opening and closing curly brackets/braces ("{" and "}"); and opening and closing parentheses ("(" and ")").
 
@@ -558,7 +560,7 @@ opening and closing curly brackets/braces ("{" and "}"); and opening and closing
 
 | OSI 七层                                                     |
 | ------------------------------------------------------------ |
-| Application 应用层                                           |
+| Application 应用层http,ftp                                   |
 | Presentation(五层合并到应用层)表示层                         |
 | Session 会话层(五层合并到应用层)                             |
 | Transport  传输层  TCP,UDP 等                                |
@@ -642,7 +644,7 @@ ssh [-l username] hostname [command]
 help 帮助
 •cd  /  lcd (two sides: C/S)lcd 客户端,ftp的内建命令。代表 change local directory——切换本地目录
 cd 服务器端切换
-mget get多个文件
+mget 获得多个文件
 mput 上传多个文件
 verbose 发送多个信息
 bye/quit 退出
@@ -704,9 +706,7 @@ scp -P 1234 -r test user@192.168.0.101:/home/data
 
 #### 管理员
 
-su 就是进入superuser状态
-
-su username 切换到另一个用户
+su 就是进入superuser状态 , su username 切换到另一个用户
 
 sudo 就是用superuser状态做一条命令. 比较安全.
 
@@ -716,7 +716,7 @@ sudo 就是用superuser状态做一条命令. 比较安全.
 
 ##### superblock 
 
-在内存里会有个copy,  需要sync 命令, 把内存的东西写入硬盘然后update superblock
+在内存里会有个copy,  需要sync 命令, 把内存的东西写入硬盘然后update superblock,它是[硬盘分区](https://baike.baidu.com/item/硬盘分区/300753)开头——开头的第一个byte是byte 0，从 byte 1024开始往后的一部分数据。由于 block size最小是 1024[ bytes](https://baike.baidu.com/item/ bytes/6743146)，所以super block可能是在block 1中（此时block 的大小正好是 1024 bytes），也可能是在block 0中。 超级块中的数据其实就是文件卷的控制信息部分，也可以说它是卷资源表，有关文件卷的大部分信息都保存在这里。例如：硬盘分区中每个block的大小、硬盘分区上一共有多少个block group、以及每个block group中有多少个[inode](https://baike.baidu.com/item/inode/16194)。
 
 ##### Inode
 

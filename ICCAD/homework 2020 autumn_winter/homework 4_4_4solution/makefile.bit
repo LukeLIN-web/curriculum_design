@@ -1,7 +1,7 @@
 demo_bit: demo_bit.o demo_bit_count.o
 	@echo "***$? is(are) newer than $@"
 	gcc -g -o $@ demo_bit.o demo_bit_count.o
-
+	
 demo_bit.o: demo_bit.c
 	gcc -g -c $<
 

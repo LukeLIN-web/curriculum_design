@@ -66,7 +66,7 @@ dd, yy, p, 4dd10jp, u
 :wq, :q!
 :set all, :set number, :set nonumber
 :[]s/old_exp/new_exp/[g]
-:1,$-3s/Oct\./Nov./g  n1 与 n2 为数字。在第 1 与  行之间寻找 Oct这个字符串，并将该字符串取代为 Nov
+:1,$-3s/Oct\./Nov./g 
 Regular Expression** - the basics and examples (meta-characters in REP)
 
 Shell
@@ -86,16 +86,15 @@ diff $SYNOPSYS/admin/setup/$f $LIBX11 >& /dev/null
 
 Network
 TCP/IP, HTTP, FTP, LAN, DNS
-4 Layers: ApplicationHTTP，　FTP/Transport TCP  /Internetwork IP /Link&Physical
+4 Layers: Application/Transport/Internetwork/Link&Physical
 real example for each layer? how a network basically works on such a layer?
 ping, hostname, cat /etc/hosts, ssh
-text-mode ftp commands: ls, !ls, pwd, cd, lcd change local directory——切换本地目录, put上传, get 获得, ascii, binary 
-Switching to Binary mode., mput,上传多个文件, mget
+text-mode ftp commands: ls, !ls, pwd, cd, lcd, put, get, ascii, binary, mput, mget
 
 System Admin.
 su/sudo
 file = an inode + data blocks <= what happens when ls a file, cat a file?
-df -k vs. du -ks <=> superblock vs. inode; which is faster? 我猜inode比较快
+df -k vs. du -ks <=> superblock vs. inode; which is faster?
 mount/umount
 tar cvf/xvf/tvf
 NFS
@@ -107,7 +106,7 @@ X Events: examples?
 gcc demo_x.c -lX11
 
 Software development tools
-gcc -c -g -o tri.o triangle.c (-I?, -D?)  
+gcc -c -g -o tri.o triangle.c (-I?, -D?)
 gcc -g tri.o -lm (-L?)
 gdb
 touch

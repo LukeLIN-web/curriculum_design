@@ -821,7 +821,7 @@ export license文件
 
 X是一个**协议**并不是具体的实现，类似HTTP，WSGI一样都是协议，X11就是X协议的第11版，类似ES5，ES6等不同版本的ECMAScript标准。 X protocol 在TCP/IP上层.
 
-X协议中X应用程序负责通过X协议告诉服务端需要在服务端显示什么图形，然后服务端收到消息后就会通过服务端上的Xserver的实现来显示客户端程序想要的图形。
+X协议中, X应用程序负责通过X协议告诉服务端需要在服务端显示什么图形，然后服务端收到消息后就会通过服务端上的Xserver的实现来显示客户端程序想要的图形。
 
 X11 released in 1987    怎么让电脑的屏幕,显示到手机上?怎么在不同计算机之间传递图形?
 
@@ -974,18 +974,16 @@ gdb  run
 
 gdb  print value
 
-
-
-其他tools
+**其他tools**
 
 as # 汇编器
 lex  词法分析(GNU:flex) 关键词发现,例如注释
 
 yacc  语法分析(GNU: bison)
 
-
-
 #### makefile
+
+参考http://www.ruanyifeng.com/blog/2015/02/make.html
 
 ##### 意义:
 
@@ -1011,6 +1009,20 @@ srcfile2.o: srcfile2.c myncld.h
 ```
 
 predefined macros预定义宏 ,  `make -p`可以查看
+
+make -n 不执行,预览一下Prints commands, but does not execute them.
+
+Makefile文件也可以写为makefile， 或者用命令行参数指定为其他文件名。
+
+> ```bash
+> $ make -f rules.txt
+> # 或者
+> $ make --file=rules.txt
+> ```
+
+上面代码指定make命令依据rules.txt文件中的规则，进行构建。
+
+
 
 ##### special internal macros
 
@@ -1049,11 +1061,15 @@ clean:
 
 用法  make 看到第一个target是谁就是谁,  make draw 也可以,  最后make clean
 
+使用指令"touch"修改文件"testfile"的时间属性为当前系统时间，输入如下命令：
 
+```bash
+$ touch testfile                #修改文件的时间属性 
+```
 
 non-make 的build工具 :谷歌公司的 bazel,微软的M$build等
 
-希望进一步学习,可以看看下面复杂的makefile,
+希望进一步学习,可以看看下面复杂的makefile
 
 ```makefile
 SHELL       = /bin/sh 
@@ -1417,7 +1433,7 @@ $priority = '9';
 $default = '0009';
 ```
 
-vector 向量,多个变量
+vector 向量,多个变量,用@来表示.  
 
 And for strings Perl has the following among others: 
 

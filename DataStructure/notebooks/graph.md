@@ -160,7 +160,23 @@ require contains every vertex 顶点, 由指定的起点前往指定的终点，
 
 Dijkstra 的算法是一种算法，用于查找图形中两个节点之间的最短距离
 
+Dijkstra’s algorithm (for weighted shortest paths) distance[ u ] = minimal length of path
+
+distance[u1] < distance [u2] , we add u1 into S , S change,calculate distance[u2] again .
+
 因为Dijkstra算法总是在V-S中选择“最轻”或“最近”的顶点插入到集合S中，所以我们说它使用了贪心策略。
+
+```C
+for(;;){
+	if(V == notAvertex)
+	break;
+
+	for(each W adjacent to V)
+	if(unknown)
+		if(distance smaller)
+}
+//V = smallest unknown distance vertex ;
+```
 
 #### PAT 1163 Dijkstra Sequence（30）
 
@@ -178,6 +194,19 @@ Dijkstra 的算法是一种算法，用于查找图形中两个节点之间的�
 
 当用到二叉堆时候，算法所需的时间为O(( V+E )logE)，
 斐波纳契堆能稍微提高一些性能，让算法运行时间达到O(V+ElogE)。
+
+we have a  min -heap 
+update small 
+// method 1: DecreaseKey -O(log|V|)
+good if graph is sparse , don't have too much edges
+
+
+// method 2 : 
+//  must keep doing deleteMin until an unknown vertex emerges.
+insert W in priority queue repeatly .
+requires 
+
+pairing heap and Fibonnacci heap could improve it.
 
 ### Network Flow Problem
 

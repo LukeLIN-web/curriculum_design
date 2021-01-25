@@ -16,109 +16,106 @@ ICCAD 基础, 真是讲linux 的好课.
 
 如果你想返回到普通用户的话，输入命令：su 普通用户名 就可以了
 
-
-
 ### 文件系统
+
+各个文件夹的内容:
 
 bin (binary)  放着二进制命令 sh  (shell)    data  csh
 
-etc  等等  passwd , group
+etc   系统配置文件等  passwd , group
 
-lib(library)库   C语言标准链接库
+lib(library)库   C语言标准链接库, 共享库文件,给/bin和/sbin下的文件使用
 
 usr(user)  下面有它的bin存放usr下面用的可执行代码,也有man  ,local, local下面还有 bin,man和src(source).
 
-dev(device ) 里面有ttya 远程终端  null
+dev(device ) 里面有ttya ,远程终端 , null
 tmp(temporary) 
-home  有frank,lindadb,rfunk.
+home  用户的主目录，在 Linux 中，每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的
+
+/src 内核源代码默认的放置目录。里面有linux源代码.
 
 /boot  启动文件
 /lost +found 失物招领处, 
 /misc  杂七杂八的东西
-/mnt   mount 安装盘
+/mnt   mount 安装盘,系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以将光驱挂载在 /mnt/ 上，然后进入该目录就可以查看光驱里的内容了。
 /net   可能挂着远程的硬盘
-/proc  process进程
-/opt  option
+/proc  process进程, 是一种伪文件系统（也即虚拟文件系统），存储的是当前内核运行状态的一系列特殊文件，这个目录是一个虚拟的目录，它是系统内存的映射，我们可以通过直接访问这个目录来获取系统信息。这个目录的内容不在硬盘上而是在内存里，我们也可以直接修改里面的某些文件，比如可以通过下面的命令来屏蔽主机的ping命令，使别人无法ping你的机器：
+/opt  option这是给主机额外安装软件所摆放的目录。比如你安装一个ORACLE数据库则就可以放到这个目录下。默认是空的。
 /sbin  system binary 系统管理员可以执行的binary
-/var variable 变量
+/var variable 变量,这个目录中存放着在不断扩充着的东西，我们习惯将那些经常被修改的目录放在这个目录下。包括各种日志文件。
 
 全路径名从 /   开始, 或者 $HOME/.bashrc  ,也是从slash开始的
 / 这个符号念slash 
 echo $HOME就知道了它的路径
 
-相对路径从 . 开始 比如 ../../include/define.h
+相对路径从 dot开始 比如 ../../include/define.h
 
 运行：
-./路径/文件名 （就是加个“./”符号是运行命令）
-使用命令行执行某个程序的时候，Linux会到PATH环境变量的路径去搜索程序文件，但在默认情况下，Linux和Windows不同，
-Windows会搜索当前目录，而Linux不会搜索当前目录，
-所以在当前目录下的程序，而当前目录不再PATH环境变量中的话，就需要加上"./"来指定到当前目录下去查找应用程序了。
+./路径/文件名 （加个“./”符号是运行命令）
+使用命令行执行某个程序的时候，Linux会到PATH环境变量的路径去搜索程序文件，但在默认情况下，Linux和Windows不同，Windows会搜索当前目录，而Linux不会搜索当前目录.
+所以在当前目录下的程序，而当前目录不在PATH环境变量中的话，就需要加上"./"来指定到当前目录下去查找应用程序了。
 
 
-
-Disks mount  to positions in file tree,  mount有骑上,载上的意思
-a disk partition 分 3个major sections
-superblock
-inodes  索引节点
-data blocks 
 
 命名规范
-1.不要使用Meta characters 客服一般在印度,你要会读这些字符,
+
+1. Meta characters 客服一般在印度,口音很严重哈哈哈,你要会读这些字符,
 
 2. 鼓励用字母数字和下划线.Unix是case sensitive大小写敏感的
 
 ### 目录命令
 
+```bash
 pwd 当前目录在哪里
-
-cd = cd~ =cd $HOME
-直接敲cd就是到$HOME了,
+cd = cd~ =cd $HOME   ,直接敲cd就是到$HOME了,
 mkdir 创建目录 make directory
 rmdir 删除目录remove directory
 ls  list 列出所有文件
 ls  -al  和ls -la 是一样的  所有的,all,包括以"." 开头的
-
 ls -lt 最近的排前面,根据time排队
 ls -R  recursive 递归列出,广度优先
 ls -l  long 完整地列出
-参数可以拼在一起, ls - al,ls -alt, 就是两个条件三个条件.
+```
 
-drwxr-  
+参数可以拼在一起, ls - al,ls -alt, 就是两个参数三个参数.
+
+ls -l 你会看到 
+
+`drwxr-xr-x.  2 root root    6 1月   8 00:08 桌面`
+
+2- 10字符是三组读写执行权限access permission
+前三个是user/owner的权限
+中三个是group用户组的权限
+后三个是others的权限
+
+第二个是number of links ,这里是2 , 第三个是 owner 第四个是group 这里都是root 第五个是size or device number,ls列出大小是**以字节为单位**, 第六个是修改时间 1月 8日 00:08,第七个是file name文件名
+
 ```c
 - 表示ordinary file 普通文件
+d 表示是文件夹, 
 -l symbolic link 符号链接
 -d 是目录 directory
 ```
-2- 10字符是三组存取权限
-前三个是user/owner的权限
-中三个是 group的权限
-后三个是others的权限
-读写权限
-access permission
-
 ```c
 r 读权限, 
 w 写权限
 x execute 执行权限
 - no permission
 ```
-第二个是number of links 第三个是 owner 第四个是group  第五个是size or device number, 第六个是修改时间,第七个是file name文件名
-54 opc 85 3072 
-
-ls列出大小是**以字节为单位**
-
 alias al 是默认加了颜色的.
 alias ls = " ls --color =auto"
 
+alias rm='rm -i' 取一个别名 默认删除的时候提示.
+
 命令: ctrl+ c 或者ctrl+u取消当前命令
 
-寻找一个文件:
+##### 寻找一个文件:
 
 find -name 'XErr*' 
 
 find  -iname se.java  -iname不区分大小写.
 
-可以看这个
+参考文献可以看这个
 
 https://www.cnblogs.com/loveyouyou616/p/9796294.html
 
@@ -169,13 +166,13 @@ u undo 相当于ctrl+z     undo错了可以 :redo 或者按句号键 "."
 . redo
 
 替换命令: s/word1/word2 substitution
-:2,30 s/use/used  /g  2-30行 .加个g ,这一行找到的全部换; 没有g ,就替换一行找到的第一个.
+:2,30 s/use/used  /g  2-30行 .参数加个g ,这一行找到的全部换; 没有g ,就替换一行找到的第一个.
 :1,$  s/Oct\./Nov .  替换Oct. 换成 Nov.  从第一行到最后一行.
 
 #### 复制粘贴:
 
 y4y   复制下面4行
-p   粘贴
+p   粘贴paste
 
 **全选（高亮显示**）：按esc后，然后ggvG或者ggVG
 
@@ -183,17 +180,15 @@ p   粘贴
 
 **全部删除：**按esc后，然后dG
 
-
-
 解析：
 
-**gg：**是让光标移到首行，在**vim**才有效，vi中无效 
+**gg：**光标移到首行，在**vim**才有效，vi中无效 
 
-**v ：** 是进入Visual(可视）模式 
+**v ：** 进入Visual(可视）模式 
 
 **G ：**光标移到最后一行 
 
-**选**中内容以后就可以其他的操作了，比如： 
+选中内容以后就可以其他的操作了，比如： 
 **d** 删除**选**中内容 
 **y** 复制**选**中内容到0号寄存器 
 **"+y** 复制**选**中内容到＋寄存器，也就是系统的剪贴板，供其他程序用 
@@ -234,7 +229,7 @@ anchors
 character sets
 modifiers
 
-```bash
+```
 . match any single character except newline
 * match 0或多个
 [abc]  match a或b或c
@@ -276,19 +271,17 @@ testfile_2:This is a linux testfile! #列出testfile_2 文件中包含test字符
 testfile_2:Linux test #列出testfile_2 文件中包含test字符的行 
 ```
 
+这是linux比较独特的, 因为window你必须打开它, 然后查找. 
+
 ### 命令bash
 
 history nn 打印之前nn条命令
 
-!f  上一条f开头的命令
+!f  上一条f开头的命令并且显示那时的结果
 
 !! 执行上一条命令
 
 !nn执行之前nn条命令
-
-#! magic symbol
-
-
 
 #### 重定向
 
@@ -322,9 +315,13 @@ command  &  在后台执行
 
 加 & 让他在后台运行
 bg  继续运行后台的job
+
+fg  3  控制台 由任务3 占领
+
 ^z  暂停
 jobs 观察任务
-fg  3  控制台 由任务3 占领
+
+#### 进程
 
 ps -ef  or ps -aux 看整个系统的process status
 
@@ -332,13 +329,9 @@ top 动态查看ps
 pstree 进程树
 uptime tell 系统运行了多久.
 
-
-
 #### kill
 
-kill  -l 可以查看kill可以发送的信号.
-
-例如 HUP 挂起 INT中断,
+kill  -l 可以查看kill可以发送的信号.例如 HUP 挂起, INT中断,
 
 kill -9 PID 第9个信号是删除 ,
 
@@ -350,7 +343,7 @@ kill -9 PID 第9个信号是删除 ,
 
 https://www.cnblogs.com/hust-chenming/p/4943268.html
 
-###### set global environment variable
+##### set global environment variable
 
 export NAME = value
 
@@ -360,19 +353,11 @@ export NAME = value
 
 注意小心复制:/home/user/scripts,粘贴他可能直接执行, 我一下子把所有PATH都删除了.
 
-###### set local shell变量
+##### set local shell变量
 
 name = value
 
 不设置的话就是unset
-
-
-
-if condition
-
-if -f 当存在并且是普通file的话.为真
-
-if -d 当存在并且是directory的话.为真
 
 
 
@@ -384,17 +369,17 @@ if -d 当存在并且是directory的话.为真
 
 **1.首先读入的是全局环境变量设定档/etc/profile，然后根据其内容读取额外的设定的文档，如 /etc/profile.d和/etc/inputrc**
 
-**2.然后根据不同使用者帐号，去其家目录读取~/.bash_profile，如果这读取不了就读取~/.bash_login，这个也读取不了才会读取~/.profile，这三个文档设定基本上是一样的，读取有优先关系**
+**2.然后根据不同使用者帐号，去其home目录读取~/.bash_profile，如果读取不了就读取~/.bash_login，这个也读取不了才会读取~/.profile，这三个文档设定基本上是一样的，读取有优先关系**
 
-**3.然后在根据用户帐号读取~/.bashrc**
+**3.然后根据用户帐号读取~/.bashrc**
 
 可以在/etc/profile.d 配置开机启动项
 
-##### /etc/*和~/.*区别：
+##### /etc/和~/.区别：
 
 **/etc/profile，/etc/bashrc 是系统全局环境变量设定**
 
-**~/.profile，~/.bashrc是用户家目录下的私有环境变量设定**
+**~/.profile，~/.bashrc是用户home目录下的私有环境变量设定**
 
 ~/.profile与~/.bashrc的区别:
 
@@ -407,6 +392,8 @@ if -d 当存在并且是directory的话.为真
 
 
 #### 脚本
+
+#! 叫做magic symbol,  写在第一行,设置用哪个shell来执行这个脚本
 
 set a = $<   读键盘
 
@@ -424,7 +411,7 @@ sort将文件的每一行作为一个单位，相互比较，比较原则是从�
 
 - -n 依照数值的大小排序。
 
-- **sort的-u选项**它的作用很简单，就是在输出行中去除重复行。
+- -u,它的作用很简单，就是在输出行中去除重复行。
 
 - -k 3  根据第三列排序.  
 
@@ -432,43 +419,47 @@ sort将文件的每一行作为一个单位，相互比较，比较原则是从�
 
 ##### 变量
 
-echo “$HATs” 找不到HATs这个变量
+echo “$HATs” 会报错, 找不到HATs这个变量
 
 所以需要 “${HAT}s” 花括号
 
-
-
-最好用双引号定义变量  " $HAT" 避免有空格或者变量名输错的错误.
+最好用双引号定义变量  ,如" $HAT" 避免有空格或者变量名输错的错误.
 
 **shell脚本对空格有严格的规定，赋值语句等号两边不能有空格，而字符串比较，等号两边必须有空格**
 
 赋值时： i=1　　
 
+```bash
 　i=$((i+1))          //   =用作赋值时，两边绝对不能有空格
-
 比较时： if [ $a = $b ]   　　// =用作比较判断时，两边必须有空格
+```
 
-这里变量a左右不能加空格.加了会出错
+下面这行代码变量a左右不能加空格.加了会出错
 
 `a='sed -n 1p pingsort_1.txt'`
 
 sed 命令
 
 - -n或--quiet或--silent 仅显示script处理后的结果。
-- p ：打印，亦即将某个选择的数据印出。通常 p 会与参数 sed -n 一起运行～
-- 
+- p ：打印，亦即将某个选择的数据印出。通常 p 会与参数 sed -n 一起运行
 
-sed "s/.*CONNS([0−9]∗[0−9]∗).*/\1/g"
+`sed "s/.*CONNS([0−9]∗[0−9]∗).*/\1/g"`
 
 1. 使用s/pattern1(pattern2)pattern3/\1/g  的方式， \1 代表提取括号里pattern2的部分
 
 2. (pattern2)的括号是正则表达式里的运算符，要转义，就变成pattern2pattern2
 
-3. 对应于CONNS(6), CONNS(  的pattern是 .*CONNS( ,  ) 对应pattern是).*  这样确保默认贪婪的正则匹配不会匹配到下一个括号前的内容
+3. 对应于CONNS(6), `CONNS(  的pattern是 .*CONNS( ,  ) 对应pattern是).*`  这样确保默认贪婪的正则匹配不会匹配到下一个括号前的内容
 
 4. 需要提取的括号中的内容，pattern2, 使用[0-9a-zA-Z]*的方式，我在aix上的sed不支持\w, \d这样的写法
 
 ##### 条件语句
+
+if condition
+
+if -f 当存在并且是普通file的话.为真
+
+if -d 当存在并且是directory的话.为真
 
 test 10 -lt 5  测试是否10<5
 
@@ -508,13 +499,15 @@ cut  文件内容查看
 
 ##### cron命令
 
+定时执行脚本
+
 "0 12  * * * ?" 每天中午12点触发
 
 "15 10 * * *" 每天上午10:15触发
 
 ` 22 22 * * * /home/lustre/hw2/prb4.sh `
 
-
+22点22分执行prb4.sh
 
 #### meta character   元字符的读音
 
@@ -583,7 +576,7 @@ PPPoE 是一种网络协议，它派生自另一种称为 PPP 的较旧协议，
 PPPoE 设计用于管理如何通过以太网网络（有线网络）传输数据，它允许使用以太网在多个客户端之间分配单个服务器连接。因此，多个客户端可以从 Internet 服务提供商连接到同一服务器，并同时访问 Internet。
 
 
-说到window跟Linux之间的文件互传，工具有很多。我用的是File-zilla。没有为什么，觉得个工具间都差不多，能用就行了。用File-zilla连接服务器，直接在上面输入账号密码，点击连接就行了。
+window跟Linux之间的文件互传，工具有很多。用File-zilla连接服务器，直接在上面输入账号密码，点击连接就行了。用scp 也行
 
 /etc/resolv.conf 文件中有自己的IP地址.
 
@@ -622,8 +615,6 @@ ssh [-l username] hostname [command]
 
 
 ##### ftp命令 
-
-**.ftp命令**
 
 　　使用格式：ftp [-v] [-d] [-i] [-n] [-g] [-s:filename] [-a] [-w:windowsize] [computer]
 
@@ -674,7 +665,7 @@ unix上的http 服务器软件是 Apache HTTP Server(httpd)
 
 
 
-mail发送协议 SMTP  接收协议 是POP3 和IMAP
+mail的发送协议是 SMTP,  接收协议 是POP3 和IMAP Internet Message Access Protocol应用层
 
 ##### ssh命令
 
@@ -688,14 +679,14 @@ mail发送协议 SMTP  接收协议 是POP3 和IMAP
 - -r： 递归复制整个目录。
 - -P 1234 [fileUrl] [user]@[ip]:/home 指定port
 
-那么这个本地文件在哪里有没有关系呢? 有关系,你要进入本地目录,然后打开终端.
+那么这个本地文件在哪里有没有关系呢? 有关系,你要先进入本地目录,然后打开终端.
 
 ```
 scp -P 1234 -r test user@192.168.0.101:/home/data
 1
 ```
 
-是将该路径下的test文件夹上传到服务器的`/home/data`
+将该路径下的test文件夹上传到服务器的`/home/data`
 
 4. 将 文件/文件夹 从远程 Ubuntu 机拷至本地(scp)
    `$scp -r username@192.168.0.1:/home/username/remotefile.txt`
@@ -712,7 +703,11 @@ sudo 就是用superuser状态做一条命令. 比较安全.
 
 #### 硬盘模型
 
-三个部分 , superblock , inodes,data blocks
+Disks mount  to positions in file tree,  mount有骑上,载上的意思
+a disk partition 分 3个major sections
+superblock
+inodes  索引节点
+data blocks 
 
 ##### superblock 
 
@@ -756,7 +751,7 @@ create a mount point挂载点    /home
 
 mount the file system
 
-```
+```bash
 mount /dev/sdc1  /home 
 ```
 
@@ -1330,7 +1325,7 @@ pack .hello
 •Web browser: 2000 lines, 10x less code for simple things.
 
 ```tcl
-#!/  usr/local/bin/wish
+#!/  usr/local/bin/wish  
 有一个listbox,名字叫.list , y方向的scroll
 listbox .list -yscroll \ 
 ".scroll set"  -width 20 -height 20

@@ -57,7 +57,7 @@ int Height_of_BST( int postorder[], int N ){
     ha = i != 0 ? Height_of_BST(a, i) : 0;
     hb = i == N - 1 ? 0 : Height_of_BST(b, N - i - 1);
     printIndent(--count);
-    printf("return ha+1= %d\n",ha+1);
-    printf("return hb+1=  %d\n",hb+1);
-    return hb < ha ? hb + 1 : ha + 1;
+    printf("return ha+1= %d     ",ha+1);
+    printf("     hb+1=  %d\n",hb+1);
+    return hb < ha ? ha + 1 : hb + 1;
 }

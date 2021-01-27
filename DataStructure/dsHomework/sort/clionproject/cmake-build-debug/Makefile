@@ -181,6 +181,33 @@ Arrangement_of_Computation_Tasks.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\Arrangement_of_Computation_Tasks.cpp.s
 .PHONY : Arrangement_of_Computation_Tasks.cpp.s
 
+FinalexamHeight_of_Binary_Search_Tree.obj: FinalexamHeight_of_Binary_Search_Tree.c.obj
+
+.PHONY : FinalexamHeight_of_Binary_Search_Tree.obj
+
+# target to build an object file
+FinalexamHeight_of_Binary_Search_Tree.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.obj
+.PHONY : FinalexamHeight_of_Binary_Search_Tree.c.obj
+
+FinalexamHeight_of_Binary_Search_Tree.i: FinalexamHeight_of_Binary_Search_Tree.c.i
+
+.PHONY : FinalexamHeight_of_Binary_Search_Tree.i
+
+# target to preprocess a source file
+FinalexamHeight_of_Binary_Search_Tree.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.i
+.PHONY : FinalexamHeight_of_Binary_Search_Tree.c.i
+
+FinalexamHeight_of_Binary_Search_Tree.s: FinalexamHeight_of_Binary_Search_Tree.c.s
+
+.PHONY : FinalexamHeight_of_Binary_Search_Tree.s
+
+# target to generate assembly for a file
+FinalexamHeight_of_Binary_Search_Tree.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.s
+.PHONY : FinalexamHeight_of_Binary_Search_Tree.c.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -250,6 +277,9 @@ help:
 	@echo ... Arrangement_of_Computation_Tasks.obj
 	@echo ... Arrangement_of_Computation_Tasks.i
 	@echo ... Arrangement_of_Computation_Tasks.s
+	@echo ... FinalexamHeight_of_Binary_Search_Tree.obj
+	@echo ... FinalexamHeight_of_Binary_Search_Tree.i
+	@echo ... FinalexamHeight_of_Binary_Search_Tree.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

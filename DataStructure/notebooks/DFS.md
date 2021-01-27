@@ -1,7 +1,5 @@
 # DFS的应用
 
-
-
 ```cpp
 visited[V] = true;
 for(each W adjacent to V){
@@ -9,8 +7,6 @@ for(each W adjacent to V){
         DFS(W);
 }
 ```
-
-
 
 ## 双连通性biconnectivity
 
@@ -40,13 +36,21 @@ root is 割点 , <=> 他有at least 两个孩子
 
 ##### low的定义
 
- 计算一个low  ,back回去最小的值是多少.
+ 计算一个low  ,back回去最小的值是多少.就是在DFS的过程中，如果当前节点是极大强联通子图的话，他的根节点的标号就是对应的LOW值：如下图 **LOW[4]= min(LOW[4], num[1])** 
 
-可以直接返回到root, low就是0 .
+![](https://images2017.cnblogs.com/blog/1322166/201801/1322166-20180120183011115-1431772847.jpg)
 
- 
+**再回溯到节点1，更新 LOW[1]的值： LOW[1]= min(LOW[1], LOW[3])  值还是为1**
 
-num的值是编号的.
+可以直接返回到root, low就是1 .　
+
+num的值是编号的. 就是DFS的顺序.
+
+
+
+LOW［］作为每个点在这颗树中的，最小的子树的根，每次保证最小，like它的父亲结点的时间戳这种感觉。如果它自己的LOW［］最小，那这个点就应该从新分配，变成这个强连通分量子树的根节点。
+
+num  == low 说明他是这个分量的根结点. 比如6是它本身这个子树的根
 
 spinning tree 生成每个low 的值, 然后判断是否是割点.
 
@@ -65,10 +69,6 @@ DFS(u), initiate num[u] = low[u] = DFSCount
 
     else low[u] = min(low[u], num[v])
 ```
-
-
-
-
 
 ## Euler circuits
 
@@ -90,15 +90,13 @@ T = O(|E|+|V|)  , 边全部一遍, 顶点不止一遍
 
 Hamiliton cycle是一个NP问题
 
-
-
 ### 作业题: 
 
 #### 一
 
 Apply DFS to a directed acyclic graph, and output the vertex before the end of each recursion. The output sequence will be:
 
-答案:深度优先遍历算法中退栈次序是逆拓扑有序。DFS入栈顺序是入度为0的顶点入栈，然后将与此顶点相连的弧度删除，继续将入度为0的顶点入栈，删除对应的弧，重复此过程！
+答案:深度优先遍历算法中,退栈次序是逆拓扑有序。DFS入栈顺序是入度为0的顶点入栈，然后将与此顶点相连的弧度删除，继续将入度为0的顶点入栈，删除对应的弧，重复此过程！
 
 #### 二
 
@@ -107,6 +105,8 @@ Apply DFS to a directed acyclic graph, and output the vertex before the end of e
 Graph G is an undirected completed graph of 20 nodes. Is there an Euler circuit in G? If not, in order to have an Euler circuit, what is the minimum number of edges which should be removed from G?
 
 思路: 完全图是一个简单的无向图，其中每对不同的顶点之间都恰连有一条边相连。
+
+`19+18+...+3+3  = (3+19)*16 /2 = 8*22 +3  = 179` 
 
 #### 代码补全: 
 
@@ -128,7 +128,7 @@ LOW[ i ] : 为i或i的子树能够追溯到的最早的栈中节点的次序号
 
 拓展节点1 ， 发现1在栈中更新LOW[ 4 ]，LOW[ 3 ] 的值为1
 
-
+可以发现，运行Tarjan算法的过程中，每个顶点都被访问了一次，且只进出了一次堆栈，每条边也只被访问了一次，所以该算法的时间复杂度为**O(N+M)**。
 
 ### 拓扑排序
 
@@ -136,9 +136,9 @@ LOW[ i ] : 为i或i的子树能够追溯到的最早的栈中节点的次序号
 
 
 
-若图G有环，则G不存在拓扑排序序列。 √
+若图G有环，则G不存在拓扑排序序列。 √ 
 
 若图G为连通图且不存在拓扑排序序列，则图G必有环。 √
 
-拓扑序一定是唯一的。 × 
+拓扑序一定是唯一的。 ×   不一定唯一 
 

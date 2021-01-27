@@ -27,7 +27,7 @@ vi -> vj ,  vi is adjacent to vj, vj is adjacent(与…毗连的；邻近的) fr
 
 连通图: 每一个顶点都是connected.  
 
-强连通图:   有向图每一个顶点都是互相可以有路径到达
+强连通图:   有向图每一个顶点互相都有路径到达.
 
 in degree  入度,就是进来的边
 
@@ -40,13 +40,12 @@ out degree 出度, 出去的边
 数组法
 
 ```c
-adj_mat[i][j] = 1 ;
-    //无向图,adj_mat是对称的,可以存在数组中.
+adj_mat[i][j] = 1 ;    //无向图,adj_mat是对称的,可以存在数组中.
 ```
 
 链表法  adjacent list
 
-// 有向图可以看出outdegree,需要求indegree
+// 有向图可以看出outdegree, 求indegree
 //建立一个 反向的lists
 
 adjacent multilists
@@ -118,20 +117,26 @@ void Topsort( Graph G )
 
 A graph with 90 vertices and 20 edges must have at least __ connected component(s).
 
-解法:最小的是一个20条边的生成树.对连通图进行遍历，过程中所经过的边和顶点的组合可看做是一棵普通树，通常称为生成树。
+解法:  让单独的点最多的方法, 是一个20条边的生成树 加上69个顶点, .70个连通分量, 对连通图进行遍历，过程中所经过的边和顶点的组合可看做是一棵普通树，通常称为生成树。
 
 连通图的生成树必须满足以下 2 个条件：
 
 1. 包含连通图中所有的顶点；
 2. 任意两顶点之间有且仅有一条通路；
 
+
+
 问题二: Given an undirected graph G with 16 edges, where 3 vertices are of degree 4, 4 vertices are of degree 3, and all the other vertices are of degrees less than 3. Then G must have at least __ vertices.
 
-解法 : Sum of vertex degrees 2 number of edges  16*2 -12 -12 = 8 
+解法 : Sum of vertex degrees 2 number of edges , 16*2 -12 -12 = 8 个顶点,  无向图点的入度是边数量的两倍.
 
-问题三:Let P be the shortest path from S to T. If the weight of every edge in the graph is incremented by 2, P will still be the shortest path from S to T.
+
+
+问题三: 判断题 Let P be the shortest path from S to T. If the weight of every edge in the graph is incremented by 2, P will still be the shortest path from S to T. 错
 
 解法: 假如说最短路径上一共有10条边，而另一条路径虽然比最短路径长，但它只有一条边，如果全加1，就会导致边少的路径成为新的最短路径。
+
+
 
 问题四: 若要求在找到从S到其他顶点最短路的同时，还给出不同的最短路的条数，我们可以将Dijkstra算法略作修改，增加一个count[]数组：count[V]记录S到顶点V的最短路径有多少条。则count[V]应该被初始化为：
 
@@ -140,7 +145,9 @@ A graph with 90 vertices and 20 edges must have at least __ connected component(
   C.count[S]=1;对于其他顶点V则令count[V]=0
   D.count[S]=0;对于其他顶点V则令count[V]=1
 
-答案为 C , 由于S到S一定有一条长度为0的边，所以count初始化为1，其他则是0 .
+答案为 C , 由于S到S一定有一条长度为0的边，所以初始化为1，其他则是0 .
+
+
 
 ##### 拓扑序列
 
@@ -149,6 +156,10 @@ A graph with 90 vertices and 20 edges must have at least __ connected component(
 **Hamiltonian Cycle**
 
 require contains every vertex 顶点, 由指定的起点前往指定的终点，途中经过所有其他节点且只经过一次*/
+
+题目:  有两个奇数度, 其他都是偶数度,  就有欧拉路径  X
+
+还得是连通的 无向图. 
 
 ### 最短路径算法
 
@@ -200,7 +211,6 @@ update small
 // method 1: DecreaseKey -O(log|V|)
 good if graph is sparse , don't have too much edges
 
-
 // method 2 : 
 //  must keep doing deleteMin until an unknown vertex emerges.
 insert W in priority queue repeatly .
@@ -251,7 +261,7 @@ G=(V, E)是一个有向图，图中每条边(u, v) ∈E有一个非负的容量�
 
 1. 速度慢，复杂度为O(mf*E)的Ford Fulkerson算法，
 
-   ```
+   ```pesudo
    initMaxFlow
    
    while there is an augmenting path
@@ -312,7 +322,7 @@ ties是啥意思?
 
 加进去会形成cycle ,就不能加. 循环结束后, 边 < 顶点数 -1 . 就说没有 spanning tree , 说明 图 是非连通的. 
 
-```
+```pesudo
 Sort E edges by increasing weight
 
 T = {}

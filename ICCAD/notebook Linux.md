@@ -287,8 +287,8 @@ history nn 打印之前nn条命令
 
 bash里面
 ```bash
->               输出重定向到一个文件或设备 覆盖原来的文件
->!              输出重定向到一个文件或设备 强制覆盖原来的文件
+>      输出重定向到一个文件或设备 覆盖原来的文件
+>!    输出重定向到一个文件或设备 强制覆盖原来的文件
 >>!  or  >|   重定向到file
 >>     apppend to file
 >><   从 file  input 
@@ -537,7 +537,9 @@ question mark ("?");   plus sign ("+");
 
 opening and closing curly brackets/braces ("{" and "}"); and opening and closing parentheses ("(" and ")").
 
+double quotation marks   ""
 
+single quotation marks (' ')
 
 ### 网络
 
@@ -561,22 +563,22 @@ opening and closing curly brackets/braces ("{" and "}"); and opening and closing
 | Data/Link   有以太网 CSMA -CD  或token ring 令牌(用在数据量非常大的地方) |
 | Physical(四层合并到数据链路层)                               |
 
-##### 一些名词:
+#### 一些名词:
 
 LAN 局域网  WAN 广域网  wide area network
 
 Wi-Fi 的英文全称为wireless fidelity
 
-DNS :  domain name server          INS: servers provider
+DNS :  domain name server  应用层         INS: servers provider
 
-PPP   , PPPoE:  Point-to-Point Protocol over Ethernet
+PPP   数据链路层, PPPoE:  Point-to-Point Protocol over Ethernet
 
 PPPoE 是一种网络协议，它派生自另一种称为 PPP 的较旧协议，
 
 PPPoE 设计用于管理如何通过以太网网络（有线网络）传输数据，它允许使用以太网在多个客户端之间分配单个服务器连接。因此，多个客户端可以从 Internet 服务提供商连接到同一服务器，并同时访问 Internet。
 
 
-window跟Linux之间的文件互传，工具有很多。用File-zilla连接服务器，直接在上面输入账号密码，点击连接就行了。用scp 也行
+window跟Linux之间的文件互传，工具有很多。用File-zilla连接服务器。用scp 也行
 
 /etc/resolv.conf 文件中有自己的IP地址.
 
@@ -614,7 +616,7 @@ ssh [-l username] hostname [command]
 
 
 
-##### ftp命令 
+#### ftp命令 
 
 　　使用格式：ftp [-v] [-d] [-i] [-n] [-g] [-s:filename] [-a] [-w:windowsize] [computer]
 
@@ -667,7 +669,11 @@ unix上的http 服务器软件是 Apache HTTP Server(httpd)
 
 mail的发送协议是 SMTP,  接收协议 是POP3 和IMAP Internet Message Access Protocol应用层
 
-##### ssh命令
+#### SSH 协议
+
+安全外壳协议。为 Secure Shell 的缩写。SSH 为建立在应用层和传输层基础上的安全协议。
+
+**sshd命令**是openssh软件套件中的服务器守护进程。
 
 1. 检查是否启动 ` ps -e | grep ssh`
 
@@ -691,7 +697,8 @@ scp -P 1234 -r test user@192.168.0.101:/home/data
 4. 将 文件/文件夹 从远程 Ubuntu 机拷至本地(scp)
    `$scp -r username@192.168.0.1:/home/username/remotefile.txt`
 
-5. 
+   
+   
 
 ### 系统管理
 
@@ -725,13 +732,17 @@ cat  的全称是concatenate使(成串地)连结[衔接]起来 ,深度优先搜�
 
 很多同学主要做cache , 人工智能卷积和放进cache
 
-修复文件系统.  fsck -y -a -n filesystem
+修复文件系统. 
+
+ **fsck** -y -a -n filesystem
 
 -y -a   对所有问题说yes
 
 -n 对所有问题说no
 
-df -i  -k  显示空闲的disk block.
+看磁盘使用情况:disk free 
+
+**df** ：  -i  -k  显示空闲的disk block. -k 就是用kb显示大小 .
 
 cat一个文件, 找到inode指向地址的数据块
 
@@ -759,13 +770,13 @@ sdc1 是一个硬盘
 
 umount 解除挂载
 
-du 报告目录所有的数据块 ,可以看还有多少空间
+**du** 报告目录所有的数据块disk usage ,可以看还有多少空间
 
 du /home 
 
 du -ks file
 
-kilotypes作为单位, 只显示total sum
+-k  kilotypes作为单位,  -s只显示total sum
 
 可以练习USB盘安装试试
 
@@ -781,15 +792,14 @@ linux 脚本化, 实现自动打包发送
 
 #### NFS
 
-cshell, vi , NFS 都是bill joe 写的.
+cshell, vi , NFS  网络文件系统，英文Network File System(NFS)，是由SUN公司研制的UNIX表示层协议(presentation layer protocol)，都是bill joe 写的.
 
 ```bash
 # mount -t nfs cello:/remotedir /project
 远程挂载cello硬盘上/remotedir目录
-对方, 
+对方:
 cat /etc/exports 
 share -F nfs /space
-
 ```
 
 #### NIS network information system
@@ -838,8 +848,6 @@ X display server 就是另一个教室的人, 她管理黑板, 老师就是X cli
 client 有一个mask, 设置接收哪些事件
 
 window exposure, server 内存很小, 不负责redraw内容, 发送window exposure信号给client
-
-
 
 #### 命令
 
@@ -1118,8 +1126,6 @@ $(LIBRARY): $(OBJECTS)
 	include $(OBJECTS:.o=.d) 
 ```
 
-
-
 ##### 问题: 
 
 makefile：4：***缺少分隔符。停止
@@ -1132,13 +1138,9 @@ makefile：4：***缺少分隔符。停止
 
 ### 版本控制工具
 
-
-
 2007年, Linus Benedict Torvalds 创造了git 
 
-
-
-除了intel都是big endian 高位地址对应小数据, intel是little endian. 高位地址对应大数据.
+除了intel都是big endian ,0x1234 高位地址对应0x34, intel是little endian. 高位地址对应0x12.
 
 
 
@@ -1193,7 +1195,9 @@ mount( ),  umount( ), link( ),
 
 #### process control calls: 
 
-fork(), kill( ), signal( ), execve(), 
+fork()子进程是父进程的副本，它将获得父进程数据空间、堆、栈等资源的副本。注意，子进程持有的是上述存储空间的“副本”，这意味着父子进程间不共享这些存储空间。
+
+UNIX将复制父进程的[地址空间](https://baike.baidu.com/item/地址空间)内容给子进程，因此，子进程有了独立的地址空间。在不同的UNIX (Like)系统下，我们无法确定fork之后是子进程先运行还是父进程先运行，这依赖于系统的实现。所以在移植代码的时候我们不应该对此作出任何的假设。, kill( ), signal( ), execve(), 
 
 wait(), exit(), sleep(), nice(), pause(), 
 
@@ -1209,14 +1213,14 @@ time( ), stime( ), times( ), alarm( )
 
 #### Inter-Process Communication (IPC)
 
-1. Pipe –pipe(), mknod(), read(), write() 
-2. •Interrupt and signal–kill(), signal(), setjmp(), longjmp() 
+1. Pipe –pipe(), mknod()**mknod命令**用于创建Linux中的字符设备文件和块设备文件。, read(), write() 
+2. •Interrupt and signal–kill(), signal(), setjmp(), longjmp() setjmp()进行非局部标号的设置，而longjmp()是实现跳转的功能，调转到设置的标号处setjmp()。
 3. •Message queue –msgget(), msgctl(), msgsnd(), msgrcv() 
 4. •Semaphore信号灯信号量–semget(), semop(), semctl() 
-5. •Shared memory –shmget(), shmat(), shmdt(), shmctl() 
+5. •Shared memory –shmget()当key的取值为IPC_PRIVATE，则函数shmget()将创建一块新的共享内存, shmat(), shmdt()shmdt将使相关shmid_ds结构中的shm_nattch计数器值减1, shmctl()  删除共享内存.
 6. •Socket–socket(), bind(), getsockname(), connect(), listen(), accept(), send(), 
 
-recv( ), shutdown() 
+recv( )不论是客户还是服务器应用程序都用recv函数从TCP连接的另一端接收数据。该函数的第一个参数指定接收端套接字描述符；, shutdown() 
 
 **进程间可以通讯, 考试可能问一问.**
 

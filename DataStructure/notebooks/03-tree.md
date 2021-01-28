@@ -57,7 +57,7 @@ It is always possible to represent a tree by a one-dimensional integer array.  �
 
     * 后序（Post-order）遍历：左右值（后缀表达式）
 
-    已知前/后序和中序遍历序列，则可以知道树的结构
+    已知前/后序和中序遍历序列，则可以知道树的结构.后序最后一个是根, 前序第一个是根.
 中序二叉树 = 后序普通树
 
 * 广度优先遍历，队列：
@@ -142,3 +142,78 @@ https://blog.csdn.net/qq_41754065/article/details/106590844?utm_medium=distribut
 $$
 n = n0 + n0 - 1 + 1 = 2n0
 $$
+
+二叉树的数学性质
+n0 = n2 + 1  n2是 degree =2 的node数量。 n0是叶结点数量。
+
+prove：
+n = n0 + n1+ n2  =124
+n =B+1 ， B 是分支数量。 
+B = n1+ 2 *n2 
+根据上面三条可以得到。
+
+BST二叉搜索树。
+（1） 每个node 有一个整数key，key是distinct 独特的。
+（2） 任何左子树都比根节点小。
+（3 比根节点 大的在根节点右边
+（4  
+
+```cpp
+Position Find (ElementType X,Search Tree T) ： 
+if（T == null）
+ return null;
+if(x < T->Element) 
+ return Find(X,T->left);
+else
+ if(x > T->Element)
+  return Find(X,T->Right);
+ else
+  return T;
+} T(N) =O (depth)
+```
+
+
+怎么计算时间复杂度？
+子结点接近 1/2 结点 ，有1/2概率在最后一层
+degree 1 约1/4结点， 
+
+插入：
+
+```cpp
+if（T == null）{
+ T = malloc(sizeof(struct TreeNode));
+ T ->Element = X;
+ T->left = T->right =null;
+ }
+ else
+  if(X< T->element)
+   T->left = Insert(X,T->left);
+ 	else
+ 	 if(X> T->element)
+   	T->right = Insert(X,T->right);
+return T; 	 
+}
+```
+
+
+难点： delete a degree 2
+无孩结点 直接删除。
+单孩结点，让父节点指针指向单孩。
+双孩结点， 左子树最大的来替代。然后递归Delete（左子树）。 把左子树最大的删除，把复杂问题简单化，                                      
+
+二叉搜索树
+左子树每个结点都不大于root， 
+右子树每个结点都不小于root，
+查询复杂度：  查询结点比较次数为depth +1
+构造复杂度和查询复杂度相同                   
+
+
+完全二叉树
+除了最后一层外， 别的层都是满的， 最后一层集中在最左边。(notice : not as same as full binary tree ) level－order遍历时，搜索到空节点就遍历完树了。    
+度为1 的节点个数要么1个，要么0个，
+2n0 = 总数+1 － n1
+124 n1 =1 ， n0 = 总数/2 
+最大堆
+                                     
+最小堆
+删除最小，

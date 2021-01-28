@@ -74,11 +74,9 @@ https://www.w3cschool.cn/cpp/cpp-fu8l2ppt.html
 unordered系列的容器。unordered_map记录元素的hash值，根据hash值判断元素是否相同。map相当于java中的TreeMap，unordered_map相当于HashMap。无论从查找、插入上来说，unordered_map的效率都优于hash_map，更优于map；而空间复杂度方面，hash_map最低，unordered_map次之，map最大。
 
 ```cpp
-unordered_map<string,double>
-18     myrecipe,
-19     mypantry = {{"milk",2.0},{"flour",1.5}};
-20 
-21     /****************插入*****************/
+unordered_map<string,double>myrecipe,
+mypantry = {{"milk",2.0},{"flour",1.5}};
+     /****************插入*****************/
 22     pair<string,double> myshopping ("baking powder",0.3);
 23     myrecipe.insert (myshopping);                        // 复制插入
 24     myrecipe.insert (make_pair<string,double>("eggs",6.0)); // 移动插入
@@ -153,7 +151,7 @@ Set和Vector的区别在于Set不包含重复的数据。Set和Map的区别在�
 
 #### vector
 
-
+长度vector.size();
 
 最后一个元素 `return vec.back();`
 
@@ -167,11 +165,17 @@ vector排序, 用自定义的结构体进行sort算法
 
 错误: 排序后又没有排序了不知道为啥. 
 
-因为你的 vt = vector 是复制了一份, 要直接取地址. auto产生的迭代器是const ,.`auto` 在进行类型推导时会默认使用**基础类型**，而非指针与引用，所以不能修改,只有在初始化时使用了显式的引用（如 `std::ref()`）时才会将类型变更为引用类型。
+因为你的 vt = vector 是复制了一份, 要直接取地址. 
+
+auto产生的迭代器是const ,`auto` 在进行类型推导时会默认使用**基础类型**，而非指针与引用，所以不能修改,只有在初始化时使用了显式的引用（如 `std::ref()`）时才会将类型变更为引用类型。
 
 ```cpp
   auto p1 = std::make_pair(names[1], std::ref(score[1]));
 ```
+
+赋值一部分
+
+
 
 #### queue
 
@@ -279,6 +283,8 @@ true 和 false 并不是某某库做的 define，他们是 C/C++ 的关键字，
 
 构造函数初始化列表还有一个很重要的作用，那就是初始化 const 成员变量。初始化 const 成员变量的唯一方法就是使用初始化列表。
 
+`TreeNode* node = new TreeNode(root); ` new会返回一个指针,而不能 &TreeNode(root) 得到指针.
+
 #### 对象指针
 
 在栈上创建出来的对象都有一个名字，比如 stu，使用指针指向它不是必须的。但是通过 new 创建出来的对象就不一样了，它在**堆上分配内存**，没有名字，只能得到一个指向它的指针，所以必须使用一个指针变量来接收这个指针，否则以后再也无法找到这个对象了，更没有办法使用它。也就是说，使用 new 在堆上创建出来的对象是匿名的，没法直接使用，必须要用一个指针指向它，再借助指针来访问它的成员变量或成员函数。
@@ -294,3 +300,12 @@ true 和 false 并不是某某库做的 define，他们是 C/C++ 的关键字，
 int i不会回带参数，而int &i可以回带参数,int &i 相当于别名，而int i 只是拷贝
 
  int i 可赋予常量，而int & i 不能
+
+
+
+**reference to ' min' is ambiguous**
+
+翻译过来就是对min的引用有歧义. 
+
+ reference to overloaded function could not 
+

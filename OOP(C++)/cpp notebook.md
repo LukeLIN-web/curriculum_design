@@ -61,7 +61,11 @@ TestHelloObject::TestHelloObject(TestHelloObjectParams *params) :
 
 ### STL库
 
+因此，当使用<iostream.h>时，相当于在c中调用库函数，使用的是全局命名空间，也就是早期的c++实现,是为了兼容以前的C++代码；当使用<iostream>的时候，该头文件没有定义全局命名空间，必须使用namespacestd；这样才能正确使用cout。
 
+\#include <string>
+using namespace std;
+这样命名空间std内定义的所有标识符都有效（曝光）。就好像它们被声明为全局变量一样。因为标准库非常的庞大，所程序员在选择的类的名称或函数名时就很有可能和标准库中的某个名字相同。所以为了避免这种情况所造成的名字冲突，就把标准库中的一切都被放在名字空间std中。
 
    1 如果你需要高效的随即存取，而不在乎插入和删除的效率，使用vector 
    2 如果你需要大量的插入和删除，而不关心随即存取，则应使用list 
@@ -94,6 +98,8 @@ emplace_back() 和 push_back() 效果一样.
 最多的方法是先用eraser函数擦除，可以通过key 擦除, 然后我们再进行赋值
 
 不要局部变量,其实全局变量设iterator也可以修改,用一个指针.
+
+![](https://mmbiz.qpic.cn/mmbiz_png/F1VzfUpxxe4nxvWzKLIMPMARI6WiaMdag5moDNWxGcOot6SRoialwsCSnlX9Sa1Upl0PP6vR50mkaQT5yL2upUcQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 #### unordered_map 容器
 
@@ -151,15 +157,13 @@ Set和Vector的区别在于Set不包含重复的数据。Set和Map的区别在�
 
 #### vector
 
-长度vector.size();
+长度`vector.size();`
 
 最后一个元素 `return vec.back();`
 
  vector，set，map,The values taken out by the end() of these containers are not actually the last values, sort method actually does not take the number corresponding to the last address.
 
-`sort(vt.begin(),vt.end());`
-
-vector排序, 用自定义的结构体进行sort算法
+`sort(vt.begin(),vt.end());`vector排序, 用自定义的结构体进行sort算法
 
 这时候需要自己定义个比较函数，因为sort算法是基于容器中的元素是可以两两比较的，然后从小到大排序，所以要自定义怎么样才是小于（'<'）
 
@@ -174,6 +178,14 @@ auto产生的迭代器是const ,`auto` 在进行类型推导时会默认使用**
 ```
 
 赋值一部分
+
+寻找元素  `vector<*int*>::iterator it2 = find(nums.begin(), nums.end(), tem[fastIndex]);`
+
+获得下标: `int index2 = &*it2-&nums[0];`
+
+复制元素 
+
+`vector<*int*> tem(*nums*);//这种拷贝，相当于复制了一份数据，list中的数据不变。`
 
 
 

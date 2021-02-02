@@ -1,7 +1,9 @@
 
 Please CAREFULLY read the questions and follow instructions to answer.
 
-Problem 1. Try to insert a USB stick into your computer, then find whether it has been automatically mounted on somewhere in the file tree by 'diff'. If so, then try to unmount it manually from the file tree. After that, try to mount the USB stick to your home directory.
+Problem 1. Try to insert a USB stick into your computer, 
+then find whether it has been automatically mounted on somewhere in the file tree by 'diff'. 
+If so, then try to unmount it manually from the file tree. After that, try to mount the USB stick to your home directory.
 
 Problem 2. Try to enter shell as superuser (with great care).
  Try to change the hostname of your computer and keep this new name after restarting computer. 

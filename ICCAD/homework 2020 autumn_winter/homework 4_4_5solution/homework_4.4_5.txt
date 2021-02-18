@@ -9,6 +9,8 @@ and show the hierarchy with a screenshot.se'r
 
 Problem 2. Run Python scripts of demo_8queen.py and demo_showqueens.py,
  read the source code, comments and their outputs.
+
+
  Then (OPTIONALLY) write a Perl or Python script to analyze the solutions in 8queen.out,
  and show how many kinds of the solutions are unique.
  (symmetrical solutions are not considered as unique, for example, one solution being mirrored or rotated

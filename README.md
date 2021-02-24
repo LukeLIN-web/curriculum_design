@@ -30,7 +30,7 @@
 
 pull = fetch + merge ,多人协作时不够安全
 
-
+在window下生成ssh密钥,然后加在github上. https://www.jianshu.com/p/2790a860f151
 
 怎么删除git中一个无用的分支:
 

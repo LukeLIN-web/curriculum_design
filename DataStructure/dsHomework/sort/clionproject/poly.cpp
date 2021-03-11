@@ -210,10 +210,9 @@ List getSum(List L1,List L2){
 
 List getMuti(List L1,List L2){
     /*
-    在这里我们采用的是：逐项插入。
-    什么是逐项插入？
+    我们采用逐项插入
     1，先拿出L2的第一项，让它与L1的每一项相乘。从而得到 L。
-    2，在拿出L2的第二项，让它与L1的每一项相乘，然后每乘一项，就将其插入到 L中。
+    2，拿出L2的第二项，让它与L1的每一项相乘，然后每乘一项，就将其插入到 L中。
     3，依次重复上面的步骤，最终得到L。将其打印出来。
     */
     List L,temp = NULL,s = NULL;
@@ -221,7 +220,7 @@ List getMuti(List L1,List L2){
     temp = L;
     List La = L1;
 
-    //出L2的第一项，让它与L1的每一项相乘。从而得到 L。
+    //取出L2的第一项，让它与L1的每一项相乘。从而得到 L。
     while(La->next){
         s = (struct Node *)malloc(sizeof(struct Node));
         s->coef = La->next->coef * L2->next->coef;
@@ -230,7 +229,6 @@ List getMuti(List L1,List L2){
         L = s;
         La = La->next;
     }
-
     L->next = NULL;
     L = temp;
     List Lb = L2->next;
@@ -247,6 +245,7 @@ List getMuti(List L1,List L2){
             s = (struct Node *)malloc(sizeof(struct Node));
             s->coef = La->next->coef * Lb->next->coef;
             s->exp = La->next->exp + Lb->next->exp;
+            //得到的s插入L中.
             while(L->next){
                 if(s->exp > L->next->exp){
                     List val = L->next;
@@ -255,11 +254,10 @@ List getMuti(List L1,List L2){
                     flag = false;
                     break;
                 }
-                else if(s->exp == L->next->exp)
-                {
+                else if(s->exp == L->next->exp){
                     if(s->coef + L->next->coef == 0){
                         List val = L->next->next;
-                        L->next = val;
+                        L->next = val;////如果相等，非0时，系数相加,为0时,删除掉该节点
                     }
                     else
                         L->next->coef += s->coef;
@@ -268,10 +266,10 @@ List getMuti(List L1,List L2){
                 }
                 L = L->next;
             }
-
+            // 如果没有插入到L中,那就放在最后
             if(flag){
                 L->next = s;
-                s->next = NULL;
+                s->next = nullptr;
             }
             L = temp;
             La = La->next;

@@ -29,6 +29,6 @@ List sampC1();// input 3 4 -5 2  6 1  -2 0
 List sampB1();// input 3 3 0 2
 List sampB2();// input 0 3 0 2
 void judgeZero(List L);
-void judge3(List L);
+void judge3(List L);// test 3 3 0 2 和 0 3 0 2 相乘
 
 #endif //CLINCHER_POLYNOMIAL_H

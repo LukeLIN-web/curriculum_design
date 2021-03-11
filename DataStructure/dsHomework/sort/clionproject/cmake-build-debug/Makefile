@@ -235,6 +235,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\main.cpp.s
 .PHONY : main.cpp.s
 
+poly.obj: poly.cpp.obj
+
+.PHONY : poly.obj
+
+# target to build an object file
+poly.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\poly.cpp.obj
+.PHONY : poly.cpp.obj
+
+poly.i: poly.cpp.i
+
+.PHONY : poly.i
+
+# target to preprocess a source file
+poly.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\poly.cpp.i
+.PHONY : poly.cpp.i
+
+poly.s: poly.cpp.s
+
+.PHONY : poly.s
+
+# target to generate assembly for a file
+poly.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\poly.cpp.s
+.PHONY : poly.cpp.s
+
 ptaNewyear1.obj: ptaNewyear1.cpp.obj
 
 .PHONY : ptaNewyear1.obj
@@ -283,6 +310,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... poly.obj
+	@echo ... poly.i
+	@echo ... poly.s
 	@echo ... ptaNewyear1.obj
 	@echo ... ptaNewyear1.i
 	@echo ... ptaNewyear1.s

@@ -156,13 +156,33 @@ CMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.s: cmake_for
  /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.s /c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\FinalexamHeight of Binary Search Tree.c"
 <<
 
+CMakeFiles\clionproject.dir\poly.cpp.obj: CMakeFiles\clionproject.dir\flags.make
+CMakeFiles\clionproject.dir\poly.cpp.obj: ..\poly.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/clionproject.dir/poly.cpp.obj"
+	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\clionproject.dir\poly.cpp.obj /FdCMakeFiles\clionproject.dir\ /FS -c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\poly.cpp"
+<<
+
+CMakeFiles\clionproject.dir\poly.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clionproject.dir/poly.cpp.i"
+	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\clionproject.dir\poly.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\poly.cpp"
+<<
+
+CMakeFiles\clionproject.dir\poly.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clionproject.dir/poly.cpp.s"
+	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\clionproject.dir\poly.cpp.s /c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\poly.cpp"
+<<
+
 # Object files for target clionproject
 clionproject_OBJECTS = \
 "CMakeFiles\clionproject.dir\main.cpp.obj" \
 "CMakeFiles\clionproject.dir\1098_Insertion_or_Heap_Sort.cpp.obj" \
 "CMakeFiles\clionproject.dir\Arrangement_of_Computation_Tasks.cpp.obj" \
 "CMakeFiles\clionproject.dir\ptaNewyear1.cpp.obj" \
-"CMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.obj"
+"CMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.obj" \
+"CMakeFiles\clionproject.dir\poly.cpp.obj"
 
 # External object files for target clionproject
 clionproject_EXTERNAL_OBJECTS =
@@ -172,9 +192,10 @@ clionproject.exe: CMakeFiles\clionproject.dir\1098_Insertion_or_Heap_Sort.cpp.ob
 clionproject.exe: CMakeFiles\clionproject.dir\Arrangement_of_Computation_Tasks.cpp.obj
 clionproject.exe: CMakeFiles\clionproject.dir\ptaNewyear1.cpp.obj
 clionproject.exe: CMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.obj
+clionproject.exe: CMakeFiles\clionproject.dir\poly.cpp.obj
 clionproject.exe: CMakeFiles\clionproject.dir\build.make
 clionproject.exe: CMakeFiles\clionproject.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable clionproject.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable clionproject.exe"
 	"C:\Program Files\JetBrains\CLion 2020.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\clionproject.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\clionproject.dir\objects1.rsp @<<
  /out:clionproject.exe /implib:clionproject.lib /pdb:"D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\clionproject.pdb" /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

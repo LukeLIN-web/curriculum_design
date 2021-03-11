@@ -9,5 +9,8 @@ CMakeFiles\clionproject.dir\Arrangement_of_Computation_Tasks.cpp.obj: "..\Arrang
 
 CMakeFiles\clionproject.dir\main.cpp.obj: ..\main.cpp
 
+CMakeFiles\clionproject.dir\poly.cpp.obj: ..\Polynomial.h
+CMakeFiles\clionproject.dir\poly.cpp.obj: ..\poly.cpp
+
 CMakeFiles\clionproject.dir\ptaNewyear1.cpp.obj: ..\ptaNewyear1.cpp
 

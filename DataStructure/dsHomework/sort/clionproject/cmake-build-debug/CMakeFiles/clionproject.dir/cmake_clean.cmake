@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/clionproject.dir/Arrangement_of_Computation_Tasks.cpp.obj"
   "CMakeFiles/clionproject.dir/FinalexamHeight_of_Binary_Search_Tree.c.obj"
   "CMakeFiles/clionproject.dir/main.cpp.obj"
+  "CMakeFiles/clionproject.dir/poly.cpp.obj"
   "CMakeFiles/clionproject.dir/ptaNewyear1.cpp.obj"
   "clionproject.exe"
   "clionproject.exe.manifest"

@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/1098 Insertion or Heap Sort.cpp" "D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/cmake-build-debug/CMakeFiles/clionproject.dir/1098_Insertion_or_Heap_Sort.cpp.obj"
   "D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/Arrangement of Computation Tasks.cpp" "D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/cmake-build-debug/CMakeFiles/clionproject.dir/Arrangement_of_Computation_Tasks.cpp.obj"
   "D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/main.cpp" "D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/cmake-build-debug/CMakeFiles/clionproject.dir/main.cpp.obj"
+  "D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/poly.cpp" "D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/cmake-build-debug/CMakeFiles/clionproject.dir/poly.cpp.obj"
   "D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/ptaNewyear1.cpp" "D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/cmake-build-debug/CMakeFiles/clionproject.dir/ptaNewyear1.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")

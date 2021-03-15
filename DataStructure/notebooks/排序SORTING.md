@@ -125,7 +125,7 @@ $$
 
 拷贝比较慢, 而且需要额外的空间, 不适合internal sorting,  归并排序需要O(n)的辅助空间，而与之效率相同的快排和堆排分别需要O(logn)和O(1)的辅助空间，在同类算法中归并排序的空间复杂度略高
 
-### quicksort
+### quick sort
 
 实践中最快的排序算法.
 
@@ -145,9 +145,13 @@ median elminate wrong way 5% time.
 
 快速排序， 首先第一个为pivot， 后面分为<pivot 和> pivot 的部分， 如果<pivot , 那就分到小于的一堆，如果> pivot ，那就分到大于的一堆。
 
- 首先从后半部分开始，**如果扫描到的值大于基准数据就让high减1**,***如果发现有元素比该基准数据的值小(如上图中18<=tmp)，就将high位置的值赋值给low位置\*** ,结果如下:
+ 首先从后半部分开始，如果扫描到的值大于基准数据就让high减1  如果发现有元素比该基准数据的值小，就将high位置的值赋值给low位置 
 
-然后开始从前往后扫描,**如果扫描到的值小于基准数据就让low加1**,***如果发现有元素大于基准数据的值(如上图46=>tmp)，就再将low位置的值赋值给high位置的值\***,指针移动并且数据交换后的结果如下:
+然后开始从前往后扫描,如果扫描到的值小于基准数据就让low加1,如果发现有元素大于基准数据的值，就再将low位置的值赋值给high位置的值.
+
+
+
+速度比较
 
 If there are less than 20 inversions in an integer array, the Quick Sort will be the best method among Quick Sort, Heap Sort and Insertion Sort.
 
@@ -155,7 +159,7 @@ If there are less than 20 inversions in an integer array, the Quick Sort will be
 
 快速排序在随机数据表现比堆排好。
 
-虽说堆排和快排都是nlog（n）级的，数据比较，堆排的常数是快排的2.5倍。
+虽说堆排和快排都是n log（n）级的，数据比较，堆排的常数是快排的2.5倍。
 
 在非随机数据下，快排的就没有什么优势了，特别是全一样的数时，达到了n^2的上限
 
@@ -168,8 +172,9 @@ If there are less than 20 inversions in an integer array, the Quick Sort will be
 
 问题2：对于含有大量重复元素的序列，即使是随机化快排效率也很差 
  于是再次改进，得到 
- **1.****双路快排**： 从两端向中间挺近，设立两个区：*小于等于区，大于等于区* 
- **2.****三路快排**： 从两端向中间挺近，设立三个区：*小与区，等于区，大于区*
+ 双路快排
+
+三路快排： 从两端向中间挺近，设立三个区：小与区，等于区，大于区
 
 ### Sorting 大结构
 

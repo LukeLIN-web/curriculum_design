@@ -325,7 +325,7 @@ jobs 观察任务
 
 ps -ef  or ps -aux 看整个系统的process status
 
-top 动态查看ps
+top 动态查看ps, 
 pstree 进程树
 uptime tell 系统运行了多久.
 
@@ -1213,12 +1213,12 @@ time( ), stime( ), times( ), alarm( )
 
 #### Inter-Process Communication (IPC)
 
-1. Pipe –pipe(), mknod()**mknod命令**用于创建Linux中的字符设备文件和块设备文件。, read(), write() 
-2. •Interrupt and signal–kill(), signal(), setjmp(), longjmp() setjmp()进行非局部标号的设置，而longjmp()是实现跳转的功能，调转到设置的标号处setjmp()。
-3. •Message queue –msgget(), msgctl(), msgsnd(), msgrcv() 
-4. •Semaphore信号灯信号量–semget(), semop(), semctl() 
-5. •Shared memory –shmget()当key的取值为IPC_PRIVATE，则函数shmget()将创建一块新的共享内存, shmat(), shmdt()shmdt将使相关shmid_ds结构中的shm_nattch计数器值减1, shmctl()  删除共享内存.
-6. •Socket–socket(), bind(), getsockname(), connect(), listen(), accept(), send(), 
+1. 管道Pipe –pipe(), mknod()**mknod命令**用于创建Linux中的字符设备文件和块设备文件。, read(), write() 
+2. 信号Interrupt and signal–kill(), signal(), setjmp(), longjmp() setjmp()进行非局部标号的设置，而longjmp()是实现跳转的功能，调转到设置的标号处setjmp()。
+3. 消息队列Message queue –msgget(), msgctl(), msgsnd(), msgrcv() 
+4. Semaphore信号量–semget(), semop(), semctl() 
+5. 共享内存Shared memory –shmget()当key的取值为IPC_PRIVATE，则函数shmget()将创建一块新的共享内存, shmat(), shmdt()shmdt将使相关shmid_ds结构中的shm_nattch计数器值减1, shmctl()  删除共享内存.
+6. Socket用到的一些函数有–socket(), bind(), getsockname(), connect(), listen(), accept(), send(), 
 
 recv( )不论是客户还是服务器应用程序都用recv函数从TCP连接的另一端接收数据。该函数的第一个参数指定接收端套接字描述符；, shutdown() 
 

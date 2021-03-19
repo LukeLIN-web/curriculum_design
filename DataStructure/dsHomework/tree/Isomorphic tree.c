@@ -39,8 +39,6 @@ struct TreeNode {
  A右  !=B左,返回0 ;
  如果分别只有一个,判断是否相等,是的话,返回1. 一个为两个一个为一个,返回0. (包括在上面的==情况) 
 如果不等于, 0
-
- 
 */ 
 int Isomorphic( Tree T1, Tree T2 ){
 	if(T1 == NULL && T2 == NULL){
@@ -55,10 +53,10 @@ int Isomorphic( Tree T1, Tree T2 ){
 		} 
 		else {
 			if(T1->Left == NULL &&T1->Right == NULL && T1->Left == NULL &&T1->Right == NULL){
-					return 1;
+				return 1;
 			}
 			else{
-					return	 Isomorphic( T1->Left, T2->Left )&&Isomorphic( T1->Right, T2->Right ) || Isomorphic( T1->Left, T2->Right )&&Isomorphic( T1->Right, T2->Left ) ;
+				return	 Isomorphic( T1->Left, T2->Left )&&Isomorphic( T1->Right, T2->Right ) || Isomorphic( T1->Left, T2->Right )&&Isomorphic( T1->Right, T2->Left ) ;
 			} 
 		}
 

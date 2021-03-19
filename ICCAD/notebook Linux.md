@@ -115,6 +115,12 @@ find -name 'XErr*'
 
 find  -iname se.java  -iname不区分大小写.
 
+示例：① 列出当前目录及子目录下所有文件和文件夹: `find .`；
+
+② 在`/home`目录下查找以.txt 结尾的文件名:`find /home -name "*.txt"` ,忽略大小写: `find /home -iname "*.txt"` ；
+
+③ 当前目录及子目录下查找所有以.txt 和.pdf 结尾的文件:`find . \( -name "*.txt" -o -name "*.pdf" \)`或`find . -name "*.txt" -o -name "*.pdf"`。
+
 参考文献可以看这个
 
 https://www.cnblogs.com/loveyouyou616/p/9796294.html
@@ -584,9 +590,11 @@ window跟Linux之间的文件互传，工具有很多。用File-zilla连接服�
 
 /etc/nesswitch.conf 文件中 ,有host 解析IP地址找的顺序,一般是file 之后dns 
 
-ip, ipconfig, route , netstat 展示网络状态.
+ip, ipconfig, route , netstat 展示网络状态. 
 
-
+- - 查看当前系统的网卡信息：ifconfig
+  - 查看与某台机器的连接情况：ping
+  - 查看当前系统的端口使用：netstat -an  .netstat可以看 pid, 哪个进程用 什么ip地址和端口, 以及用什么协议tcp, 
 
 ```bash
 ftp host
@@ -722,7 +730,9 @@ data blocks
 
 ##### Inode
 
-所有的文件和文件夹都有一个Inode, 记录文件的信息如size, permission, data address. 
+所有的文件和文件夹都有一个Inode, 记录文件的metadata元信息如size, permission, data address(因为一个文件可能被分成几块放在不同地方). 
+
+`stat a.txt` 可以看a.txt的inode信息 
 
 inode 有data block 的地址, 
 

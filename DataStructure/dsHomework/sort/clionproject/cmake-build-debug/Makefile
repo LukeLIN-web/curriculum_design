@@ -208,6 +208,33 @@ FinalexamHeight_of_Binary_Search_Tree.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.s
 .PHONY : FinalexamHeight_of_Binary_Search_Tree.c.s
 
+alibaba_bishi1.obj: alibaba_bishi1.cpp.obj
+
+.PHONY : alibaba_bishi1.obj
+
+# target to build an object file
+alibaba_bishi1.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\alibaba_bishi1.cpp.obj
+.PHONY : alibaba_bishi1.cpp.obj
+
+alibaba_bishi1.i: alibaba_bishi1.cpp.i
+
+.PHONY : alibaba_bishi1.i
+
+# target to preprocess a source file
+alibaba_bishi1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\alibaba_bishi1.cpp.i
+.PHONY : alibaba_bishi1.cpp.i
+
+alibaba_bishi1.s: alibaba_bishi1.cpp.s
+
+.PHONY : alibaba_bishi1.s
+
+# target to generate assembly for a file
+alibaba_bishi1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\alibaba_bishi1.cpp.s
+.PHONY : alibaba_bishi1.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -307,6 +334,9 @@ help:
 	@echo ... FinalexamHeight_of_Binary_Search_Tree.obj
 	@echo ... FinalexamHeight_of_Binary_Search_Tree.i
 	@echo ... FinalexamHeight_of_Binary_Search_Tree.s
+	@echo ... alibaba_bishi1.obj
+	@echo ... alibaba_bishi1.i
+	@echo ... alibaba_bishi1.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

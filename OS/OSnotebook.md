@@ -327,9 +327,9 @@ graph TB
 新建new -.admitted.->就绪ready
 就绪ready-.scheduler dispatch.->running运行
 running运行-.exit.->terminated
-running运行-.interrupt.->就绪ready
-running运行 -.I/O or event wait.->waiting
-waiting-.I/O or event wait completion.->就绪ready
+running运行-.时间片用完或者更高优先权的进程interrupt.->就绪ready
+running运行 -.I/O or event wait.->waiting阻塞
+waiting阻塞-.I/O or event wait completion.->就绪ready
 ```
 
 ### 进程的调度算法

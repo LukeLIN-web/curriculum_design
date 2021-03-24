@@ -234,5 +234,7 @@ type Provider interface {
 
 
 
+### GET和POST
 
+1. get数据添加在url后面,`url`长度有限制,上传的数据量很小,而且暴露用户名和密码,  post是用附件, 数据量更大.
 

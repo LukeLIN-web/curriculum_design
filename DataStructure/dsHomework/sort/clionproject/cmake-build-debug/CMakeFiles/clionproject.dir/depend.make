@@ -15,3 +15,5 @@ CMakeFiles\clionproject.dir\poly.cpp.obj: ..\poly.cpp
 
 CMakeFiles\clionproject.dir\ptaNewyear1.cpp.obj: ..\ptaNewyear1.cpp
 
+CMakeFiles\clionproject.dir\wangyiXiaoZhao.cpp.obj: ..\wangyiXiaoZhao.cpp
+

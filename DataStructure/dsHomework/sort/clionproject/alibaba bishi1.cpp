@@ -3,39 +3,35 @@
 //
 #include <iostream>
 #include <vector>
+#include <string>
 using namespace std;
+
 //int main(){
-//
+//    vector<vector<bool>> mat;
+//    char c;
+//    int i  = 0 , j = 0  ;
+//    vector<bool> vt;
+//    ; // 到底怎么样算读完了???? 救命
+//    c = getchar();
+//    int size;
+//    while(c != '\n') {
+//        if (c == '1') {
+//            vt.push_back(true);
+//        }
+//        if (c == '0') {
+//            vt.push_back(false);
+//        }
+//        if(c == ';') {
+//            mat.push_back(vt);
+//            vt.clear();
+//        }
+//        c = getchar();
+//    }
+//    mat.push_back(vt);// 获得mat
 //
 //
 //    return 0 ;
 //}
-int main(){
-    vector<vector<bool>> mat;
-    char c;
-    int i  = 0 , j = 0  ;
-    vector<bool> vt;
-    ; // 到底怎么样算读完了???? 救命
-    c = getchar();
-    int size;
-    while(c != '\n') {
-        if (c == '1') {
-            vt.push_back(true);
-        }
-        if (c == '0') {
-            vt.push_back(false);
-        }
-        if(c == ';') {
-            mat.push_back(vt);
-            vt.clear();
-        }
-        c = getchar();
-    }
-    mat.push_back(vt);// 获得mat
-
-
-    return 0 ;
-}
 
 
 

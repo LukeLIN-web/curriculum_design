@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/clionproject.dir/main.cpp.obj"
   "CMakeFiles/clionproject.dir/poly.cpp.obj"
   "CMakeFiles/clionproject.dir/ptaNewyear1.cpp.obj"
+  "CMakeFiles/clionproject.dir/wangyiXiaoZhao.cpp.obj"
   "clionproject.exe"
   "clionproject.exe.manifest"
   "clionproject.lib"

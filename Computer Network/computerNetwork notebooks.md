@@ -242,7 +242,7 @@ Session 的运行依赖Session ID，而 Session ID 是存在 Cookie 中的，也
 
 
 
-**在浏览器中输入 www.baidu.com 后执行的全部过程**
+### 14.在浏览器中输入 www.baidu.com 后执行的全部过程
 
 　　现在假设如果我们在客户端（客户端）浏览器中输入http://www.baidu.com,而baidu.com为要访问的服务器（服务器），下面详细分析客户端为了访问服务器而执行的一系列关于协议的操作：
 

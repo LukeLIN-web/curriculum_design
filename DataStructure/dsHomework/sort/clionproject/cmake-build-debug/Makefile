@@ -316,6 +316,33 @@ ptaNewyear1.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\ptaNewyear1.cpp.s
 .PHONY : ptaNewyear1.cpp.s
 
+wangyiXiaoZhao.obj: wangyiXiaoZhao.cpp.obj
+
+.PHONY : wangyiXiaoZhao.obj
+
+# target to build an object file
+wangyiXiaoZhao.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\wangyiXiaoZhao.cpp.obj
+.PHONY : wangyiXiaoZhao.cpp.obj
+
+wangyiXiaoZhao.i: wangyiXiaoZhao.cpp.i
+
+.PHONY : wangyiXiaoZhao.i
+
+# target to preprocess a source file
+wangyiXiaoZhao.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\wangyiXiaoZhao.cpp.i
+.PHONY : wangyiXiaoZhao.cpp.i
+
+wangyiXiaoZhao.s: wangyiXiaoZhao.cpp.s
+
+.PHONY : wangyiXiaoZhao.s
+
+# target to generate assembly for a file
+wangyiXiaoZhao.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\wangyiXiaoZhao.cpp.s
+.PHONY : wangyiXiaoZhao.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -346,6 +373,9 @@ help:
 	@echo ... ptaNewyear1.obj
 	@echo ... ptaNewyear1.i
 	@echo ... ptaNewyear1.s
+	@echo ... wangyiXiaoZhao.obj
+	@echo ... wangyiXiaoZhao.i
+	@echo ... wangyiXiaoZhao.s
 .PHONY : help
 
 

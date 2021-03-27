@@ -106,6 +106,9 @@
 		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/ptaNewyear1.cpp">
 			<Option target="clionproject"/>
 		</Unit>
+		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/wangyiXiaoZhao.cpp">
+			<Option target="clionproject"/>
+		</Unit>
 		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

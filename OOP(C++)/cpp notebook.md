@@ -67,6 +67,12 @@ TestHelloObject::TestHelloObject(TestHelloObjectParams *params) :
 
 
 
+
+
+
+
+
+
 ### STL库
 
 因此，当使用<iostream.h>时，相当于在c中调用库函数，使用的是全局命名空间，也就是早期的c++实现,是为了兼容以前的C++代码；当使用<iostream>的时候，该头文件没有定义全局命名空间，必须使用namespacestd；这样才能正确使用cout。

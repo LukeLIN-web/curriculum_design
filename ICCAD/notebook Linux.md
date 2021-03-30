@@ -401,13 +401,14 @@ name = value
 
 #! 叫做magic symbol,  写在第一行,设置用哪个shell来执行这个脚本
 
+```bash
 set a = $<   读键盘
 
 awk '{printf $1}'  剪切出第一列
+awk  '{print $4}'| awk -F “：” '{print $2}'   
+```
 
-awk  '{print $4}'| awk -F '"' '{print $2}'   
-
-以空格为分隔符打印第四列,然后,  以" 为分隔符, 打印第二列.
+以空格为分隔符打印第四列,然后,  以：为分隔符, 打印第二列.
 
 ##### sort 命令
 

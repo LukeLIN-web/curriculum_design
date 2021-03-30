@@ -238,3 +238,6 @@ type Provider interface {
 
 1. get数据添加在url后面,`url`长度有限制,上传的数据量很小,而且暴露用户名和密码,  post是用附件, 数据量更大.
 
+http请求有两种方式，Get和Post。
+
+使用post方法，第一行，http method会发生变化，然后我们自己的参数都会以正文的形式发送到服务端。而不再是直接放在URL里，展示在地址栏里了。在浏览器地址栏中输入地址的方式是Get方式，所有的链接都是Get方式，表单默认也是Get方式，唯有在表单中指定method=“post”才是Post方式。

@@ -80,85 +80,9 @@ CMakeFiles\clionproject.dir\main.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\clionproject.dir\main.cpp.s /c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\main.cpp"
 <<
 
-CMakeFiles\clionproject.dir\1098_Insertion_or_Heap_Sort.cpp.obj: CMakeFiles\clionproject.dir\flags.make
-CMakeFiles\clionproject.dir\1098_Insertion_or_Heap_Sort.cpp.obj: "..\1098 Insertion or Heap Sort.cpp"
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/clionproject.dir/1098_Insertion_or_Heap_Sort.cpp.obj"
-	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\clionproject.dir\1098_Insertion_or_Heap_Sort.cpp.obj /FdCMakeFiles\clionproject.dir\ /FS -c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\1098 Insertion or Heap Sort.cpp"
-<<
-
-CMakeFiles\clionproject.dir\1098_Insertion_or_Heap_Sort.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clionproject.dir/1098_Insertion_or_Heap_Sort.cpp.i"
-	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\clionproject.dir\1098_Insertion_or_Heap_Sort.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\1098 Insertion or Heap Sort.cpp"
-<<
-
-CMakeFiles\clionproject.dir\1098_Insertion_or_Heap_Sort.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clionproject.dir/1098_Insertion_or_Heap_Sort.cpp.s"
-	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\clionproject.dir\1098_Insertion_or_Heap_Sort.cpp.s /c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\1098 Insertion or Heap Sort.cpp"
-<<
-
-CMakeFiles\clionproject.dir\Arrangement_of_Computation_Tasks.cpp.obj: CMakeFiles\clionproject.dir\flags.make
-CMakeFiles\clionproject.dir\Arrangement_of_Computation_Tasks.cpp.obj: "..\Arrangement of Computation Tasks.cpp"
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/clionproject.dir/Arrangement_of_Computation_Tasks.cpp.obj"
-	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\clionproject.dir\Arrangement_of_Computation_Tasks.cpp.obj /FdCMakeFiles\clionproject.dir\ /FS -c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\Arrangement of Computation Tasks.cpp"
-<<
-
-CMakeFiles\clionproject.dir\Arrangement_of_Computation_Tasks.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clionproject.dir/Arrangement_of_Computation_Tasks.cpp.i"
-	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\clionproject.dir\Arrangement_of_Computation_Tasks.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\Arrangement of Computation Tasks.cpp"
-<<
-
-CMakeFiles\clionproject.dir\Arrangement_of_Computation_Tasks.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clionproject.dir/Arrangement_of_Computation_Tasks.cpp.s"
-	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\clionproject.dir\Arrangement_of_Computation_Tasks.cpp.s /c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\Arrangement of Computation Tasks.cpp"
-<<
-
-CMakeFiles\clionproject.dir\ptaNewyear1.cpp.obj: CMakeFiles\clionproject.dir\flags.make
-CMakeFiles\clionproject.dir\ptaNewyear1.cpp.obj: ..\ptaNewyear1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/clionproject.dir/ptaNewyear1.cpp.obj"
-	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\clionproject.dir\ptaNewyear1.cpp.obj /FdCMakeFiles\clionproject.dir\ /FS -c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\ptaNewyear1.cpp"
-<<
-
-CMakeFiles\clionproject.dir\ptaNewyear1.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clionproject.dir/ptaNewyear1.cpp.i"
-	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\clionproject.dir\ptaNewyear1.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\ptaNewyear1.cpp"
-<<
-
-CMakeFiles\clionproject.dir\ptaNewyear1.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clionproject.dir/ptaNewyear1.cpp.s"
-	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\clionproject.dir\ptaNewyear1.cpp.s /c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\ptaNewyear1.cpp"
-<<
-
-CMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.obj: CMakeFiles\clionproject.dir\flags.make
-CMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.obj: "..\FinalexamHeight of Binary Search Tree.c"
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/clionproject.dir/FinalexamHeight_of_Binary_Search_Tree.c.obj"
-	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.obj /FdCMakeFiles\clionproject.dir\ /FS -c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\FinalexamHeight of Binary Search Tree.c"
-<<
-
-CMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/clionproject.dir/FinalexamHeight_of_Binary_Search_Tree.c.i"
-	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\FinalexamHeight of Binary Search Tree.c"
-<<
-
-CMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/clionproject.dir/FinalexamHeight_of_Binary_Search_Tree.c.s"
-	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.s /c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\FinalexamHeight of Binary Search Tree.c"
-<<
-
 CMakeFiles\clionproject.dir\poly.cpp.obj: CMakeFiles\clionproject.dir\flags.make
 CMakeFiles\clionproject.dir\poly.cpp.obj: ..\poly.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/clionproject.dir/poly.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/clionproject.dir/poly.cpp.obj"
 	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\clionproject.dir\poly.cpp.obj /FdCMakeFiles\clionproject.dir\ /FS -c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\poly.cpp"
 <<
@@ -175,69 +99,82 @@ CMakeFiles\clionproject.dir\poly.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\clionproject.dir\poly.cpp.s /c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\poly.cpp"
 <<
 
-CMakeFiles\clionproject.dir\alibaba_bishi1.cpp.obj: CMakeFiles\clionproject.dir\flags.make
-CMakeFiles\clionproject.dir\alibaba_bishi1.cpp.obj: "..\alibaba bishi1.cpp"
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/clionproject.dir/alibaba_bishi1.cpp.obj"
+CMakeFiles\clionproject.dir\hashtable.cpp.obj: CMakeFiles\clionproject.dir\flags.make
+CMakeFiles\clionproject.dir\hashtable.cpp.obj: ..\hashtable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/clionproject.dir/hashtable.cpp.obj"
 	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\clionproject.dir\alibaba_bishi1.cpp.obj /FdCMakeFiles\clionproject.dir\ /FS -c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\alibaba bishi1.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\clionproject.dir\hashtable.cpp.obj /FdCMakeFiles\clionproject.dir\ /FS -c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\hashtable.cpp"
 <<
 
-CMakeFiles\clionproject.dir\alibaba_bishi1.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clionproject.dir/alibaba_bishi1.cpp.i"
-	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\clionproject.dir\alibaba_bishi1.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\alibaba bishi1.cpp"
+CMakeFiles\clionproject.dir\hashtable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clionproject.dir/hashtable.cpp.i"
+	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\clionproject.dir\hashtable.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\hashtable.cpp"
 <<
 
-CMakeFiles\clionproject.dir\alibaba_bishi1.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clionproject.dir/alibaba_bishi1.cpp.s"
+CMakeFiles\clionproject.dir\hashtable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clionproject.dir/hashtable.cpp.s"
 	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\clionproject.dir\alibaba_bishi1.cpp.s /c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\alibaba bishi1.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\clionproject.dir\hashtable.cpp.s /c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\hashtable.cpp"
 <<
 
-CMakeFiles\clionproject.dir\wangyiXiaoZhao.cpp.obj: CMakeFiles\clionproject.dir\flags.make
-CMakeFiles\clionproject.dir\wangyiXiaoZhao.cpp.obj: ..\wangyiXiaoZhao.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/clionproject.dir/wangyiXiaoZhao.cpp.obj"
+CMakeFiles\clionproject.dir\test.cpp.obj: CMakeFiles\clionproject.dir\flags.make
+CMakeFiles\clionproject.dir\test.cpp.obj: ..\test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/clionproject.dir/test.cpp.obj"
 	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\clionproject.dir\wangyiXiaoZhao.cpp.obj /FdCMakeFiles\clionproject.dir\ /FS -c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\wangyiXiaoZhao.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\clionproject.dir\test.cpp.obj /FdCMakeFiles\clionproject.dir\ /FS -c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\test.cpp"
 <<
 
-CMakeFiles\clionproject.dir\wangyiXiaoZhao.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clionproject.dir/wangyiXiaoZhao.cpp.i"
-	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\clionproject.dir\wangyiXiaoZhao.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\wangyiXiaoZhao.cpp"
+CMakeFiles\clionproject.dir\test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clionproject.dir/test.cpp.i"
+	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\clionproject.dir\test.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\test.cpp"
 <<
 
-CMakeFiles\clionproject.dir\wangyiXiaoZhao.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clionproject.dir/wangyiXiaoZhao.cpp.s"
+CMakeFiles\clionproject.dir\test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clionproject.dir/test.cpp.s"
 	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\clionproject.dir\wangyiXiaoZhao.cpp.s /c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\wangyiXiaoZhao.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\clionproject.dir\test.cpp.s /c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\test.cpp"
+<<
+
+CMakeFiles\clionproject.dir\huawei2.cpp.obj: CMakeFiles\clionproject.dir\flags.make
+CMakeFiles\clionproject.dir\huawei2.cpp.obj: ..\huawei2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/clionproject.dir/huawei2.cpp.obj"
+	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\clionproject.dir\huawei2.cpp.obj /FdCMakeFiles\clionproject.dir\ /FS -c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\huawei2.cpp"
+<<
+
+CMakeFiles\clionproject.dir\huawei2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clionproject.dir/huawei2.cpp.i"
+	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\clionproject.dir\huawei2.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\huawei2.cpp"
+<<
+
+CMakeFiles\clionproject.dir\huawei2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clionproject.dir/huawei2.cpp.s"
+	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\clionproject.dir\huawei2.cpp.s /c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\huawei2.cpp"
 <<
 
 # Object files for target clionproject
 clionproject_OBJECTS = \
 "CMakeFiles\clionproject.dir\main.cpp.obj" \
-"CMakeFiles\clionproject.dir\1098_Insertion_or_Heap_Sort.cpp.obj" \
-"CMakeFiles\clionproject.dir\Arrangement_of_Computation_Tasks.cpp.obj" \
-"CMakeFiles\clionproject.dir\ptaNewyear1.cpp.obj" \
-"CMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.obj" \
 "CMakeFiles\clionproject.dir\poly.cpp.obj" \
-"CMakeFiles\clionproject.dir\alibaba_bishi1.cpp.obj" \
-"CMakeFiles\clionproject.dir\wangyiXiaoZhao.cpp.obj"
+"CMakeFiles\clionproject.dir\hashtable.cpp.obj" \
+"CMakeFiles\clionproject.dir\test.cpp.obj" \
+"CMakeFiles\clionproject.dir\huawei2.cpp.obj"
 
 # External object files for target clionproject
 clionproject_EXTERNAL_OBJECTS =
 
 clionproject.exe: CMakeFiles\clionproject.dir\main.cpp.obj
-clionproject.exe: CMakeFiles\clionproject.dir\1098_Insertion_or_Heap_Sort.cpp.obj
-clionproject.exe: CMakeFiles\clionproject.dir\Arrangement_of_Computation_Tasks.cpp.obj
-clionproject.exe: CMakeFiles\clionproject.dir\ptaNewyear1.cpp.obj
-clionproject.exe: CMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.obj
 clionproject.exe: CMakeFiles\clionproject.dir\poly.cpp.obj
-clionproject.exe: CMakeFiles\clionproject.dir\alibaba_bishi1.cpp.obj
-clionproject.exe: CMakeFiles\clionproject.dir\wangyiXiaoZhao.cpp.obj
+clionproject.exe: CMakeFiles\clionproject.dir\hashtable.cpp.obj
+clionproject.exe: CMakeFiles\clionproject.dir\test.cpp.obj
+clionproject.exe: CMakeFiles\clionproject.dir\huawei2.cpp.obj
 clionproject.exe: CMakeFiles\clionproject.dir\build.make
 clionproject.exe: CMakeFiles\clionproject.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable clionproject.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable clionproject.exe"
 	"C:\Program Files\JetBrains\CLion 2020.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\clionproject.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\clionproject.dir\objects1.rsp @<<
  /out:clionproject.exe /implib:clionproject.lib /pdb:"D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\clionproject.pdb" /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

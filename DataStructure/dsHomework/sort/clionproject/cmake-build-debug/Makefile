@@ -127,113 +127,59 @@ clionproject\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\build
 .PHONY : clionproject\fast
 
-1098_Insertion_or_Heap_Sort.obj: 1098_Insertion_or_Heap_Sort.cpp.obj
+hashtable.obj: hashtable.cpp.obj
 
-.PHONY : 1098_Insertion_or_Heap_Sort.obj
-
-# target to build an object file
-1098_Insertion_or_Heap_Sort.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\1098_Insertion_or_Heap_Sort.cpp.obj
-.PHONY : 1098_Insertion_or_Heap_Sort.cpp.obj
-
-1098_Insertion_or_Heap_Sort.i: 1098_Insertion_or_Heap_Sort.cpp.i
-
-.PHONY : 1098_Insertion_or_Heap_Sort.i
-
-# target to preprocess a source file
-1098_Insertion_or_Heap_Sort.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\1098_Insertion_or_Heap_Sort.cpp.i
-.PHONY : 1098_Insertion_or_Heap_Sort.cpp.i
-
-1098_Insertion_or_Heap_Sort.s: 1098_Insertion_or_Heap_Sort.cpp.s
-
-.PHONY : 1098_Insertion_or_Heap_Sort.s
-
-# target to generate assembly for a file
-1098_Insertion_or_Heap_Sort.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\1098_Insertion_or_Heap_Sort.cpp.s
-.PHONY : 1098_Insertion_or_Heap_Sort.cpp.s
-
-Arrangement_of_Computation_Tasks.obj: Arrangement_of_Computation_Tasks.cpp.obj
-
-.PHONY : Arrangement_of_Computation_Tasks.obj
+.PHONY : hashtable.obj
 
 # target to build an object file
-Arrangement_of_Computation_Tasks.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\Arrangement_of_Computation_Tasks.cpp.obj
-.PHONY : Arrangement_of_Computation_Tasks.cpp.obj
+hashtable.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\hashtable.cpp.obj
+.PHONY : hashtable.cpp.obj
 
-Arrangement_of_Computation_Tasks.i: Arrangement_of_Computation_Tasks.cpp.i
+hashtable.i: hashtable.cpp.i
 
-.PHONY : Arrangement_of_Computation_Tasks.i
+.PHONY : hashtable.i
 
 # target to preprocess a source file
-Arrangement_of_Computation_Tasks.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\Arrangement_of_Computation_Tasks.cpp.i
-.PHONY : Arrangement_of_Computation_Tasks.cpp.i
+hashtable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\hashtable.cpp.i
+.PHONY : hashtable.cpp.i
 
-Arrangement_of_Computation_Tasks.s: Arrangement_of_Computation_Tasks.cpp.s
+hashtable.s: hashtable.cpp.s
 
-.PHONY : Arrangement_of_Computation_Tasks.s
+.PHONY : hashtable.s
 
 # target to generate assembly for a file
-Arrangement_of_Computation_Tasks.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\Arrangement_of_Computation_Tasks.cpp.s
-.PHONY : Arrangement_of_Computation_Tasks.cpp.s
+hashtable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\hashtable.cpp.s
+.PHONY : hashtable.cpp.s
 
-FinalexamHeight_of_Binary_Search_Tree.obj: FinalexamHeight_of_Binary_Search_Tree.c.obj
+huawei2.obj: huawei2.cpp.obj
 
-.PHONY : FinalexamHeight_of_Binary_Search_Tree.obj
+.PHONY : huawei2.obj
 
 # target to build an object file
-FinalexamHeight_of_Binary_Search_Tree.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.obj
-.PHONY : FinalexamHeight_of_Binary_Search_Tree.c.obj
+huawei2.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\huawei2.cpp.obj
+.PHONY : huawei2.cpp.obj
 
-FinalexamHeight_of_Binary_Search_Tree.i: FinalexamHeight_of_Binary_Search_Tree.c.i
+huawei2.i: huawei2.cpp.i
 
-.PHONY : FinalexamHeight_of_Binary_Search_Tree.i
-
-# target to preprocess a source file
-FinalexamHeight_of_Binary_Search_Tree.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.i
-.PHONY : FinalexamHeight_of_Binary_Search_Tree.c.i
-
-FinalexamHeight_of_Binary_Search_Tree.s: FinalexamHeight_of_Binary_Search_Tree.c.s
-
-.PHONY : FinalexamHeight_of_Binary_Search_Tree.s
-
-# target to generate assembly for a file
-FinalexamHeight_of_Binary_Search_Tree.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\FinalexamHeight_of_Binary_Search_Tree.c.s
-.PHONY : FinalexamHeight_of_Binary_Search_Tree.c.s
-
-alibaba_bishi1.obj: alibaba_bishi1.cpp.obj
-
-.PHONY : alibaba_bishi1.obj
-
-# target to build an object file
-alibaba_bishi1.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\alibaba_bishi1.cpp.obj
-.PHONY : alibaba_bishi1.cpp.obj
-
-alibaba_bishi1.i: alibaba_bishi1.cpp.i
-
-.PHONY : alibaba_bishi1.i
+.PHONY : huawei2.i
 
 # target to preprocess a source file
-alibaba_bishi1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\alibaba_bishi1.cpp.i
-.PHONY : alibaba_bishi1.cpp.i
+huawei2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\huawei2.cpp.i
+.PHONY : huawei2.cpp.i
 
-alibaba_bishi1.s: alibaba_bishi1.cpp.s
+huawei2.s: huawei2.cpp.s
 
-.PHONY : alibaba_bishi1.s
+.PHONY : huawei2.s
 
 # target to generate assembly for a file
-alibaba_bishi1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\alibaba_bishi1.cpp.s
-.PHONY : alibaba_bishi1.cpp.s
+huawei2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\huawei2.cpp.s
+.PHONY : huawei2.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -289,59 +235,32 @@ poly.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\poly.cpp.s
 .PHONY : poly.cpp.s
 
-ptaNewyear1.obj: ptaNewyear1.cpp.obj
+test.obj: test.cpp.obj
 
-.PHONY : ptaNewyear1.obj
-
-# target to build an object file
-ptaNewyear1.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\ptaNewyear1.cpp.obj
-.PHONY : ptaNewyear1.cpp.obj
-
-ptaNewyear1.i: ptaNewyear1.cpp.i
-
-.PHONY : ptaNewyear1.i
-
-# target to preprocess a source file
-ptaNewyear1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\ptaNewyear1.cpp.i
-.PHONY : ptaNewyear1.cpp.i
-
-ptaNewyear1.s: ptaNewyear1.cpp.s
-
-.PHONY : ptaNewyear1.s
-
-# target to generate assembly for a file
-ptaNewyear1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\ptaNewyear1.cpp.s
-.PHONY : ptaNewyear1.cpp.s
-
-wangyiXiaoZhao.obj: wangyiXiaoZhao.cpp.obj
-
-.PHONY : wangyiXiaoZhao.obj
+.PHONY : test.obj
 
 # target to build an object file
-wangyiXiaoZhao.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\wangyiXiaoZhao.cpp.obj
-.PHONY : wangyiXiaoZhao.cpp.obj
+test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\test.cpp.obj
+.PHONY : test.cpp.obj
 
-wangyiXiaoZhao.i: wangyiXiaoZhao.cpp.i
+test.i: test.cpp.i
 
-.PHONY : wangyiXiaoZhao.i
+.PHONY : test.i
 
 # target to preprocess a source file
-wangyiXiaoZhao.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\wangyiXiaoZhao.cpp.i
-.PHONY : wangyiXiaoZhao.cpp.i
+test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\test.cpp.i
+.PHONY : test.cpp.i
 
-wangyiXiaoZhao.s: wangyiXiaoZhao.cpp.s
+test.s: test.cpp.s
 
-.PHONY : wangyiXiaoZhao.s
+.PHONY : test.s
 
 # target to generate assembly for a file
-wangyiXiaoZhao.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\wangyiXiaoZhao.cpp.s
-.PHONY : wangyiXiaoZhao.cpp.s
+test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\test.cpp.s
+.PHONY : test.cpp.s
 
 # Help Target
 help:
@@ -352,30 +271,21 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... clionproject
-	@echo ... 1098_Insertion_or_Heap_Sort.obj
-	@echo ... 1098_Insertion_or_Heap_Sort.i
-	@echo ... 1098_Insertion_or_Heap_Sort.s
-	@echo ... Arrangement_of_Computation_Tasks.obj
-	@echo ... Arrangement_of_Computation_Tasks.i
-	@echo ... Arrangement_of_Computation_Tasks.s
-	@echo ... FinalexamHeight_of_Binary_Search_Tree.obj
-	@echo ... FinalexamHeight_of_Binary_Search_Tree.i
-	@echo ... FinalexamHeight_of_Binary_Search_Tree.s
-	@echo ... alibaba_bishi1.obj
-	@echo ... alibaba_bishi1.i
-	@echo ... alibaba_bishi1.s
+	@echo ... hashtable.obj
+	@echo ... hashtable.i
+	@echo ... hashtable.s
+	@echo ... huawei2.obj
+	@echo ... huawei2.i
+	@echo ... huawei2.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
 	@echo ... poly.obj
 	@echo ... poly.i
 	@echo ... poly.s
-	@echo ... ptaNewyear1.obj
-	@echo ... ptaNewyear1.i
-	@echo ... ptaNewyear1.s
-	@echo ... wangyiXiaoZhao.obj
-	@echo ... wangyiXiaoZhao.i
-	@echo ... wangyiXiaoZhao.s
+	@echo ... test.obj
+	@echo ... test.i
+	@echo ... test.s
 .PHONY : help
 
 

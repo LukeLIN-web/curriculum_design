@@ -203,8 +203,29 @@ auto产生的迭代器是const ,`auto` 在进行类型推导时会默认使用**
 
 `vector<*int*> tem(*nums*);//这种拷贝，相当于复制了一份数据，list中的数据不变。`
 
+初始化:
 
+https://blog.csdn.net/vanturman/article/details/82744491
 
+1. */初始化size,但每个元素值为默认值*
+2. vector<int> abc(10);    *//初始化了10个默认值为0的元素*
+3. *//初始化size,并且设置初始值*
+4. vector<int> cde(10，1);    *//初始化了10个值为1的元素*
+
+初始化二维vector，为r*c的vector，所有值为0.
+1.直接用初始化方法（刚开始没想到）
+
+ vector<vector<int> > newOne(r, vector<int>(c, 0));
+1
+2.用resize()来控制大小
+
+```cpp
+vector<vector<int> > res;
+    res.resize(r);//r行
+    for (int k = 0; k < r; ++k){
+        res[k].resize(c);//每行为c列
+    }
+```
 #### queue
 
 ```cpp

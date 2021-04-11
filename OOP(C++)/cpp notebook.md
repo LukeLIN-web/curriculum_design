@@ -2,7 +2,7 @@
 
 ### 变量
 
-如果未初始化的变量为全局变量的话，编译器会默认给附上0的值，这和预料中的一样。如果未初始化的变量为局部变量的话，他会是一堆乱码。
+如果未初始化的变量为全局变量的话，编译器会默认给附上0的值.如果未初始化的变量为局部变量的话，他会是一堆乱码。
 
 
 
@@ -12,10 +12,6 @@ assert() 会对表达式`expression`进行检测：
 
 - 如果`expression`的结果为 0（条件不成立），那么断言失败，表明程序出错，assert() 会向标准输出设备（一般是显示器）打印一条错误信息，并调用 abort() 函数终止程序的执行。
 - 如果`expression`的结果为非 0（条件成立），那么断言成功，表明程序正确，assert() 不进行任何操作。
-
-
-
-
 
 #### 智能指针
 
@@ -67,12 +63,6 @@ TestHelloObject::TestHelloObject(TestHelloObjectParams *params) :
 
 
 
-
-
-
-
-
-
 ### STL库
 
 因此，当使用<iostream.h>时，相当于在c中调用库函数，使用的是全局命名空间，也就是早期的c++实现,是为了兼容以前的C++代码；当使用<iostream>的时候，该头文件没有定义全局命名空间，必须使用namespacestd；这样才能正确使用cout。
@@ -81,9 +71,9 @@ TestHelloObject::TestHelloObject(TestHelloObjectParams *params) :
 using namespace std;
 这样命名空间std内定义的所有标识符都有效（曝光）。就好像它们被声明为全局变量一样。因为标准库非常的庞大，所程序员在选择的类的名称或函数名时就很有可能和标准库中的某个名字相同。所以为了避免这种情况所造成的名字冲突，就把标准库中的一切都被放在名字空间std中。
 
-   1 如果你需要高效的随即存取，而不在乎插入和删除的效率，使用vector 
-   2 如果你需要大量的插入和删除，而不关心随即存取，则应使用list 
-   3 如果你需要随即存取，而且关心两端数据的插入和删除，则应使用deque
+   1 如果你需要高效的随机存取，而不在乎插入和删除的效率，使用vector 
+   2 如果你需要大量的插入和删除，则应使用list 
+   3 如果你需要随机存取，而且关心两端数据的插入和删除，则应使用deque
 
 #### map
 
@@ -105,9 +95,7 @@ mypantry = {{"milk",2.0},{"flour",1.5}};
 27     myrecipe["coffee"] = 10.0;  //数组形式插入
 ```
 
-emplace_back() 和 push_back() 效果一样.
-
-区别就在于底层实现的机制不同。push_back() 向容器尾部添加元素时，首先会创建这个元素，然后再将这个元素拷贝或者移动到容器中（如果是拷贝的话，事后会自行销毁先前创建的这个元素）；而 emplace_back() 在实现时，则是直接在容器尾部创建这个元素，省去了拷贝或移动元素的过程。
+emplace_back() 和 push_back() 效果一样,区别就在于底层实现的机制不同。push_back() 向容器尾部添加元素时，首先会创建这个元素，然后再将这个元素拷贝或者移动到容器中（如果是拷贝的话，事后会自行销毁先前创建的这个元素）；而 emplace_back() 在实现时，则是直接在容器尾部创建这个元素，省去了拷贝或移动元素的过程。
 
 怎么修改map的值?
 
@@ -195,7 +183,7 @@ auto产生的迭代器是const ,`auto` 在进行类型推导时会默认使用**
 
 赋值一部分
 
-寻找元素  `vector<*int*>::iterator it2 = find(nums.begin(), nums.end(), tem[fastIndex]);`
+寻找元素x1  `vector<*int*>::iterator it2 = find(nums.begin(), nums.end(), x1);`
 
 获得下标: `int index2 = &*it2-&nums[0];`
 
@@ -207,16 +195,18 @@ auto产生的迭代器是const ,`auto` 在进行类型推导时会默认使用**
 
 https://blog.csdn.net/vanturman/article/details/82744491
 
-1. */初始化size,但每个元素值为默认值*
-2. vector<int> abc(10);    *//初始化了10个默认值为0的元素*
-3. *//初始化size,并且设置初始值*
-4. vector<int> cde(10，1);    *//初始化了10个值为1的元素*
+初始化size,但每个元素值为默认值*
+
+`vector<int> abc(10);    *//初始化了10个默认值为0的元素*`
+
+初始化size,并且设置初始值
+
+`vector<int> cde(10，1);    *//初始化了10个值为1的元素*`
 
 初始化二维vector，为r*c的vector，所有值为0.
 1.直接用初始化方法（刚开始没想到）
 
- vector<vector<int> > newOne(r, vector<int>(c, 0));
-1
+ `vector<vector<int> > newOne(r, vector<int>(c, 0));`
 2.用resize()来控制大小
 
 ```cpp
@@ -351,6 +341,8 @@ int i不会回带参数，而int &i可以回带参数,int &i 相当于别名，�
  int i 可赋予常量，而int & i 不能
 
 
+
+### 一些错误:
 
 **reference to ' min' is ambiguous**
 

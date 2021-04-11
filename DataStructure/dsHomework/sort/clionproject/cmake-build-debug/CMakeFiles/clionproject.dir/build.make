@@ -137,23 +137,23 @@ CMakeFiles\clionproject.dir\test.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\clionproject.dir\test.cpp.s /c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\test.cpp"
 <<
 
-CMakeFiles\clionproject.dir\huawei2.cpp.obj: CMakeFiles\clionproject.dir\flags.make
-CMakeFiles\clionproject.dir\huawei2.cpp.obj: ..\huawei2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/clionproject.dir/huawei2.cpp.obj"
+CMakeFiles\clionproject.dir\BytedanceTest.cpp.obj: CMakeFiles\clionproject.dir\flags.make
+CMakeFiles\clionproject.dir\BytedanceTest.cpp.obj: ..\BytedanceTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/clionproject.dir/BytedanceTest.cpp.obj"
 	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\clionproject.dir\huawei2.cpp.obj /FdCMakeFiles\clionproject.dir\ /FS -c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\huawei2.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\clionproject.dir\BytedanceTest.cpp.obj /FdCMakeFiles\clionproject.dir\ /FS -c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\BytedanceTest.cpp"
 <<
 
-CMakeFiles\clionproject.dir\huawei2.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clionproject.dir/huawei2.cpp.i"
-	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\clionproject.dir\huawei2.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\huawei2.cpp"
+CMakeFiles\clionproject.dir\BytedanceTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clionproject.dir/BytedanceTest.cpp.i"
+	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\clionproject.dir\BytedanceTest.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\BytedanceTest.cpp"
 <<
 
-CMakeFiles\clionproject.dir\huawei2.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clionproject.dir/huawei2.cpp.s"
+CMakeFiles\clionproject.dir\BytedanceTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clionproject.dir/BytedanceTest.cpp.s"
 	C:\PROGRA~2\MIB055~1\2017\PROFES~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\clionproject.dir\huawei2.cpp.s /c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\huawei2.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\clionproject.dir\BytedanceTest.cpp.s /c "D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\BytedanceTest.cpp"
 <<
 
 # Object files for target clionproject
@@ -162,7 +162,7 @@ clionproject_OBJECTS = \
 "CMakeFiles\clionproject.dir\poly.cpp.obj" \
 "CMakeFiles\clionproject.dir\hashtable.cpp.obj" \
 "CMakeFiles\clionproject.dir\test.cpp.obj" \
-"CMakeFiles\clionproject.dir\huawei2.cpp.obj"
+"CMakeFiles\clionproject.dir\BytedanceTest.cpp.obj"
 
 # External object files for target clionproject
 clionproject_EXTERNAL_OBJECTS =
@@ -171,7 +171,7 @@ clionproject.exe: CMakeFiles\clionproject.dir\main.cpp.obj
 clionproject.exe: CMakeFiles\clionproject.dir\poly.cpp.obj
 clionproject.exe: CMakeFiles\clionproject.dir\hashtable.cpp.obj
 clionproject.exe: CMakeFiles\clionproject.dir\test.cpp.obj
-clionproject.exe: CMakeFiles\clionproject.dir\huawei2.cpp.obj
+clionproject.exe: CMakeFiles\clionproject.dir\BytedanceTest.cpp.obj
 clionproject.exe: CMakeFiles\clionproject.dir\build.make
 clionproject.exe: CMakeFiles\clionproject.dir\objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\curriculum_design to git\curriculum_design\DataStructure\dsHomework\sort\clionproject\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable clionproject.exe"

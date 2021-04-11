@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/clionproject.dir/BytedanceTest.cpp.obj"
   "CMakeFiles/clionproject.dir/hashtable.cpp.obj"
-  "CMakeFiles/clionproject.dir/huawei2.cpp.obj"
   "CMakeFiles/clionproject.dir/main.cpp.obj"
   "CMakeFiles/clionproject.dir/poly.cpp.obj"
   "CMakeFiles/clionproject.dir/test.cpp.obj"

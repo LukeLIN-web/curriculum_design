@@ -127,6 +127,33 @@ clionproject\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\build
 .PHONY : clionproject\fast
 
+BytedanceTest.obj: BytedanceTest.cpp.obj
+
+.PHONY : BytedanceTest.obj
+
+# target to build an object file
+BytedanceTest.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\BytedanceTest.cpp.obj
+.PHONY : BytedanceTest.cpp.obj
+
+BytedanceTest.i: BytedanceTest.cpp.i
+
+.PHONY : BytedanceTest.i
+
+# target to preprocess a source file
+BytedanceTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\BytedanceTest.cpp.i
+.PHONY : BytedanceTest.cpp.i
+
+BytedanceTest.s: BytedanceTest.cpp.s
+
+.PHONY : BytedanceTest.s
+
+# target to generate assembly for a file
+BytedanceTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\BytedanceTest.cpp.s
+.PHONY : BytedanceTest.cpp.s
+
 hashtable.obj: hashtable.cpp.obj
 
 .PHONY : hashtable.obj
@@ -153,33 +180,6 @@ hashtable.s: hashtable.cpp.s
 hashtable.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\hashtable.cpp.s
 .PHONY : hashtable.cpp.s
-
-huawei2.obj: huawei2.cpp.obj
-
-.PHONY : huawei2.obj
-
-# target to build an object file
-huawei2.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\huawei2.cpp.obj
-.PHONY : huawei2.cpp.obj
-
-huawei2.i: huawei2.cpp.i
-
-.PHONY : huawei2.i
-
-# target to preprocess a source file
-huawei2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\huawei2.cpp.i
-.PHONY : huawei2.cpp.i
-
-huawei2.s: huawei2.cpp.s
-
-.PHONY : huawei2.s
-
-# target to generate assembly for a file
-huawei2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\huawei2.cpp.s
-.PHONY : huawei2.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -271,12 +271,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... clionproject
+	@echo ... BytedanceTest.obj
+	@echo ... BytedanceTest.i
+	@echo ... BytedanceTest.s
 	@echo ... hashtable.obj
 	@echo ... hashtable.i
 	@echo ... hashtable.s
-	@echo ... huawei2.obj
-	@echo ... huawei2.i
-	@echo ... huawei2.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -3,4 +3,4 @@ project(clionproject)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(clionproject main.cpp   poly.cpp Polynomial.h  hashtable.cpp hashtable.hpp test.cpp huawei2.cpp)
+add_executable(clionproject main.cpp   poly.cpp Polynomial.h  hashtable.cpp hashtable.hpp test.cpp BytedanceTest.cpp)

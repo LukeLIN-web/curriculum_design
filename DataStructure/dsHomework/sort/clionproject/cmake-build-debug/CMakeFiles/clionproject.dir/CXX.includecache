@@ -6,9 +6,31 @@
 
 #IncludeRegexTransform: 
 
-D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/BytedanceTest.cpp
+D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/StrProcess.cpp
+StrProcess.h
+D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/StrProcess.h
+stack
+-
 iostream
 -
-vector
+cassert
 -
+
+D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/StrProcess.h
+Tree.h
+D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/Tree.h
+display.h
+D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/display.h
+
+D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/Tree.h
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+
+D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/display.h
+Tree.h
+D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/Tree.h
 

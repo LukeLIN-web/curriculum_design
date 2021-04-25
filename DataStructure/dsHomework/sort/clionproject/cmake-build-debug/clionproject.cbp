@@ -82,25 +82,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/BytedanceTest.cpp">
+		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/FromWebExpressionTree.cpp">
 			<Option target="clionproject"/>
 		</Unit>
-		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/Polynomial.h">
+		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/StrProcess.cpp">
 			<Option target="clionproject"/>
 		</Unit>
-		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/hashtable.cpp">
+		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/StrProcess.h">
 			<Option target="clionproject"/>
 		</Unit>
-		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/hashtable.hpp">
+		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/Tree.cpp">
+			<Option target="clionproject"/>
+		</Unit>
+		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/Tree.h">
+			<Option target="clionproject"/>
+		</Unit>
+		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/display.h">
 			<Option target="clionproject"/>
 		</Unit>
 		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/main.cpp">
 			<Option target="clionproject"/>
 		</Unit>
-		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/poly.cpp">
-			<Option target="clionproject"/>
-		</Unit>
-		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/test.cpp">
+		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/print.cpp">
 			<Option target="clionproject"/>
 		</Unit>
 		<Unit filename="D:/curriculum_design to git/curriculum_design/DataStructure/dsHomework/sort/clionproject/CMakeLists.txt">

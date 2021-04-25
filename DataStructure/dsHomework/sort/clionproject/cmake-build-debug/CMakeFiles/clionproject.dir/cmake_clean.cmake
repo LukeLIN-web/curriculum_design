@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/clionproject.dir/BytedanceTest.cpp.obj"
-  "CMakeFiles/clionproject.dir/hashtable.cpp.obj"
+  "CMakeFiles/clionproject.dir/FromWebExpressionTree.cpp.obj"
+  "CMakeFiles/clionproject.dir/StrProcess.cpp.obj"
+  "CMakeFiles/clionproject.dir/Tree.cpp.obj"
   "CMakeFiles/clionproject.dir/main.cpp.obj"
-  "CMakeFiles/clionproject.dir/poly.cpp.obj"
-  "CMakeFiles/clionproject.dir/test.cpp.obj"
+  "CMakeFiles/clionproject.dir/print.cpp.obj"
   "clionproject.exe"
   "clionproject.exe.manifest"
   "clionproject.lib"

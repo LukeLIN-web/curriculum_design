@@ -6,49 +6,38 @@
 
 /**
 
-*initializationof each node
+*initialization of each node
 
-*paramintNum indicates the int number stored in the node
+*param intNum indicates the int number stored in the node
 
-*paramdoubleNum indicates the float number stored in the node
+*param doubleNum indicates the float number stored in the node
 
-*paramif flag == 1 means all the characters under this node is included in thebracket
+*param if flag == 1 means all the characters under this node is included in thebracket
 
-*paramintDoubleOpe decides whether the type of number stored in the node is a int ora float
+*param intDoubleOpe decides whether the type of number stored in the node is a int ora float
 
-*paramleftPoint and rightPoint is the binary-branch of the parent node
+*param leftPoint and rightPoint is the binary-branch of the parent node
 
 **/
 
 
 void nodeIntInit(Node *node,int num){
     node->intNum=num;
-
     node->flag=0;
-
     node->doubleNum=0;
-
     node->intDoubleOpe=1;
-
-    node->leftPoint=NULL;
-
-    node->rightPoint=NULL;
-
+    node->leftPoint=nullptr;
+    node->rightPoint=nullptr;
 }
 
 
 
 void nodeDoubleInit(Node *node,double num){
     node->intNum=0;
-
     node->flag=0;
-
     node->doubleNum=num;
-
     node->intDoubleOpe=2;
-
-    node->leftPoint=NULL;
-
-    node->rightPoint=NULL;
+    node->leftPoint=nullptr;
+    node->rightPoint=nullptr;
 
 }

@@ -40,14 +40,14 @@ void displayInOrder(Node *root){
 **/
 
 double calculate(Node *root){
-    if(root->leftPoint==NULL&&root->rightPoint==NULL){            //如果该节点的左右都是空指针，则需要返回该节点所存储的值，如果inDoubleOpe为1的话，返回值应该为int，如果是2的话 返回值为floa
+    if(root->leftPoint==nullptr&&root->rightPoint==nullptr){            //如果该节点的左右都是空指针，则需要返回该节点所存储的值，如果inDoubleOpe为1的话，返回值应该为int，如果是2的话 返回值为floa
         if(root->intDoubleOpe==1)
             return root->intNum;
         if(root->intDoubleOpe==2)
             return root->doubleNum;
     }
 
-    if(root->leftPoint!=NULL&&root->rightPoint!=NULL){
+    if(root->leftPoint!=nullptr&&root->rightPoint!=nullptr){
         switch(root->ope){
             case '+':                                                                       //如果子节点是加号，则将左右节点的计算结果想加，如果是负号则把左右节点的结果相减，如果是乘号，则把左右节点结果相乘
                 return calculate(root->leftPoint)+calculate(root->rightPoint);          //如果是/ 号，就把左右结果相除
@@ -73,13 +73,13 @@ double calculate(Node *root){
 
 
 void recursiveDelete(Node *root) {
-    if (root->leftPoint == NULL&&root->rightPoint == NULL) {
+    if (root->leftPoint == nullptr&&root->rightPoint == nullptr) {
         free(root);
-        root = NULL;
+        root = nullptr;
         return;
     }
     recursiveDelete(root->leftPoint);
-    root->leftPoint = NULL;
+    root->leftPoint = nullptr;
     recursiveDelete(root->rightPoint);
-    root->rightPoint = NULL;
+    root->rightPoint = nullptr;
 }

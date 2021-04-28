@@ -1,9 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/clionproject.dir/FromWebExpressionTree.cpp.obj"
-  "CMakeFiles/clionproject.dir/StrProcess.cpp.obj"
-  "CMakeFiles/clionproject.dir/Tree.cpp.obj"
+  "CMakeFiles/clionproject.dir/Alibaba.cpp.obj"
   "CMakeFiles/clionproject.dir/main.cpp.obj"
-  "CMakeFiles/clionproject.dir/print.cpp.obj"
   "clionproject.exe"
   "clionproject.exe.manifest"
   "clionproject.lib"

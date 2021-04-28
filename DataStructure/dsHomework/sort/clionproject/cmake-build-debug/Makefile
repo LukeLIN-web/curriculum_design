@@ -126,86 +126,32 @@ clionproject\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\build
 .PHONY : clionproject\fast
 
-FromWebExpressionTree.obj: FromWebExpressionTree.cpp.obj
+Alibaba.obj: Alibaba.cpp.obj
 
-.PHONY : FromWebExpressionTree.obj
-
-# target to build an object file
-FromWebExpressionTree.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\FromWebExpressionTree.cpp.obj
-.PHONY : FromWebExpressionTree.cpp.obj
-
-FromWebExpressionTree.i: FromWebExpressionTree.cpp.i
-
-.PHONY : FromWebExpressionTree.i
-
-# target to preprocess a source file
-FromWebExpressionTree.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\FromWebExpressionTree.cpp.i
-.PHONY : FromWebExpressionTree.cpp.i
-
-FromWebExpressionTree.s: FromWebExpressionTree.cpp.s
-
-.PHONY : FromWebExpressionTree.s
-
-# target to generate assembly for a file
-FromWebExpressionTree.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\FromWebExpressionTree.cpp.s
-.PHONY : FromWebExpressionTree.cpp.s
-
-StrProcess.obj: StrProcess.cpp.obj
-
-.PHONY : StrProcess.obj
+.PHONY : Alibaba.obj
 
 # target to build an object file
-StrProcess.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\StrProcess.cpp.obj
-.PHONY : StrProcess.cpp.obj
+Alibaba.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\Alibaba.cpp.obj
+.PHONY : Alibaba.cpp.obj
 
-StrProcess.i: StrProcess.cpp.i
+Alibaba.i: Alibaba.cpp.i
 
-.PHONY : StrProcess.i
-
-# target to preprocess a source file
-StrProcess.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\StrProcess.cpp.i
-.PHONY : StrProcess.cpp.i
-
-StrProcess.s: StrProcess.cpp.s
-
-.PHONY : StrProcess.s
-
-# target to generate assembly for a file
-StrProcess.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\StrProcess.cpp.s
-.PHONY : StrProcess.cpp.s
-
-Tree.obj: Tree.cpp.obj
-
-.PHONY : Tree.obj
-
-# target to build an object file
-Tree.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\Tree.cpp.obj
-.PHONY : Tree.cpp.obj
-
-Tree.i: Tree.cpp.i
-
-.PHONY : Tree.i
+.PHONY : Alibaba.i
 
 # target to preprocess a source file
-Tree.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\Tree.cpp.i
-.PHONY : Tree.cpp.i
+Alibaba.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\Alibaba.cpp.i
+.PHONY : Alibaba.cpp.i
 
-Tree.s: Tree.cpp.s
+Alibaba.s: Alibaba.cpp.s
 
-.PHONY : Tree.s
+.PHONY : Alibaba.s
 
 # target to generate assembly for a file
-Tree.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\Tree.cpp.s
-.PHONY : Tree.cpp.s
+Alibaba.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\Alibaba.cpp.s
+.PHONY : Alibaba.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -234,33 +180,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\main.cpp.s
 .PHONY : main.cpp.s
 
-print.obj: print.cpp.obj
-
-.PHONY : print.obj
-
-# target to build an object file
-print.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\print.cpp.obj
-.PHONY : print.cpp.obj
-
-print.i: print.cpp.i
-
-.PHONY : print.i
-
-# target to preprocess a source file
-print.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\print.cpp.i
-.PHONY : print.cpp.i
-
-print.s: print.cpp.s
-
-.PHONY : print.s
-
-# target to generate assembly for a file
-print.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\clionproject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\clionproject.dir\print.cpp.s
-.PHONY : print.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -270,21 +189,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... clionproject
-	@echo ... FromWebExpressionTree.obj
-	@echo ... FromWebExpressionTree.i
-	@echo ... FromWebExpressionTree.s
-	@echo ... StrProcess.obj
-	@echo ... StrProcess.i
-	@echo ... StrProcess.s
-	@echo ... Tree.obj
-	@echo ... Tree.i
-	@echo ... Tree.s
+	@echo ... Alibaba.obj
+	@echo ... Alibaba.i
+	@echo ... Alibaba.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... print.obj
-	@echo ... print.i
-	@echo ... print.s
 .PHONY : help
 
 

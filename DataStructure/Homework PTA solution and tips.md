@@ -114,7 +114,7 @@ For a sequentially stored linear list of length *N*, the time complexities for d
 
 ## 6 Percolate Up and Down
 
-题目其实不难, 但是还是写了好久, 有一个错误, 每个值都要思考,写多了还是挺费脑子的.
+题目其实不难, 但是还是写了好久, 有一个错误, 每个值都要思考,写多了还是挺费脑子的.算法其实都很费脑子.
 
 //  最小堆的插入维护和删除维护 不断比较交换儿子与父亲的值。直到p小于0或者子节点大于父节点. 
 

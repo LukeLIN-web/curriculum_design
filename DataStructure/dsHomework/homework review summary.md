@@ -18,13 +18,13 @@
 
 2. If a linear list is represented by a linked list, the addresses of the elements in the memory must be consecutive(连续的). X 
 
-3.  循环队列, 不能 rear == front. 队列满时rear == front -1. enqueue时rear增加, dequeue front 增加.
+3.  循环队列, 不能 rear == front. 队列满时rear == front -1. enqueue时rear增加, dequeue 时front 增加.
 
 #### HW 3
 
 Push 5 characters `ooops` onto a stack. In how many different ways that we can pop these characters and still obtain `ooops`?
 
-答案: 123  , 132, 231, 213, 321. 五种,  312 是不行的. 
+答案: 其实就是ooo的全排列, 总共六种 ,123  , 132, 231, 213, 321. 五种,  312 是不行的. 
 
 
 
@@ -34,7 +34,7 @@ There exists a binary tree with 2016 nodes in total, and with 16 nodes having on
 
 n0+n1+n2 =2016=1+0n0+1n1+2n2  根结点不是任何结点的孩子, 
 
-发现除不尽. 
+2n2 +1 = 2000 , n2是整数 ,所以不对
 
 选择题的话,可以 画一个出来,然后看看.
 
@@ -48,21 +48,25 @@ It is always possible to represent a tree by a one-dimensional integer array 对
 
 In a binary search tree which contains several integer keys including 4, 5, and 6, if 4 and 6 are on the same level, then 5 must be their parent. X
 
-不是能有两个5, 而是可以很高.
+不能有两个5, 但是可以 
 
-
+```mermaid
+graph
+5 --> 7
+7-->6
+7-->8
+5--> 3
+3 -->4
+3-->2
+```
 
 #### HW6
 
-根据前序遍历为第一个, 然后找到中序遍历中的点,分成两块.
-
- 选择题6
+根据preoder和inorder重建 : 根据前序遍历为第一个, 然后找到中序遍历中的点,分成两块.
 
 If a binary search tree of *N* nodes is complete, which one of the following statements is FALSE?
 
-答案: C 选项 the maximum key must be at a leaf node.
-
-complete是**除最后一层外其他层均充满**不是*全部充满*.
+ the maximum key must be at a leaf node.  因为complete是**除最后一层外其他层均充满**不是全部充满.
 
 
 
@@ -102,7 +106,7 @@ complete是**除最后一层外其他层均充满**不是*全部充满*.
 
 1 Insertion sort; 2. Selection Sort; 3. Bubble sort; 4. Shell sort; 5. Heap sort
 
-答案: D Shell sort;  Heap sort是在数组中, heap本身在数组中, shell sort也是在数组中. 链表查询较慢,
+答案: D Shell sort;  因为 Heap sort是在数组中, heap本身在数组中, shell sort也是在数组中. 链表查询较慢,
 
 题三 During the sorting, processing every element which is not yet at its final position is called a "run". Which of the following cannot be the result after the second run of quick sort?
 

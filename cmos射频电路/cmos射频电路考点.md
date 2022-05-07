@@ -218,3 +218,139 @@ RX 动态范围
 
 RX tolerance to blocks 抗干扰能力。
 
+## lec6
+
+线性度有哪些指标?
+
+一阶, 二阶, 三阶.
+
+线性度不好会如何?
+
+
+
+接收机发射机, 会有哪些指标?
+
+Heterodyne  Receivers
+
+Problem of Image
+Mixing Spurs
+Sliding-IF RX
+
+
+
+1. filter 要有高Q
+2. 要有可变的,精确的中心频率
+
+怎么做带通滤波器?
+
+一个高通一个低通.
+
+在全双工duplex标准中，TX和RX同时工作。
+在1W的TX功率下，LNA感应到的泄漏可以达到-20dBm，这就决定了RX的压缩点要大大增加。
+
+前端带选滤波器在其选择性和带内损耗之间存在权衡，因为带通频率响应的边缘只能通过增加滤波器的阶数来锐化。
+前端损失直接提高了整个接收器的NF
+
+例题1:解释一下LNA后面的带通滤波器如何缓解CDMA系统中的TX-RX泄漏。
+
+答案:如下图所示，如果BPF在TX频段提供额外的抑制，那么RX链其他部分的线性度要求就会相应地放宽。然而，LNA的压缩点仍然必须足够高。
+
+
+
+#### 接收机的构架
+
+#### Basic Heterodyne Receivers
+
+- "外差Heterodyne "接收机采用不等于ωin的LO频率，因此中频不为零。
+- 一个执行下变频的混频器。
+- 由于其高噪声，下变频混频器前有一个低噪声放大器
+
+从载波搬到基带, 一种是直接到0, 一种是先到比较低的频率.
+
+##### 镜像的问题
+
+有干扰信号.找到理想的方案清除镜像:
+
+最常见的方法是在混频器前加一个 "image抑制滤波器"
+一个具有高image抑制的滤波器通常出现在LNA和混频器之间，这样LNA的增益就降低了滤波器对接收器噪声系数的贡献。
+image reject滤波器所要求的线性度和选择性决定了无源的片外实现。
+
+1. 超 外参接收机
+2. image 抑制滤波器
+3. I Q两路,
+4. hartley 架构
+
+##### Direct-Conversion Receivers
+
+优点
+
+- 没有image大大简化了设计过程
+- 通道选择由片上低通滤波器完成
+- 混合尖峰的数量大大减少
+
+缺点
+
+1. 高频的时候相移会放大
+2. DC Offsets
+
+DC Offsets
+
+有限的带内LO漏电出现在LNA的输入端。与所需信号一起，这个成分被放大并与LO混合。
+可能会使基带电路饱和，根本无法进行信号检测。
+
+例题2:
+
+一个直接转换接收器direct-conversion receiver包含了从LNA输入到每个混频器输出的30dB的电压增益，以及在混频器之后的基带阶段的另一个40dB的增益。如果LNA输入处的LO漏电等于-60 dBm，请确定混频器输出处和基带链输出处的偏移电压。
+
+答案:
+
+AV1=30dB是什么意思？如果一个正弦波V0 cos ωint被施加到LNA输入端，那么混频器输出端的基带信号Vbb cos(ωin - ωLO)t，其振幅由以下公式给出
+
+因此，对于一个输入Vleak cos ωLOt, 
+混频器输出的直流值等于
+
+由于AV1=31.6，Vleak=（632/2）μV。
+我们有Vdc = 10 mV。
+再放大40dB。
+ 这个偏移量在基带输出处达到了1 V!
+
+The dc offsets measured in the baseband I and Q outputs are often unequal. Explain why
+
+答案
+
+假设在LO的正交相位存在的情况下，LNA输入端的净LO泄漏表示为Vleak cos(ωLOt+Φleak )，其中Φleak来自于从每个LO相位到LNA输入的路径的相移，也是泄漏VLO cos ωLOt和VLO sinωLOt的总和。
+
+LO泄漏通过LNA和每个混频器，经历一个额外的相移，Φckt，并乘以VLO cos ωLOt和VLO sin ωLOt。因此，直流分量由以下公式给出： 因此，两个直流偏移一般是不相等的。
+
+##### 偏移消除
+
+用C1电容, 偏移消除：高通滤波器
+这样的网络也会在零频率附近去除一部分信号的频谱，引入符号间干扰
+
+##### Flicker Noise
+
+An 802.11g receiver exhibits a baseband flicker noise corner frequency of 200 kHz. Determine the flicker noise penalty
+
+ fBW = 10 MHz, fc = 200 kHz, and hence
+
+
+
+希尔伯特变换
+
+The shift-by-90 ° operation is also called the “Hilbert transform”.
+
+##### Hartley Architecture
+
+If we shift I(t) or Q(t) by another 90 ° before adding them, the image may be removed.
+
+另一个关键的缺点来自于R1和C1的绝对值的变化。
+
+如果转换到中频的信号有很宽的带宽，那么RC-CR部分产生的另一个缺点就会表现出来。
+
+
+
+低中频结构的另一个变体如下图所示，下变频信号被应用于信道选择滤波器和放大器，如同在直接转换接收器中一样。然后将结果数字化，并在求和之前在数字域中进行希尔伯特变换。 这是对模拟电路而言最简单的方法,采样率不需要特别高. 
+
+ "on-off 键控"（OOK）调制是ASK的一个特例，载波振幅在零和最大之间切换。
+
+当LO被二进制基带数据直接打开和关闭时（上图左），如果LO的波动足够大，PA也会经历相对完整的切换，并向天线提供OOK波形。上图（右）可以避免LO不容易被PLL控制的问题。

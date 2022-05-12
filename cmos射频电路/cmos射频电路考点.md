@@ -142,8 +142,6 @@ SNRmin是能检测到的最小长度。
 
 
 
-### 
-
 ### lec4
 
 噪声的底 -174. 4KTRs， Rs是天线的电阻。
@@ -152,16 +150,82 @@ SNRmin是能检测到的最小长度。
 
 ##### 系统指标
 
+##### 动态范围
+
+​     可容忍的最大期望信号功率除以可容忍的最小期望信号功率 
+
 Dynamic Range:
      Maximum tolerable desired signal power divided by the minimum tolerable desired signal power 
 
-SFDR:
-     Lower end equal to sensitivity.
-     Higher end defined as maximum input level in a two-tone test for which the third-order IM products do not exceed the integrated noise of the receiver
+##### SFDR
 
+​     Lower end equal to sensitivity.
+​     Higher end defined as maximum input level in a two-tone test for which the third-order IM products do not exceed the integrated noise of the receiver
 
+​      毛刺情况下的动态范围, 下端等于灵敏度。
+​     高端定义为双音测试中的最大输入电平，其中三阶IM产品不超过接收器的集成噪声。 SFDR大于DR
 
 #### 品质因子
+
+Passive Impedance Transformation: Quality Factorndicates how close to ideal an energy-storing device is.被动阻抗转换。品质系数表示一个储能设备有多接近理想。
+
+振荡器里面有电阻,  希望品质因子越大越好, 串联希望电阻小, 并联希望电阻大,  为什么? 损耗小，希望并联电流全部从电容走过，串联就电阻小点
+
+##### 电阻和电容
+
+串联, 电容是虚部,  虚部的阻抗/ 实部的阻抗,  如果都在虚部上, 实部上很小, 那么品质因子就高. 
+
+并联, 阻抗越小越好, 电阻越大并联起来越小. 
+
+##### 电阻和电感
+
+串联, 电感是高频的阻抗, 虚部,  虚部的阻抗/ 实部的阻抗,  如果都在虚部上, 实部上很小, 那么品质因子就高. 
+
+并联, 阻抗越小越好, 电阻RP(人品)越大并联起来越小. 
+
+##### 串联到并联的转换
+
+不知道寄生电阻是串联还是并联. 所以有个等效, 可以看关系. 
+
+电容基本不变, 并联电阻会变大, 是串联电阻的Q平方倍. 看进去的阻抗是不一样的。
+
+当需要进行变化的时候，可以利用这个串并的转化来实现q的平方倍变化
+
+为什么要这么做?经常需要做阻抗变化，特别是在高频的时候.
+
+50 欧姆阻抗是大还是小? 不一定
+
+要让阻抗是匹配的
+
+#### 匹配网络
+
+第一次作业problem1 , PPT  73页
+
+假如RL太大,怎么变成小阻抗? 
+
+放电阻RL在并联网络中, 加一个串联网络L1.
+
+我的电容和电感在高频谐振的时候，电容和电阻是虚部抵消的, 留下实部. rs并不是一个真实的，是个等效的.
+
+例题1:
+
+设计上图的匹配网络，以便在中心频率为5GHz时将RL=50Ω转换为25Ω。
+
+假设QP2 >> 1，我们有C1 = 0:90 pF和L1 = 1.13 nH，分别。然而，不幸的是，QP=1.41，表明QP2>>1的近似值不能使用。因此，我们得到C1 = 0:637 pF和L1 = 0:796 nH。
+
+例题2 :
+
+低阻到高阻. 
+
+确定下图所示的电路是如何转换RL的。
+
+我们推测，将L1-RL分支转换为并联部分会产生一个更高的电阻。如果QS2 = (L1ω/RL)2 >> 1，那么等效的并联电阻是
+
+并联的等效电感大约等于L1，并被C1所抵消。
+
+
+
+
 
 S参数的定义
 
@@ -171,12 +235,7 @@ S11       越小越好
 
 S22 越小越好， 和S11对称。
 
-
-
-要让阻抗是匹配的， 
-
-这个不用讲， 不考
- 非线性系统
+不考 非线性系统
 
 
 
@@ -436,7 +495,7 @@ band switching, 做两个非连续的两个带, 像开车换挡一样,
 
 最简单的是common source. 不可能有50欧姆的输入阻抗.
 
-有一个实部和虚部, 调整比例关系, 可能获得50欧姆.
+有实部和虚部, 调整比例关系, 可能获得50欧姆.
 
 负载端加电感有好处, 高频可以有增益.
 

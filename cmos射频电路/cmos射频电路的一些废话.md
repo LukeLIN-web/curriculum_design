@@ -38,3 +38,10 @@ Gain Compression: 1-dB Compression Point
 
 
 
+
+
+噪声放大器, 做一个硕士或博士都可以
+
+24GHz ,  55nm 工艺
+
+14nm 很贵. 

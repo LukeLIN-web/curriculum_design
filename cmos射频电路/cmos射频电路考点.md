@@ -226,17 +226,9 @@ RX tolerance to blocks 抗干扰能力。
 
 线性度不好会如何?
 
-
-
 接收机发射机, 会有哪些指标?
 
-Heterodyne  Receivers
-
-Problem of Image
-Mixing Spurs
-Sliding-IF RX
-
-
+要窄带宽.
 
 1. filter 要有高Q
 2. 要有可变的,精确的中心频率
@@ -244,6 +236,8 @@ Sliding-IF RX
 怎么做带通滤波器?
 
 一个高通一个低通.
+
+#### TX-RX泄露
 
 在全双工duplex标准中，TX和RX同时工作。
 在1W的TX功率下，LNA感应到的泄漏可以达到-20dBm，这就决定了RX的压缩点要大大增加。
@@ -255,9 +249,15 @@ Sliding-IF RX
 
 答案:如下图所示，如果BPF在TX频段提供额外的抑制，那么RX链其他部分的线性度要求就会相应地放宽。然而，LNA的压缩点仍然必须足够高。
 
+接收机的构架
 
+### 外差分接收机
 
-#### 接收机的构架
+Heterodyne  Receivers
+
+Problem of Image
+Mixing Spurs
+Sliding-IF RX
 
 #### Basic Heterodyne Receivers
 
@@ -280,7 +280,11 @@ image reject滤波器所要求的线性度和选择性决定了无源的片外�
 3. I Q两路,
 4. hartley 架构
 
-##### Direct-Conversion Receivers
+### Direct-Conversion Receivers
+
+A **direct-conversion receiver** (**DCR**), also known as **homodyne**, **synchrodyne**, or **zero-IF receiver**
+
+第二种解决方法,  分为I路和Q路,
 
 优点
 
@@ -293,7 +297,7 @@ image reject滤波器所要求的线性度和选择性决定了无源的片外�
 1. 高频的时候相移会放大
 2. DC Offsets
 
-DC Offsets
+##### DC Offsets
 
 有限的带内LO漏电出现在LNA的输入端。与所需信号一起，这个成分被放大并与LO混合。
 可能会使基带电路饱和，根本无法进行信号检测。
@@ -322,6 +326,11 @@ The dc offsets measured in the baseband I and Q outputs are often unequal. Expla
 
 LO泄漏通过LNA和每个混频器，经历一个额外的相移，Φckt，并乘以VLO cos ωLOt和VLO sin ωLOt。因此，直流分量由以下公式给出： 因此，两个直流偏移一般是不相等的。
 
+通过振荡器和射频信号路径的对称布局，可以将LO泄漏降到最低。
+LO泄漏主要来自电路和LO波形的随机或确定的不对称性
+
+### 镜像清除和low if 接收机
+
 ##### 偏移消除
 
 用C1电容, 偏移消除：高通滤波器
@@ -335,11 +344,21 @@ An 802.11g receiver exhibits a baseband flicker noise corner frequency of 200 kH
 
 
 
-希尔伯特变换
+##### 希尔伯特变换
 
 The shift-by-90 ° operation is also called the “Hilbert transform”.
 
-##### Hartley Architecture
+在+ωc的脉冲被顺时针旋转，在-ωc的脉冲被逆时针旋转。
+
+例题 1 :在相位图中，我们只需将一个相位乘以-j，就可以将其顺时针旋转90°。这与希尔伯特变换不一致吗？
+
+不，它不是。相位是Aexp(jωct)的表示，即只表示正频率内容。也就是说，我们隐含地假定，如果Aexp(jωct)乘以-j，那么Aexp(-jωct)也乘以+j。
+
+例题 2 : 绘制Acos ωct + jA sinωct的频谱。
+
+Asinωct的频谱乘以j，使两个脉冲逆时针旋转90°。将这个频谱与Acos ωct的频谱相加后，我们得到了下图所示的单侧频谱（右图）。当然，这是可以预期的，因为Acos ωct + jA sinωct = Aexp(-jωct)，其傅里叶变换是一个位于ω = +ωc的单一脉冲。
+
+### Hartley Architecture
 
 If we shift I(t) or Q(t) by another 90 ° before adding them, the image may be removed.
 
@@ -354,3 +373,5 @@ If we shift I(t) or Q(t) by another 90 ° before adding them, the image may be r
  "on-off 键控"（OOK）调制是ASK的一个特例，载波振幅在零和最大之间切换。
 
 当LO被二进制基带数据直接打开和关闭时（上图左），如果LO的波动足够大，PA也会经历相对完整的切换，并向天线提供OOK波形。上图（右）可以避免LO不容易被PLL控制的问题。
+
+### 发送机

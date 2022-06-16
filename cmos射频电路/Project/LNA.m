@@ -4,28 +4,41 @@ Tox = 4E-9 *10^6  ;% um from PSpice model of TSMC's 180nm MOSFET process .
 E0=8.85E-18;  %  F/um (Jacop Backer : CMOS circuit design ... , pp114)
 Er=3.97  ; % , same book
 L = 50 ;%  um
-un = 670E6 ;% For a NMOS: u0 = 670 cm^2/(V*s)
+un = 670E8 ;% For a NMOS: u0 = 670 cm^2/(V*s)
 Cox=E0*Er/Tox; %  Cox=8.784E-15F/um²
 Vth= 0.7 ;% V 
-W= [0:50:200];
-Vgs=[500E-3:100E-3:900E-3];
-[W,Vgs]=meshgrid([0:50:200],[500E-3:100E-3:900E-3]);
-Id = (1/2)*un*Cox*(W./L)*(Vgs-Vth).^2;
-gm2 = sqrt(2*un*Cox*Id.*W/L); 
+[W,Vgs]=meshgrid([0:50:600],[3:0.5:9]);
+k = un.*Cox.*W./L; % k =0.5E-3
+Id = (1/2).*k.*(Vgs-Vth).^2;
 Rs = 50 ;% 欧姆
 Cgs= 80E-15 ;
 gamma=1;
-Gain =10;
-%%
-% ppt21 resistive feedback
-% gain
-Rf = 50:10:1000;
-plot(Rf,20*log10(Rf/Rs));
-yline(15);
-yline(25);
-index = find(y ==25); 
-disp(y(index))
 
+%% gain
+% ppt21 resistive feedback
+
+% Rf = 50:10:1000;
+% plot(Rf,20*log10(Rf/Rs));
+% yline(15);
+% yline(25);
+% xlabel('Rf/Ω');ylabel('Gain/dB') 
+
+%% gm 
+% gm1 = sqrt(2*un*Cox*Id.*W/L); 
+% mesh(W,Vgs,gm1);
+% title('gm1 versus Vgs & W');  
+% x1=xlabel('Vgs / V');      
+% x2=ylabel('W / um');       
+% x3=zlabel('gm1/ S');        
+% set(x1,'Rotation',30);   
+% set(x2,'Rotation',-30);    
+% figure();
+% title('gm1 versus Vgs & W （Contour lines）');
+% [C, h] =contour(W,Vgs,gm1);
+% clabel(C, h);
+% xlabel('W /um ');ylabel('Vgs / V') 
+
+%%
 % noise figure
 %NF = 1+ 4*Rs/Rf + gamma +gamma.*gm2.*Rs;
 %mesh(W,Vgs,NF);

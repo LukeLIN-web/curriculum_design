@@ -29,7 +29,7 @@ x3=zlabel('Id/A');
 set(x1,'Rotation',30);   
 set(x2,'Rotation',-30);  
 hold on
-z=0.02.*(W>=0.36&W<=3.6);
+z=0.017.*(W>=0.36&W<=3.6);
 surf(W,Vgs,z);
 figure();
 [C, h] =contour(W,Vgs,Id);
@@ -37,6 +37,7 @@ clabel(C, h);
 xlabel('W /um ');ylabel('Vgs / V') 
 title('Id versus Vgs2 & W2 （Contour lines）');
 
+figure();
 
 %% gain
 Rf = 50:10:1000;
@@ -44,7 +45,7 @@ plot(Rf,20*log10(Rf/Rs));
 yline(15);
 yline(25);
 xlabel('Rf/Ω');ylabel('Gain/dB') 
-
+title('Gain versus Rf');
 %% gm 
 gm1 = sqrt(2*un*Cox*Id.*W/L); 
 mesh(W,Vgs,gm1);
